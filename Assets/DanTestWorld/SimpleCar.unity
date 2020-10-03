@@ -1085,7 +1085,9 @@ MonoBehaviour:
   m_trackLayer:
     serializedVersion: 2
     m_Bits: 512
-  m_speed: 2
+  m_accel: 0.2
+  m_brakeAccel: 1.25
+  m_maxSpeed: 3
   m_minSpeed: 0.1
   m_strafe: 0.05
   m_spline: {fileID: 329053447}

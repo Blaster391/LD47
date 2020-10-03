@@ -8,34 +8,39 @@ public class SurfaceClampedCarController : MonoBehaviour
     public Transform m_forcePos;
     public LayerMask m_trackLayer;
     private Rigidbody m_rBody;
-    public float m_speed = 3;
+    public float m_accel = 0.2f;
+    public float m_brakeAccel = 0.4f;
+    public float m_maxSpeed = 3;
     public float m_minSpeed = 0.1f;
     public float m_strafe = 0.05f;
     public Spline m_spline;
 
     private int m_curSplineIndex = 0;
-       
-    private bool GetRaycastDownAtNewPosition(Vector3 movementDirection, out RaycastHit hitInfo)
+    private float m_curSpeed;
+
+    private void Start()
     {
-        Ray ray = new Ray(transform.position + movementDirection   , -transform.up);
-
-        if (Physics.Raycast(ray, out hitInfo, float.PositiveInfinity, m_trackLayer))
-        {
-            return true;
-        }
-
-        return false;
+        m_curSpeed = m_minSpeed;
     }
 
     private void FixedUpdate()
     {
-        RaycastHit hitInfo;
-
-        Vector3 minFwdSpeed = Mathf.Max(m_minSpeed, m_speed * Input.GetAxis("Vertical")) * transform.forward ;
-
-        if (GetRaycastDownAtNewPosition(minFwdSpeed + transform.right * Input.GetAxis("Horizontal") * m_strafe, out hitInfo))
+        float accel = 0;
+        if(Input.GetAxis("Vertical") > 0)
         {
+            accel = m_accel;
+        }
+        else if(Input.GetAxis("Vertical") < 0)
+        {
+            accel = m_brakeAccel;
+        }
+        m_curSpeed = Mathf.Max(m_minSpeed, m_curSpeed + Input.GetAxis("Vertical") * accel * Time.deltaTime);
 
+        Vector3 minFwdSpeed = m_curSpeed * transform.forward;
+        Vector3 moveDir = minFwdSpeed + transform.right * Input.GetAxis("Horizontal") * m_strafe;
+        RaycastHit hitInfo;
+        if (Physics.Raycast(new Ray(transform.position + moveDir, -transform.up), out hitInfo, float.PositiveInfinity, m_trackLayer))  
+        {
             //Get the desired forward from the spline and update our spline indexes if appropriate
             bool incInd = false;
             Vector3 predPos = hitInfo.point + hitInfo.normal * .5f;
@@ -52,7 +57,5 @@ public class SurfaceClampedCarController : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, rot, Time.deltaTime * rotSpeed);
             transform.position = Vector3.MoveTowards(transform.position, predPos, Time.deltaTime * movSpeed);
         }
-
-      
     }
 }
