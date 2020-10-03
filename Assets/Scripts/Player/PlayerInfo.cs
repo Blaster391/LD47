@@ -7,6 +7,7 @@ public class PlayerInfo : MonoBehaviour
 {
     private string _username = "";
     private string _id = "";
+    private GameObject _selectedCar = null;
 
     // Start is called before the first frame update
     void Start()
