@@ -1,4 +1,9 @@
-﻿Shader "Custom/DestructableShader"
+﻿// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
+
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
+
+Shader "Custom/DestructableShader"
 {
     Properties
     {
@@ -14,7 +19,7 @@
 
         CGPROGRAM
         // Physically based Standard lighting model, and enable shadows on all light types
-        #pragma surface surf Standard fullforwardshadows vertex:vert
+        #pragma surface surf Standard vertex:vert // fullforwardshadows
 
         // Use shader model 3.0 target, to get nicer looking lighting
         #pragma target 3.0
@@ -26,13 +31,26 @@
             float2 uv_MainTex;
         };
 
+        struct VS_Input
+        {
+            float4 vertex : POSITION;
+            float4 texcoord : TEXCOORD0;
+            float4 texcoord1 : TEXCOORD1;
+            float4 texcoord2 : TEXCOORD2;
+            float3 normal : NORMAL;
+            float4 tangent : TANGENT;
+            uint   id : SV_VertexID;
+        };
+
+ 
+
         int _vertexCount;
         float _destructTime;
         float _lowEndTime;
         float _highEndTime;
         float3 _collisionPosition;
 
-        void vert(inout appdata_full v)
+        void vert(inout VS_Input v)
         {
             if (_destructTime >= _highEndTime)
             {
@@ -40,8 +58,25 @@
             }
             else if (_destructTime > 0.0f)
             {
-                float prop = (_highEndTime / _destructTime);
-                v.vertex.xyz = lerp(v.vertex.xyz, _collisionPosition, prop);
+               
+                //prop = 1.0f - prop; 
+                //v.vertex.xyz += v.normal * float3(prop * v.vertex.x,prop * v.vertex.y,prop * v.vertex.z);*/
+                
+                /*uint scrambledId = fmod(v.id + 2731u, 983u);
+                float floatId = float(scrambledId);
+                float modifier = (floatId / 983.0f);*/
+
+                float floatId = float(v.id);
+                float modifier = (floatId / float(_vertexCount));
+
+                float timeDiff = _highEndTime - _lowEndTime;
+                float myTime = modifier * timeDiff;
+                float prop = (_destructTime / myTime);
+                prop = min(prop, 1.0f);
+
+                float4 collisionPointLocal = mul(unity_WorldToObject, float4(_collisionPosition, 1.0f));
+                float3 lerpPoint = lerp(v.vertex.xyz, collisionPointLocal, prop);
+                v.vertex.xyz = lerpPoint;
             }
         }
 

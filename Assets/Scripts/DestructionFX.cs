@@ -62,7 +62,18 @@ public class DestructionFX : MonoBehaviour
     {
         if (_destructOnCollision)
         {
-            Destruct(collision.contacts[0].point);
+            Vector3 collisionPoint = transform.position;
+            if(collision.contacts.Length > 0)
+            {
+                collisionPoint = new Vector3();
+                foreach (var contact in collision.contacts)
+                {
+                    collisionPoint += contact.point;
+                }
+                collisionPoint /= collision.contacts.Length;
+            }
+
+            Destruct(collisionPoint);
         }
     }
 
@@ -80,7 +91,7 @@ public class DestructionFX : MonoBehaviour
         if(_constructed)
         {
             _constructed = false;
-           // _collisionPosition = collisionPosition;
+            _collisionPosition = collisionPosition;
         }
     }
 }
