@@ -22,17 +22,30 @@ public class SurfaceClampedCarController : MonoBehaviour
     private SlidingAverageBuffer m_avgUpBuffer;
     private SlidingAverageBuffer m_avgFwdBuffer;
     private int m_curSplineIndex = 0;
+    private bool m_active = true;
+
 
     private void Start()
     {
         m_curSpeed = m_minSpeed;
         m_avgUpBuffer = new SlidingAverageBuffer(m_smoothingFrames);
         m_avgFwdBuffer = new SlidingAverageBuffer(m_smoothingFrames);
+
+        var life = GetComponent<PlayerLife>();
+        if(life)
+        {
+            life.OnDeath.AddListener(OnDeath);
+        }
     }
 
 
     private void UpdateInternal()
     {
+        if(!m_active)
+        {
+            return;
+        }
+
         float accel = 0;
         if (Input.GetAxis("Vertical") > 0)
         {
@@ -91,5 +104,10 @@ public class SurfaceClampedCarController : MonoBehaviour
             UpdateInternal();
         }
        
+    }
+
+    private void OnDeath(Vector3 lol)
+    {
+        m_active = false;
     }
 }
