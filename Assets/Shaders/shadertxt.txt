@@ -1,0 +1,50 @@
+            
+vertexOUT = vertexIN;
+float maxTime = (highEndTime + shrinkDelay);
+
+if (destructTime >= maxTime)
+{
+   vertexOUT = float3(0, 0, 0);
+}
+else if (destructTime > 0.0f)
+{
+	float floatId = float(v.id);
+	float scrambledId = fmod(floatId * 2731.0f, 983.0f);
+	float modifier = (scrambledId / 983.0f);
+
+   
+
+	float3 burstModifer = float3(0.0f, 0.0f, 0.0f);
+	if (burstTime > 0.0f)
+	{
+		float scrambledBurstId = fmod(floatId * 8677.0f, 8087.0f);
+		float burstModifier = (scrambledBurstId / 8087.0f);
+		float burstSizeDiff = (burstSizeMax - burstSizeMin);
+		float burstSize = (burstSizeDiff * burstModifier) + burstSizeMin;
+
+		float currentBurstProp = destructTime / burstTime;
+		currentBurstProp = min(currentBurstProp, 1.0f);
+		burstModifer = vertexIN.xyz * burstSize * currentBurstProp;
+		
+	}
+
+	float shrinkTime = destructTime - shrinkDelay;
+	float3 burstVertex = vertexIN.xyz + burstModifer;
+	if (shrinkTime > 0.0f)
+	{
+		float timeDiff = highEndTime - lowEndTime;
+		float myTime = (modifier * timeDiff) + lowEndTime;
+		float shrinkProp = (shrinkTime / myTime);
+		float prop = min(shrinkProp, 1.0f);
+
+		float4 collisionPointLocal = mul(unityWorldToObject, float4(collisionPosition, 1.0f));
+		float3 lerpPoint = lerp(burstVertex, collisionPointLocal, prop);
+		vertexOUT.xyz = lerpPoint;
+	}
+	else
+	{
+		vertexOUT.xyz = burstVertex;
+	}
+
+	
+}

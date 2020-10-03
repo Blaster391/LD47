@@ -124,8 +124,16 @@ Material:
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
     - _ZWrite: 1
+    - _burstSizeMax: 2
+    - _burstSizeMin: 1
+    - _burstTime: 0.25
+    - _destructTime: 0
+    - _highEndTime: 1
+    - _lowEndTime: 0.25
+    - _shrinkDelay: 0.1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _collisionPosition: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
