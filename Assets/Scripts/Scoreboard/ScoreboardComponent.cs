@@ -26,6 +26,11 @@ namespace Scoreboard
 
         public class ScoreboardComponent : MonoBehaviour
         {
+            [SerializeField]
+            private string m_scoreboardConnectionFile = "";
+
+            private ScoreboardConnection m_connection = null;
+
             private void Awake()
             {
                 TextAsset connectionText = Resources.Load<TextAsset>(m_scoreboardConnectionFile);
@@ -41,11 +46,6 @@ namespace Scoreboard
 
                 //SubmitResult(score);
             }
-
-            [SerializeField]
-            private string m_scoreboardConnectionFile = "";
-
-            private ScoreboardConnection m_connection = null;
 
             public void GetHighscores(Func<List<ScoreboardCore.Data.ScoreResult>, bool, bool> _onRequestComplete, string level)
             {
