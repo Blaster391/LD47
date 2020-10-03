@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SurfaceClampedCarController : MonoBehaviour
 {
-
     public Transform m_forcePos;
     public LayerMask m_trackLayer;
     private Rigidbody m_rBody;
@@ -16,7 +15,7 @@ public class SurfaceClampedCarController : MonoBehaviour
     public Spline m_spline;
 
     private int m_curSplineIndex = 0;
-    private float m_curSpeed;
+    public float m_curSpeed;
 
     private void Start()
     {
@@ -34,7 +33,7 @@ public class SurfaceClampedCarController : MonoBehaviour
         {
             accel = m_brakeAccel;
         }
-        m_curSpeed = Mathf.Max(m_minSpeed, m_curSpeed + Input.GetAxis("Vertical") * accel * Time.deltaTime);
+        m_curSpeed = Mathf.Clamp(m_curSpeed + Input.GetAxis("Vertical") * accel * Time.deltaTime, m_minSpeed, m_maxSpeed);
 
         Vector3 minFwdSpeed = m_curSpeed * transform.forward;
         Vector3 moveDir = minFwdSpeed + transform.right * Input.GetAxis("Horizontal") * m_strafe;
@@ -52,7 +51,7 @@ public class SurfaceClampedCarController : MonoBehaviour
 
             Debug.DrawLine(transform.position, transform.position + 5 * desiredF, Color.cyan);
             Quaternion rot = Quaternion.LookRotation(desiredF, hitInfo.normal);
-            float rotSpeed = 175;
+            float rotSpeed = 50000;
             float movSpeed = 75;
             transform.rotation = Quaternion.RotateTowards(transform.rotation, rot, Time.deltaTime * rotSpeed);
             transform.position = Vector3.MoveTowards(transform.position, predPos, Time.deltaTime * movSpeed);
