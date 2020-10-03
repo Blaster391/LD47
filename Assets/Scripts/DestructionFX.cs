@@ -36,6 +36,12 @@ public class DestructionFX : MonoBehaviour
         {
             _destructTime = _highEndTime;
         }
+
+        var life = GetComponent<PlayerLife>();
+        if(life)
+        {
+            life.OnDeath.AddListener(Destruct);
+        }
     }
 
     // Update is called once per frame
