@@ -55,6 +55,11 @@ public class DestructionFX : MonoBehaviour
         }
 
         var life = GetComponent<PlayerLife>();
+        if(!life)
+        {
+            life = GetComponentInParent<PlayerLife>();
+        }
+
         if(life)
         {
             life.OnDeath.AddListener(Destruct);

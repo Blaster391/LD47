@@ -63,14 +63,15 @@ public class PlayerCamera : MonoBehaviour
 
 
         RaycastHit hit;
-        if (Physics.Raycast(_focus.transform.position, -_dummyTransform.forward, out hit, Vector3.Distance(_dummyTransform.position, _focus.transform.position), ~8, QueryTriggerInteraction.Ignore))
+        if (Physics.Raycast(_focus.transform.position + _focus.transform.up, -_dummyTransform.forward, out hit, Vector3.Distance(_dummyTransform.position, _focus.transform.position), ~9, QueryTriggerInteraction.Ignore))
         {
+            Debug.Log(hit.collider.gameObject);
             _dummyTransform.position = hit.point + (_focus.transform.forward * _wallAvoidDist);
             _dummyTransform.LookAt(_focus.transform, _focus.transform.up);
         }
 
 
-        if(_useSmoothing)
+        if (_useSmoothing)
         {
             float maxMove = _averageSpeed * _maxMoveDelta * Time.deltaTime;
             float maxTurn = _averageSpeed * _maxTurnDelta * Time.deltaTime;
