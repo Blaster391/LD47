@@ -69,3 +69,11 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+#Scoreboard key
+*.scoreboard
+*.scoreboard.txt
+*.scoreboard.txt.meta
+*.scoreboard.meta
+
+!Newtonsoft.Json.dll
