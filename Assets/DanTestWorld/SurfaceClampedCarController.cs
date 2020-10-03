@@ -13,6 +13,7 @@ public class SurfaceClampedCarController : MonoBehaviour
     public Spline m_spline;
 
     private int m_curSplineIndex = 0;
+    private bool m_active = true;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +42,11 @@ public class SurfaceClampedCarController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(!m_active)
+        {
+            return;
+        }
+
         RaycastHit hitInfo;
 
         if (GetRaycastDownAtNewPosition(speed * transform.forward /** Input.GetAxis("Vertical")*/ + transform.right * Input.GetAxis("Horizontal") * strafe, out hitInfo))
@@ -62,7 +68,10 @@ public class SurfaceClampedCarController : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, rot, Time.deltaTime * rotSpeed);
             transform.position = Vector3.MoveTowards(transform.position, predPos, Time.deltaTime * movSpeed);
         }
+    }
 
-      
+    public void OnDeath()
+    {
+
     }
 }
