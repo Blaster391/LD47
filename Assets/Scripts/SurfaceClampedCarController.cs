@@ -9,8 +9,8 @@ public class SurfaceClampedCarController : MonoBehaviour
     public LayerMask m_trackLayer;
     private Rigidbody m_rBody;
     public float m_accel = 0.2f;
-    public float m_brakeAccel = 0.4f;
-    public float m_maxSpeed = 3;
+    public float m_brakeAccel = 1.25f;
+    public float m_maxSpeed = 1.5f;
     public float m_minSpeed = 0.1f;
     public float m_strafe = 0.05f;
     public Spline m_spline;
