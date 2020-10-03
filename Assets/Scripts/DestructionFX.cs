@@ -40,13 +40,6 @@ public class DestructionFX : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        //
-        //        _mesh = GetComponent<MeshFilter>().sharedMesh;
-        //        _material = GetComponent<Renderer>().sharedMaterial;
-        //        GetComponent<Renderer>().sharedMaterial = new Material(Shader.Find("DestructableShader"));
-        //#else
-
 #if UNITY_EDITOR
 
         _mesh = GetComponent<MeshFilter>().sharedMesh;
@@ -56,8 +49,6 @@ public class DestructionFX : MonoBehaviour
         _material = GetComponent<Renderer>().material;
 #endif
 
-      //  GetComponent<Renderer>().material = new Material(_material);
-//#endif
         if (!_constructed)
         {
             _destructTime = _highEndTime;
