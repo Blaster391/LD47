@@ -6,6 +6,8 @@ public class PlayerScore : MonoBehaviour
 {
     [SerializeField]
     private float _suvivalScore = 1.0f;
+    [SerializeField]
+    private Stats _hudStats = null;
 
     private PlayerLife _life = null;
     private float _score = 0.0f;
@@ -29,6 +31,11 @@ public class PlayerScore : MonoBehaviour
         if(_life.IsAlive)
         {
             _score += Time.deltaTime * _suvivalScore;
+
+            if(_hudStats)
+            {
+                _hudStats.UpdateScore(Mathf.RoundToInt(_score));
+            }
         }
     }
 }
