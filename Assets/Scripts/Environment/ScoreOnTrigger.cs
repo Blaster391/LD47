@@ -36,6 +36,11 @@ public class ScoreOnTrigger : MonoBehaviour
             player.AddScore(_scoreToAdd);
             _scoreGiven = true;
         }
-        
+
+        var destructionComponent = GetComponent<DestructionFX>();
+        if(destructionComponent)
+        {
+            destructionComponent.Destruct(collider.transform.position);
+        }
     }
 }

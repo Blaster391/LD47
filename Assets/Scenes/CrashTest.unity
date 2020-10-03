@@ -444,6 +444,7 @@ GameObject:
   - component: {fileID: 334339920}
   - component: {fileID: 334339919}
   - component: {fileID: 334339918}
+  - component: {fileID: 334339923}
   m_Layer: 0
   m_Name: ScoreSphere
   m_TagString: Untagged
@@ -496,7 +497,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9648342cce5a10240a9d689610bb7167, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -540,6 +541,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &334339923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334339917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f56faa1f2aaa0d848bc19e3b738b9abf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destroyObjectOnDestruction: 0
+  _destructOnCollision: 0
+  _constructed: 1
+  _lowEndTime: 0.1
+  _highEndTime: 0.25
+  _shrinkDelay: 0.1
+  _burstSizeMax: 1
+  _burstSizeMin: 0
+  _burstTime: 0.25
 --- !u!1 &570059001
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,6 +575,7 @@ GameObject:
   - component: {fileID: 570059004}
   - component: {fileID: 570059003}
   - component: {fileID: 570059002}
+  - component: {fileID: 570059007}
   m_Layer: 0
   m_Name: ScoreSphere (3)
   m_TagString: Untagged
@@ -605,7 +628,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9648342cce5a10240a9d689610bb7167, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -649,6 +672,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &570059007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570059001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f56faa1f2aaa0d848bc19e3b738b9abf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destroyObjectOnDestruction: 0
+  _destructOnCollision: 0
+  _constructed: 1
+  _lowEndTime: 0.1
+  _highEndTime: 1
+  _shrinkDelay: 0.1
+  _burstSizeMax: 1
+  _burstSizeMin: 0
+  _burstTime: 0.25
 --- !u!1 &803750629
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,11 +1059,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937960319}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f56faa1f2aaa0d848bc19e3b738b9abf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyObjectOnDestruction: 0
   _destructOnCollision: 1
   _constructed: 1
   _lowEndTime: 1
@@ -1182,6 +1227,7 @@ GameObject:
   - component: {fileID: 1138611110}
   - component: {fileID: 1138611109}
   - component: {fileID: 1138611108}
+  - component: {fileID: 1138611113}
   m_Layer: 0
   m_Name: ScoreSphere (1)
   m_TagString: Untagged
@@ -1234,7 +1280,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9648342cce5a10240a9d689610bb7167, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1278,6 +1324,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1138611113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138611107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f56faa1f2aaa0d848bc19e3b738b9abf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destroyObjectOnDestruction: 0
+  _destructOnCollision: 0
+  _constructed: 1
+  _lowEndTime: 0.1
+  _highEndTime: 1
+  _shrinkDelay: 0.1
+  _burstSizeMax: 1
+  _burstSizeMin: 0
+  _burstTime: 0.25
 --- !u!1 &1177011258
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,6 +1606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f56faa1f2aaa0d848bc19e3b738b9abf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyObjectOnDestruction: 0
   _destructOnCollision: 0
   _constructed: 1
   _lowEndTime: 1
@@ -2150,6 +2218,7 @@ GameObject:
   - component: {fileID: 1714553676}
   - component: {fileID: 1714553675}
   - component: {fileID: 1714553674}
+  - component: {fileID: 1714553679}
   m_Layer: 0
   m_Name: ScoreSphere (2)
   m_TagString: Untagged
@@ -2202,7 +2271,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9648342cce5a10240a9d689610bb7167, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2246,6 +2315,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1714553679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714553673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f56faa1f2aaa0d848bc19e3b738b9abf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destroyObjectOnDestruction: 0
+  _destructOnCollision: 0
+  _constructed: 1
+  _lowEndTime: 0.1
+  _highEndTime: 1
+  _shrinkDelay: 0.1
+  _burstSizeMax: 1
+  _burstSizeMin: 0
+  _burstTime: 0.25
 --- !u!1 &1747103309
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,8 @@ using UnityEngine;
 public class DestructionFX : MonoBehaviour
 {
     [SerializeField]
+    private bool _destroyObjectOnDestruction = false;
+    [SerializeField]
     private bool _destructOnCollision = false;
     [SerializeField]
     private bool _constructed = true;
@@ -41,6 +43,7 @@ public class DestructionFX : MonoBehaviour
 #else
         _mesh = GetComponent<MeshFilter>().mesh;
         _material = GetComponent<Renderer>().material;
+        GetComponent<Renderer>().material = new Material(_material);
 #endif
         if (!_constructed)
         {
@@ -72,6 +75,10 @@ public class DestructionFX : MonoBehaviour
             {
                 _destructTime += Time.deltaTime;
                 _destructTime = Mathf.Min(_destructTime, maxTime);
+            }
+            else if(_destroyObjectOnDestruction)
+            {
+                Destroy(gameObject);
             }
         }
 
