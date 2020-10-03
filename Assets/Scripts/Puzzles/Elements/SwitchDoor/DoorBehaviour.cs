@@ -6,8 +6,8 @@ namespace Puzzles
 {
     public class DoorBehaviour : MonoBehaviour, IActivatee
     {
-        [SerializeField] private GameObject m_gateLeftObject;
-        [SerializeField] private GameObject m_gateRightObject;
+        [SerializeField] private GameObject m_gateLeftObject = null;
+        [SerializeField] private GameObject m_gateRightObject = null;
 
         public void Activate()
         {
