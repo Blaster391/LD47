@@ -5966,6 +5966,7 @@ MonoBehaviour:
   m_minSpeed: 0.1
   m_strafe: 0.05
   m_spline: {fileID: 761701293}
+  m_curSpeed: 0
 --- !u!65 &1692595690
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6035,13 +6036,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692595688}
-  m_LocalRotation: {x: -0.08318979, y: 0.47173217, z: -0.15244888, w: 0.8644696}
-  m_LocalPosition: {x: -52.83, y: 33.23, z: -286.31}
+  m_LocalRotation: {x: -0.11252207, y: 0.5696833, z: -0.14125411, w: 0.8017774}
+  m_LocalPosition: {x: -55.66, y: 31.62, z: -286.28}
   m_LocalScale: {x: 1.5758, y: 1.1348, z: 2.8817}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 31
-  m_LocalEulerAnglesHint: {x: 0, y: 57.242, z: -20.003}
+  m_LocalEulerAnglesHint: {x: -1.117, y: 70.994, z: -20.78}
 --- !u!114 &1692595694
 MonoBehaviour:
   m_ObjectHideFlags: 0
