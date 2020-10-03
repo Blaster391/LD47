@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a832d8f06029c142a33d7076d600c79, type: 3}
+  m_Name: SwitchDoorPuzzle
+  m_EditorClassIdentifier: 
+  m_difficultyMin: 0
+  m_difficultyMax: 1
+  m_visibilityMin: 0
+  m_visibilityMax: 1
+  m_data:
+    m_puzzleCellLength: 6
+    m_switchPrefab: {fileID: 5912890777751765622, guid: e5dacfc43070a434c8eba9dbc48b88de, type: 3}
+    m_gatePrefab: {fileID: 174992776487085522, guid: 8455ea1f3070a62428e238eb91d100f7, type: 3}
+    m_wallPrefab: {fileID: 215526712701257797, guid: 76b379d09a9e1884da928c7d70113c90, type: 3}
