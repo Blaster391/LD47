@@ -72,7 +72,6 @@ public class Spline : MonoBehaviour
         Segment segment = m_segments[i_segmentInd];
 
         float curT = GetT(i_segmentInd, i_curPos);
-        Debug.Log(curT);
         float threshold = 0.01f;
         if(curT + threshold >= 1)
         {
