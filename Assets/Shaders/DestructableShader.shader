@@ -14,7 +14,7 @@ Shader "Custom/DestructableShader"
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags { "RenderType"="Opaque", "RenderPipeline" = "HDRenderPipeline"  }
         LOD 200
 
         CGPROGRAM

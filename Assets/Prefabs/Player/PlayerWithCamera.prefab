@@ -134,7 +134,7 @@ MonoBehaviour:
   _wallAvoidDist: 0.25
   _useSmoothing: 1
   _maxMoveDelta: 1000
-  _maxTurnDelta: 1000
+  _maxTurnDelta: 1200
 --- !u!1 &4113139707282617661
 GameObject:
   m_ObjectHideFlags: 0
