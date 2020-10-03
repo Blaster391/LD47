@@ -13,6 +13,16 @@ public class DestructionFX : MonoBehaviour
     private float _lowEndTime = 1.0f;
     [SerializeField]
     private float _highEndTime = 3.0f;
+    [SerializeField]
+    private float _shrinkDelay = 0.5f;
+
+    [SerializeField]
+    private float _burstSizeMax = 2.0f;
+    [SerializeField]
+    private float _burstSizeMin = 1.0f;
+    [SerializeField]
+    private float _burstTime = 1.0f;
+
 
     private float _destructTime = 0.0f;
 
@@ -57,10 +67,11 @@ public class DestructionFX : MonoBehaviour
         }
         else
         {
-            if (_destructTime < _highEndTime)
+            float maxTime = (_highEndTime + _shrinkDelay);
+            if (_destructTime < maxTime)
             {
                 _destructTime += Time.deltaTime;
-                _destructTime = Mathf.Min(_destructTime, _highEndTime);
+                _destructTime = Mathf.Min(_destructTime, maxTime);
             }
         }
 
@@ -69,6 +80,12 @@ public class DestructionFX : MonoBehaviour
         _material.SetFloat("_lowEndTime", _lowEndTime);
         _material.SetFloat("_highEndTime", _highEndTime);
         _material.SetVector("_collisionPosition", _collisionPosition);
+
+        _material.SetFloat("_burstSizeMax", _burstSizeMax);
+        _material.SetFloat("_burstSizeMin", _burstSizeMin);
+        _material.SetFloat("_burstTime", _burstTime);
+
+        _material.SetFloat("_shrinkDelay", _shrinkDelay);
     }
 
     void OnCollisionEnter(Collision collision)

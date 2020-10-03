@@ -1022,8 +1022,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _destructOnCollision: 1
   _constructed: 1
-  _lowEndTime: 0.5
-  _highEndTime: 2
+  _lowEndTime: 1
+  _highEndTime: 3
+  _shrinkDelay: 5
+  _burstSizeMax: 0
+  _burstSizeMin: 0
+  _burstTime: 0.25
 --- !u!65 &937960321
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1539,6 +1543,10 @@ MonoBehaviour:
   _constructed: 1
   _lowEndTime: 1
   _highEndTime: 3
+  _shrinkDelay: 1
+  _burstSizeMax: 1
+  _burstSizeMin: 1
+  _burstTime: 1
 --- !u!114 &1214162574
 MonoBehaviour:
   m_ObjectHideFlags: 0
