@@ -6,20 +6,16 @@ public class SurfaceClampedCarController : MonoBehaviour
 {
 
     public Transform m_forcePos;
-    public float m_accelForce = 500.0f;
-    public float m_brakeForce = 200.0f;
-    public float m_maxVelSqr = 900.0f;
-    public float m_startVelSqr = 25.0f; //Also the min 
-    public float m_sideForce = 100.0f;
-    public float m_sideFrictionLerp = 0.5f;
-
+    public LayerMask m_trackLayer;
     private Rigidbody m_rBody;
+    public float speed = 1;
+    public Spline m_spline;
+
+    private int m_curSplineIndex = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        m_rBody = GetComponent<Rigidbody>();
-        m_rBody.velocity = Mathf.Sqrt(m_startVelSqr) * transform.forward;
     }
 
     // Update is called once per frame
@@ -28,43 +24,45 @@ public class SurfaceClampedCarController : MonoBehaviour
         
     }
 
+
+
+    private bool GetRaycastDownAtNewPosition(Vector3 movementDirection, out RaycastHit hitInfo)
+    {
+        Ray ray = new Ray(transform.position + movementDirection * speed  , -transform.up);
+
+        if (Physics.Raycast(ray, out hitInfo, float.PositiveInfinity, m_trackLayer))
+        {
+            return true;
+        }
+
+        return false;
+    }
+
     private void FixedUpdate()
     {
-        //Calculate the forces
-        float fwdInput = Input.GetAxis("Vertical");
-        float sideInput = Input.GetAxis("Horizontal");
+        RaycastHit hitInfo;
 
-        float fwdForceMag = 0;
-        float sideForceMag = 0;
-
-       
-        sideForceMag = sideInput * m_sideForce;
-       
-
-        if(fwdInput > 0)
+        if (GetRaycastDownAtNewPosition(transform.forward, out hitInfo))
         {
-            //Dont apply fwd force if it will make car too fast
-            if((Vector3.Project(m_rBody.velocity, transform.forward).sqrMagnitude) < m_maxVelSqr)
+
+            //Get the desired forward from the spline and update our spline indexes if appropriate
+            bool incInd = false;
+            Vector3 predPos = hitInfo.point + hitInfo.normal * .5f;
+            Vector3 desiredF = m_spline.GetSplineForwardVec(m_curSplineIndex, transform.position, predPos, ref incInd);
+            if(incInd)
             {
-                fwdForceMag = m_accelForce * fwdInput;
+                Debug.Log("Increment");
+                m_curSplineIndex = m_spline.ClampIndex(m_curSplineIndex + 1);
             }
 
-        }
-        else if(fwdInput < 0)
-        {
-            //Dont apply brake force if it will make car too slow
-            if (Vector3.SqrMagnitude(Vector3.Project(m_rBody.velocity, transform.forward)) > m_startVelSqr)
-            {
-                fwdForceMag = -m_brakeForce * Mathf.Abs(fwdInput);
-            }
+
+           // Debug.Log(m_curSplineIndex);
+            Debug.DrawLine(transform.position, transform.position + 5 * desiredF, Color.cyan);
+            Quaternion rot = Quaternion.LookRotation(desiredF, hitInfo.normal);
+            transform.rotation = rot;
+            transform.position = predPos;
         }
 
-        //TODO stop it from getting too slow
-
-        Vector3 fwdForce = transform.forward * fwdForceMag;
-        Vector3 sideForce = transform.right * sideForceMag;
-        //Apply the forces
-        m_rBody.AddForceAtPosition(sideForce, m_forcePos.position, ForceMode.VelocityChange);
-        m_rBody.AddForceAtPosition(fwdForce, m_forcePos.position, ForceMode.VelocityChange);
+      
     }
 }
