@@ -58,16 +58,9 @@ Shader "Custom/DestructableShader"
             }
             else if (_destructTime > 0.0f)
             {
-               
-                //prop = 1.0f - prop; 
-                //v.vertex.xyz += v.normal * float3(prop * v.vertex.x,prop * v.vertex.y,prop * v.vertex.z);*/
-                
-                /*uint scrambledId = fmod(v.id + 2731u, 983u);
-                float floatId = float(scrambledId);
-                float modifier = (floatId / 983.0f);*/
-
                 float floatId = float(v.id);
-                float modifier = (floatId / float(_vertexCount));
+                float scrambledId = fmod(floatId + 2731.0f, 983.0f);
+                float modifier = (scrambledId / 983.0f);
 
                 float timeDiff = _highEndTime - _lowEndTime;
                 float myTime = modifier * timeDiff;

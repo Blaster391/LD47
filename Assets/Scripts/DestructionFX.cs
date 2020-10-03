@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteAlways]
 public class DestructionFX : MonoBehaviour
 {
     [SerializeField]
@@ -23,8 +24,14 @@ public class DestructionFX : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _material = GetComponent<Renderer>().material;
+        
+#if UNITY_EDITOR
+        _mesh = GetComponent<MeshFilter>().sharedMesh;
+        _material = GetComponent<Renderer>().sharedMaterial;
+#else
         _mesh = GetComponent<MeshFilter>().mesh;
+        _material = GetComponent<Renderer>().material;
+#endif
         if (!_constructed)
         {
             _destructTime = _highEndTime;
