@@ -8,25 +8,13 @@ public class SurfaceClampedCarController : MonoBehaviour
     public Transform m_forcePos;
     public LayerMask m_trackLayer;
     private Rigidbody m_rBody;
-    public float speed = 1;
-    public float strafe = 0.05f;
+    public float m_speed = 3;
+    public float m_minSpeed = 0.1f;
+    public float m_strafe = 0.05f;
     public Spline m_spline;
 
     private int m_curSplineIndex = 0;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
-
+       
     private bool GetRaycastDownAtNewPosition(Vector3 movementDirection, out RaycastHit hitInfo)
     {
         Ray ray = new Ray(transform.position + movementDirection   , -transform.up);
@@ -43,7 +31,9 @@ public class SurfaceClampedCarController : MonoBehaviour
     {
         RaycastHit hitInfo;
 
-        if (GetRaycastDownAtNewPosition(speed * transform.forward /** Input.GetAxis("Vertical")*/ + transform.right * Input.GetAxis("Horizontal") * strafe, out hitInfo))
+        Vector3 minFwdSpeed = Mathf.Max(m_minSpeed, m_speed * Input.GetAxis("Vertical")) * transform.forward ;
+
+        if (GetRaycastDownAtNewPosition(minFwdSpeed + transform.right * Input.GetAxis("Horizontal") * m_strafe, out hitInfo))
         {
 
             //Get the desired forward from the spline and update our spline indexes if appropriate
@@ -57,7 +47,7 @@ public class SurfaceClampedCarController : MonoBehaviour
 
             Debug.DrawLine(transform.position, transform.position + 5 * desiredF, Color.cyan);
             Quaternion rot = Quaternion.LookRotation(desiredF, hitInfo.normal);
-            float rotSpeed = 75;
+            float rotSpeed = 175;
             float movSpeed = 75;
             transform.rotation = Quaternion.RotateTowards(transform.rotation, rot, Time.deltaTime * rotSpeed);
             transform.position = Vector3.MoveTowards(transform.position, predPos, Time.deltaTime * movSpeed);
