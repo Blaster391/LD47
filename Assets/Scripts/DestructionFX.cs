@@ -9,6 +9,7 @@ public class DestructionFX : MonoBehaviour
     private bool _destroyObjectOnDestruction = false;
     [SerializeField]
     private bool _destructOnCollision = false;
+   
     [SerializeField]
     private bool _constructed = true;
     [SerializeField]
@@ -28,6 +29,9 @@ public class DestructionFX : MonoBehaviour
 
     private float _destructTime = 0.0f;
 
+    private bool _trackKillerObject = false;
+    private GameObject _killerObject = null;
+
     private Material _material;
     private Mesh _mesh;
 
@@ -36,15 +40,24 @@ public class DestructionFX : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        //
+        //        _mesh = GetComponent<MeshFilter>().sharedMesh;
+        //        _material = GetComponent<Renderer>().sharedMaterial;
+        //        GetComponent<Renderer>().sharedMaterial = new Material(Shader.Find("DestructableShader"));
+        //#else
+
 #if UNITY_EDITOR
+
         _mesh = GetComponent<MeshFilter>().sharedMesh;
         _material = GetComponent<Renderer>().sharedMaterial;
 #else
         _mesh = GetComponent<MeshFilter>().mesh;
         _material = GetComponent<Renderer>().material;
-        GetComponent<Renderer>().material = new Material(_material);
 #endif
+
+      //  GetComponent<Renderer>().material = new Material(_material);
+//#endif
         if (!_constructed)
         {
             _destructTime = _highEndTime;
@@ -60,6 +73,7 @@ public class DestructionFX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if(_constructed)
         {
             if(_destructTime > 0.0f)
@@ -86,6 +100,12 @@ public class DestructionFX : MonoBehaviour
         _material.SetFloat("_destructTime", _destructTime);
         _material.SetFloat("_lowEndTime", _lowEndTime);
         _material.SetFloat("_highEndTime", _highEndTime);
+
+        if(_trackKillerObject && _killerObject)
+        {
+            _collisionPosition = _killerObject.transform.position;
+        }
+
         _material.SetVector("_collisionPosition", _collisionPosition);
 
         _material.SetFloat("_burstSizeMax", _burstSizeMax);
@@ -129,6 +149,17 @@ public class DestructionFX : MonoBehaviour
         {
             _constructed = false;
             _collisionPosition = collisionPosition;
+        }
+    }
+
+    public void Destruct(GameObject destroyer)
+    {
+        if (_constructed)
+        {
+            _constructed = false;
+            _collisionPosition = destroyer.transform.position;
+            _killerObject = destroyer;
+            _trackKillerObject = true;
         }
     }
 }

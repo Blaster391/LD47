@@ -40,7 +40,7 @@ public class ScoreOnTrigger : MonoBehaviour
         var destructionComponent = GetComponent<DestructionFX>();
         if(destructionComponent)
         {
-            destructionComponent.Destruct(collider.transform.position);
+            destructionComponent.Destruct(collider.gameObject);
         }
     }
 }
