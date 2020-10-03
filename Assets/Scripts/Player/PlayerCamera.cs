@@ -26,7 +26,7 @@ public class PlayerCamera : MonoBehaviour
         transform.LookAt(_focus.transform, _focus.transform.up);
 
         RaycastHit hit;
-        if (Physics.Raycast(_focus.transform.position, -transform.forward, out hit, Vector3.Distance(transform.position, _focus.transform.position)))
+        if (Physics.Raycast(_focus.transform.position, -transform.forward, out hit, Vector3.Distance(transform.position, _focus.transform.position), ~8, QueryTriggerInteraction.Ignore))
         {
             transform.position = hit.point + (_focus.transform.forward * _wallAvoidDist);
             transform.LookAt(_focus.transform, _focus.transform.up);

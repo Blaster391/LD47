@@ -18,6 +18,11 @@ public class PlayerScore : MonoBehaviour
         _life = GetComponent<PlayerLife>();
     }
 
+    public void AddScore(float score)
+    {
+        _score += score;
+    }
+
     // Update is called once per frame
     void Update()
     {
