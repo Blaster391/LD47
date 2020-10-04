@@ -3,7 +3,17 @@ guid: 0f09834485870af49933734e37b17d04
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TrackCTrees_geo1SG3
+    second: {fileID: 2100000, guid: 541b96ed3312add47aa5e55f7c43c698, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: geo1SG5
+    second: {fileID: 2100000, guid: a9008f4dc4f9e1c4d934c5f9345f050d, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
