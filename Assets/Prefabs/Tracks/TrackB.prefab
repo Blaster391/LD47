@@ -401,6 +401,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1074636792967237213, guid: b20dbf8b5823d4f4ca38d39e4af2bed2, type: 3}
+--- !u!114 &3053326760529664253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071481735802195219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeacc57751d612947967d841579e3783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _streetlightPrefab: {fileID: 603085260153466892, guid: d7e7fc79cf21913469f28b2eccd97b28, type: 3}
+  _minDistance: 50
+  _spline: {fileID: 5947401837610465279}
+  _offsetSize: 8.5
 --- !u!1 &237791879096455454
 GameObject:
   m_ObjectHideFlags: 0

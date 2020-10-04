@@ -14,7 +14,7 @@ public class StreetlightSpawner : MonoBehaviour
     private Spline _spline = null;
 
     [SerializeField]
-    private float _offsetSize = 8.0f;
+    private float _offsetSize = 8.5f;
 
     void Start()
     {
@@ -39,23 +39,23 @@ public class StreetlightSpawner : MonoBehaviour
 
                     lastPlacedPosition = currentPoint.position;
 
-                    var upLamp = Instantiate(_streetlightPrefab);
-                    upLamp.transform.position = currentPoint.position;
-                    upLamp.transform.rotation = currentPoint.rotation;
+                    //var upLamp = Instantiate(_streetlightPrefab);
+                    //upLamp.transform.position = currentPoint.position;
+                    //upLamp.transform.rotation = currentPoint.rotation;
+                    //upLamp.transform.position += offset;
 
-                    if(left)
+                    if (left)
                     {
                         offset = -offset;
                     }
 
-                    upLamp.transform.position += offset;
 
                     var downLamp = Instantiate(_streetlightPrefab);
                     downLamp.transform.position = currentPoint.position;
                     downLamp.transform.position += offset;
-                    downLamp.transform.rotation = currentPoint.rotation;
+                    downLamp.transform.rotation = Quaternion.LookRotation(forward, -up);
 
-                    downLamp.transform.Rotate(new Vector3(1, 0, 0), 180);
+                   // downLamp.transform.Rotate(new Vector3(1, 0, 0), 180);
 
                     left = !left;
                 }

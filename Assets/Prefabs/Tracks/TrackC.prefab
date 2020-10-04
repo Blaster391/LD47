@@ -4847,6 +4847,7 @@ MonoBehaviour:
   _streetlightPrefab: {fileID: 603085260153466892, guid: d7e7fc79cf21913469f28b2eccd97b28, type: 3}
   _minDistance: 50
   _spline: {fileID: 1263727869899879439}
+  _offsetSize: 8.5
 --- !u!1 &5564222052176557674
 GameObject:
   m_ObjectHideFlags: 0
