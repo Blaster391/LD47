@@ -43,10 +43,33 @@ public class Spline : MonoBehaviour
     public Transform[] m_splinePoints;
     private Segment[] m_segments;
 
+    [SerializeField]
+    private bool _autoFindPoints = false;
+
     private void Awake()
     {
+        if (_autoFindPoints)
+        {
+            FindPoints();
+        }
+
         CalculateSplineSegemnts();
+
+
     }
+
+    private void FindPoints()
+    {
+        var points = GetComponentsInChildren<SplinePoint>();
+        m_splinePoints = new Transform[points.Length];
+
+
+        for(int i = 0; i < points.Length; ++i)
+        {
+            m_splinePoints[i] = points[i].transform;
+        }
+    }
+
 
     SplineTransformData CalculateAproxSplineTransformData(float i_splineVal)
     {
