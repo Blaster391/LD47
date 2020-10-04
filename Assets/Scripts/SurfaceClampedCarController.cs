@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class SurfaceClampedCarController : MonoBehaviour
 {
-
-  
     public LayerMask m_trackLayer;
     public float accel = 0.001f;
     public float m_minSpeed = 0.02f;
@@ -13,7 +11,6 @@ public class SurfaceClampedCarController : MonoBehaviour
     public float m_strafeDelta = 0.1f;
     public float m_strafeMax = 1.5f;
     public Spline m_spline;
-    public bool fixedUpdateMode = false;
     public float m_curSpeed = 0.0f;
     public float m_floatDistanceMult = 0.5f;
     public uint m_smoothingFramesU = 10;
@@ -27,7 +24,7 @@ public class SurfaceClampedCarController : MonoBehaviour
     private float m_curSplineT = 0;
     private float m_curStrafe;
     private bool m_active = true;
-
+    private int lapCount = 0;
 
     private void Start()
     {
@@ -66,34 +63,13 @@ public class SurfaceClampedCarController : MonoBehaviour
             m_avgUpBuffer.PushValue(desiredU);
             i_desiredPos += m_avgUpBuffer.GetAverage() * m_floatDistanceMult;
 
-            Quaternion rot = Quaternion.LookRotation(m_avgFwdBuffer.GetAverage(), m_avgUpBuffer.GetAverage()); //Quaternion.LookRotation(i_desiredF, desiredU);// Quaternion.LookRotation(m_avgFwdBuffer.GetAverage(), m_avgUpBuffer.GetAverage());
-            float rotSpeed = 5000;
-            float movSpeed = 75;
-
-
-            transform.rotation = rot;// Quaternion.RotateTowards(transform.rotation, rot, Time.deltaTime * rotSpeed);
-            transform.position = i_desiredPos;// Vector3.MoveTowards(transform.position, i_desiredPos, Time.deltaTime * movSpeed);
-            Debug.DrawLine(i_desiredPos, i_desiredPos + i_desiredF * 3f, Color.cyan);
-            Debug.DrawLine(i_desiredPos, i_desiredPos + right * 3f, Color.red);
-            spherePos2 = i_desiredPos;
-
+            Quaternion rot = Quaternion.LookRotation(m_avgFwdBuffer.GetAverage(), m_avgUpBuffer.GetAverage()); 
+            transform.rotation = rot;
+            transform.position = i_desiredPos;
         }
     }
 
-
-    Vector3 spherePos1;
-    Vector3 spherePos2;
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawSphere(spherePos1, 0.1f);
-
-
-        Gizmos.color = Color.green;
-        Gizmos.DrawSphere(spherePos2, 0.1f);
-    }
-
-    private void UpdateInternal()
+    private void Update()
     {
         if (!m_active)
         {
@@ -108,18 +84,17 @@ public class SurfaceClampedCarController : MonoBehaviour
         m_curSpeed = Mathf.Clamp(m_curSpeed + Input.GetAxis("Vertical") * accel * Time.deltaTime, m_minSpeed, m_maxSpeed);
         m_spline.Lookahead(ref m_curSplineIndex, m_curSpeed, ref m_curSplineT, out desiredF, out desiredPos);
 
-        if(m_curSplineIndex == 0 && splineIndPrev != 0)
+        if (m_curSplineIndex == 0 && splineIndPrev != 0)
         {
-            OnLapComplete();
+            ++lapCount;
+            if (lapCount % 2 == 0)
+            {
+                OnLapComplete();
+            }
         }
-        
 
-       // Debug.Log("Ind " + m_curSplineIndex + "T " + m_curSplineT);
-
-        spherePos1 = desiredPos;
         UpdateTransform(desiredPos, desiredF);
     }
-
 
     private void OnLapComplete()
     {
@@ -128,25 +103,6 @@ public class SurfaceClampedCarController : MonoBehaviour
         {
             playerScore.CompleteLap();
         }
-    }
-
-
-    private void Update()
-    {
-        if (!fixedUpdateMode)
-        {
-            UpdateInternal();
-        }
-
-    }
-
-    private void FixedUpdate()
-    {
-        if (fixedUpdateMode)
-        {
-            UpdateInternal();
-        }
-
     }
 
     private void OnDeath(Vector3 lol)

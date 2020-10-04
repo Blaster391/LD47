@@ -173,16 +173,17 @@ MonoBehaviour:
   m_trackLayer:
     serializedVersion: 2
     m_Bits: 512
-  accel: 0.001
+  accel: 0.05
   m_minSpeed: 0.01
-  m_maxSpeed: 0.02
+  m_maxSpeed: 0.2
   m_strafeDelta: 0.1
   m_strafeMax: 7
   m_spline: {fileID: 0}
   fixedUpdateMode: 0
   m_curSpeed: 0
-  m_floatDistanceMult: 1.5
-  m_smoothingFrames: 10
+  m_floatDistanceMult: 0.3
+  m_smoothingFramesU: 10
+  m_smoothingFramesF: 10
   m_rayOffset: 7
 --- !u!114 &4848933996499922300
 MonoBehaviour:
@@ -211,6 +212,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5db6a99455791b45ac190e0e49b4042, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnLapComplete:
+    m_PersistentCalls:
+      m_Calls: []
   _suvivalScore: 1
   _hudStats: {fileID: 0}
 --- !u!114 &6956268636214890925
