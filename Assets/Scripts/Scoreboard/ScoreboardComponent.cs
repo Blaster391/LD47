@@ -78,6 +78,49 @@ namespace Scoreboard
                 StartCoroutine(GetHighscoresCoroutine(_onRequestComplete, level));
             }
 
+            public void GetTotalForLevel(Func<int, bool, bool> _onRequestComplete, string level)
+            {
+                if (m_connection == null)
+                {
+                    _onRequestComplete(-1, false);
+                    return;
+                }
+
+                StartCoroutine(GetTotalForLevelCoroutine(_onRequestComplete, level));
+            }
+
+            private IEnumerator GetTotalForLevelCoroutine(Func<int, bool, bool> _onRequestComplete, string level)
+            {
+
+                string getUrl = "/api/scoreboard/" + m_connection.GameName + "/total?level=" + level;
+                var request = UnityWebRequest.Get(m_connection.DatabaseAddress + getUrl);
+                yield return request.SendWebRequest();
+
+                if (request.isNetworkError || request.isHttpError)
+                {
+                    Debug.LogError(request.error);
+
+                    _onRequestComplete(-1, false);
+                }
+                else
+                {
+                    Debug.Log("Get request complete!");
+
+                    string resultsString = request.downloadHandler.text;
+                    int resultValue = -1;
+                    if(int.TryParse(resultsString, out resultValue))
+                    {
+                        _onRequestComplete(resultValue, false);
+                    }
+                    else
+                    {
+                        _onRequestComplete(-1, false);
+                    }
+
+                   
+                }
+            }
+
             private IEnumerator GetHighscoresCoroutine(Func<List<ScoreboardCore.Data.ScoreResult>, bool, bool> _onRequestComplete, string level)
             {
 
