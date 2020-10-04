@@ -48,7 +48,7 @@ public class Spline : MonoBehaviour
         CalculateSplineSegemnts();
     }
 
-    SplineTransformData CalculateAproxSplineTransformData(float i_splineVal)
+    public SplineTransformData CalculateAproxSplineTransformData(float i_splineVal)
     {
         SplineTransformData data = new SplineTransformData();
 
