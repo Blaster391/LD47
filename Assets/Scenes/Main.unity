@@ -640,5 +640,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrackMain
       objectReference: {fileID: 0}
+    - target: {fileID: 7400928997761241657, guid: 06dde37de09398b4fa977a6c9fc1a86b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -2782119283110082793, guid: 4772d2cf625400c49879d25eff93a046, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06dde37de09398b4fa977a6c9fc1a86b, type: 3}
