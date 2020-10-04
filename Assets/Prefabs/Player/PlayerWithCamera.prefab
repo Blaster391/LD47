@@ -140,7 +140,7 @@ MonoBehaviour:
   _fastestDistance: 10
   _wallAvoidDist: 0.25
   _forwardTilt: 17.5
-  _useSmoothing: 1
+  _useSmoothing: 0
   _maxMoveDelta: 5000
   _maxTurnDelta: 3000
 --- !u!114 &6188129452444553797
