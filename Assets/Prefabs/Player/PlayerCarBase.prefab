@@ -95,8 +95,8 @@ MonoBehaviour:
   m_spline: {fileID: 0}
   m_curSpeed: 0
   m_floatDistanceMult: 0.3
-  m_smoothingFramesU: 10
-  m_smoothingFramesF: 10
+  m_smoothingFramesU: 3
+  m_smoothingFramesF: 3
   m_rayOffset: 7
 --- !u!114 &4848933996499922300
 MonoBehaviour:
