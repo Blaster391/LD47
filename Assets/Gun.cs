@@ -29,7 +29,7 @@ public class Gun : MonoBehaviour
         m_tSinceFire += Time.deltaTime;
         if(Input.GetKey(m_fire) && m_tSinceFire >= m_fireRate)
         {
-            GameObject bullet = Instantiate(m_bulletPrefab, transform.position, transform.rotation);
+            GameObject bullet = Instantiate(m_bulletPrefab, m_spawnTrans.position, transform.rotation);
             m_tSinceFire = 0;
             m_audioSource.PlayOneShot(m_shootSound);
 
