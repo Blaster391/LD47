@@ -13,6 +13,9 @@ public class StreetlightSpawner : MonoBehaviour
     [SerializeField]
     private Spline _spline = null;
 
+    [SerializeField]
+    private float _offsetSize = 8.0f;
+
     void Start()
     {
         if(_spline)
@@ -20,24 +23,41 @@ public class StreetlightSpawner : MonoBehaviour
             
             Vector3 lastPlacedPosition = _spline.m_splinePoints[0].position;
 
-            for(int i = 1; i < _spline.m_splinePoints.Length - 1; ++i)
+            bool left = false;
+            for (int i = 1; i < _spline.m_splinePoints.Length - 1; ++i)
             {
                 var currentPoint = _spline.m_splinePoints[i];
+                var nextPosition = _spline.m_splinePoints[i + 1];
                 float lastPlacedDistance = Vector3.Distance(lastPlacedPosition, currentPoint.position);
 
                 if(lastPlacedDistance > _minDistance)
                 {
+                    Vector3 forward = (nextPosition.position - currentPoint.position);
+                    Vector3 up = currentPoint.up;
+                    Vector3 offset = Vector3.Cross(forward.normalized, up.normalized);
+                    offset *= _offsetSize;
+
                     lastPlacedPosition = currentPoint.position;
 
                     var upLamp = Instantiate(_streetlightPrefab);
                     upLamp.transform.position = currentPoint.position;
                     upLamp.transform.rotation = currentPoint.rotation;
 
+                    if(left)
+                    {
+                        offset = -offset;
+                    }
+
+                    upLamp.transform.position += offset;
+
                     var downLamp = Instantiate(_streetlightPrefab);
                     downLamp.transform.position = currentPoint.position;
+                    downLamp.transform.position += offset;
                     downLamp.transform.rotation = currentPoint.rotation;
 
                     downLamp.transform.Rotate(new Vector3(1, 0, 0), 180);
+
+                    left = !left;
                 }
             }
 
