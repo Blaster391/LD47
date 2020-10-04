@@ -46,6 +46,12 @@ public class PlayerScore : MonoBehaviour
         _currentLapTime = 0.0f;
         Lap++;
 
+        if (_hudStats)
+        {
+            _hudStats.UpdateLaps(Lap);
+        }
+
+
         OnLapComplete.Invoke();
     }
 
@@ -55,14 +61,16 @@ public class PlayerScore : MonoBehaviour
         if(_life.IsAlive)
         {
             AddScore(Time.deltaTime * _suvivalScore);
-
-            if(_hudStats)
-            {
-                _hudStats.UpdateScore(Mathf.RoundToInt(_score));
-            }
-
             TotalTime += Time.deltaTime;
             _currentLapTime += Time.deltaTime;
+
+            if (_hudStats)
+            {
+                _hudStats.UpdateScore(Mathf.RoundToInt(_score));
+                _hudStats.UpdateTime(TotalTime);
+            }
+
+
         }
     }
 }

@@ -1161,6 +1161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cc18c472cdbb5e4a9b749fdd50b5f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_segmentLengthDelta: 0.01
   m_splinePoints:
   - {fileID: 6008826726631596329}
   - {fileID: 6008826725789720314}
@@ -5875,7 +5876,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6891296619391235955}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.287698, y: 2.2060213, z: -380.7}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
@@ -5911,7 +5912,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 245606e1126b6524caa4ef3c65043131, type: 2}
+  - {fileID: 2100000, guid: f631c58056be9dd41a36ef735f6060ca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
