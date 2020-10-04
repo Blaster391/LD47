@@ -232,7 +232,7 @@ public class Spline : MonoBehaviour
 
         //Get our current spline pos and our next spline pos.
         Vector3 curPos = GetIntraSegmentPos(io_index, io_curT);
-        io_curT = Mathf.Min(io_curT + i_speed, 1.0f);
+        io_curT = Mathf.Min(io_curT + speedNorm, 1.0f);
         o_pos = GetIntraSegmentPos(io_index, io_curT);
         o_fwd = Vector3.Normalize(o_pos - curPos);
 
