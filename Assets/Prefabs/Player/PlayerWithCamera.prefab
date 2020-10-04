@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 6188129452444553797}
   - component: {fileID: 6568232875781788910}
   - component: {fileID: 5325590456049248329}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4113139707282617660}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: PlayerWithCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
