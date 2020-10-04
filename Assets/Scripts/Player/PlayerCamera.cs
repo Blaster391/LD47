@@ -15,6 +15,9 @@ public class PlayerCamera : MonoBehaviour
     private float _distance = 5.0f;
     [SerializeField]
     private float _wallAvoidDist = 0.25f;
+    [SerializeField]
+    private float _forwardTilt = 10.0f;
+
 
     [SerializeField]
     private bool _useSmoothing = true;
@@ -22,6 +25,7 @@ public class PlayerCamera : MonoBehaviour
     private float _maxMoveDelta = 1.0f;
     [SerializeField]
     private float _maxTurnDelta = 1.0f;
+
 
     private float _averageSpeed = 0.0f;
 
@@ -70,6 +74,7 @@ public class PlayerCamera : MonoBehaviour
             _dummyTransform.LookAt(_focus.transform, _focus.transform.up);
         }
 
+        _dummyTransform.Rotate(new Vector3(-1, 0, 0), _forwardTilt);
 
         if (_useSmoothing)
         {
