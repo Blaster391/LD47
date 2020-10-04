@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 namespace Puzzles
 {
@@ -19,6 +20,7 @@ namespace Puzzles
 
         // Currently assuming car is 1, cells 1.5x that.
         public float m_cellSize = 1.5f;
+        public float m_modelScaler = 1f;
         public int m_trackWidthInCells = 5;
 
         public float m_startingDifficulty = 0f;
@@ -30,8 +32,19 @@ namespace Puzzles
         public float m_downwardRaycastLength = 2f;
         public LayerMask m_trackLayer;
 
+        // Visuals
+        [Header("Visuals")]
+        public int m_puzzlesSpawnedAtATime = 3;
+
         // Internal
-        private Dictionary<int, GameObject[,]> m_spawnedObjects = new Dictionary<int, GameObject[,]>();
+        private struct SpawnedPuzzle
+        {
+            public GameObject[,] m_spawnedObjects;
+            public int m_startPuzzleHeight;
+            public int m_endPuzzleHeight;
+            public PuzzleData m_puzzleData;
+        }
+        private Queue<SpawnedPuzzle> m_spawnedPuzzles = new Queue<SpawnedPuzzle>();
 
         // State
         private float m_runningDifficulty = 0f;
@@ -56,26 +69,38 @@ namespace Puzzles
             m_trackLengthPS = m_trackLengthWS / m_cellSize;
             m_trackTPerCell = m_cellSize / m_trackLengthWS;
 
+            m_runningDifficulty = m_startingDifficulty;
+            m_runningDistancePS = m_initialSpaceCellSize;
+
             // For now lets just try and spawn one puzzle
-            Generate();
+            StartCoroutine(GeneratePuzzlesToMax());
         }
 
         List<SplineTransformData> m_splineTransformsCalulated = new List<SplineTransformData>();
+
         void Update()
         {
-            foreach(SplineTransformData std in m_splineTransformsCalulated)
+            float currentDistanceTravelledSS = m_car.GetTotalSplineTraveled();
+            int currentDistanceTravelledPS = Mathf.FloorToInt(currentDistanceTravelledSS * m_trackLengthPS);
+
+            // What we going for here...
+            // If we've started the last puzzle in the queue we spawn the next one, destroy the previous
+            if(m_spawnedPuzzles.Count < 3)
             {
-                Debug.DrawLine(std.m_worldPos, std.m_worldPos + std.m_worldUp * 5, Color.green);
+                return;
+            }
+
+            if(currentDistanceTravelledPS >= m_spawnedPuzzles.Last().m_startPuzzleHeight)
+            {
+                RemovePuzzle();
+                StartCoroutine(GeneratePuzzlesToMax());
             }
         }
 
-        private void Generate()
+        // Must destroy a puzzle first to spawn a new one
+        private IEnumerator GeneratePuzzlesToMax()
         {
-            m_runningDifficulty = m_startingDifficulty;
-
-            int puzzleIndex = 0;
-
-            while (puzzleIndex < 3)
+            while (m_spawnedPuzzles.Count < m_puzzlesSpawnedAtATime)
             {
                 PuzzleAsset selectedPuzzle = SelectPuzzle(m_runningDifficulty);
                 if (selectedPuzzle == null)
@@ -84,12 +109,28 @@ namespace Puzzles
                 }
 
                 float totalTrackT = m_runningDistancePS / m_trackLengthPS;
-                PuzzleData puzzleData = GeneratePuzzle(puzzleIndex, selectedPuzzle.Generator, totalTrackT, totalTrackT % 1f);
+                yield return GeneratePuzzle(selectedPuzzle.Generator, totalTrackT, totalTrackT % 1f);
 
-                m_runningDistancePS += puzzleData.Height;
-                m_runningDifficulty = Mathf.Min(m_runningDifficulty + m_difficultyIncreasePerCell * puzzleData.Height, 1f);
+                int puzzleHeight = m_spawnedPuzzles.Peek().m_puzzleData.Height;
+                m_runningDistancePS += puzzleHeight;
+                m_runningDifficulty = Mathf.Min(m_runningDifficulty + m_difficultyIncreasePerCell * puzzleHeight, 1f);
+            }
+        }
 
-                ++puzzleIndex;
+        private void RemovePuzzle()
+        {
+            SpawnedPuzzle puzzleToRemove = m_spawnedPuzzles.Dequeue();
+
+            // Delete old objects
+            for (int x = 0; x < puzzleToRemove.m_spawnedObjects.GetLength(0); ++x)
+            {
+                for (int y = 0; y < puzzleToRemove.m_spawnedObjects.GetLength(1); ++y)
+                {
+                    if (puzzleToRemove.m_spawnedObjects[x, y] != null)
+                    {
+                        Destroy(puzzleToRemove.m_spawnedObjects[x, y]);
+                    }
+                }
             }
         }
 
@@ -112,14 +153,18 @@ namespace Puzzles
             return possiblePuzzles[Random.Range(0, possiblePuzzles.Count)];
         }
 
-        private PuzzleData GeneratePuzzle(int i_puzzleIndex, IPuzzleGenerator i_puzzleGeneratorIF, float i_startingSplineT, float i_startingSplineTClamped)
+        private IEnumerator GeneratePuzzle(IPuzzleGenerator i_puzzleGeneratorIF, float i_startingSplineT, float i_startingSplineTClamped)
         {
             PuzzleData puzzleData = i_puzzleGeneratorIF.GeneratePuzzle(m_trackWidthInCells, m_runningDifficulty, m_forwardCellsPerSideways);
 
             Vector2Int gridSize = new Vector2Int(puzzleData.Width, puzzleData.Height);
 
-            GameObject[,] spawnedObjects = new GameObject[gridSize.x, gridSize.y];
-            m_spawnedObjects.Add(i_puzzleIndex, spawnedObjects);
+            SpawnedPuzzle spawnedPuzzleData = new SpawnedPuzzle();
+            spawnedPuzzleData.m_spawnedObjects = new GameObject[gridSize.x, gridSize.y];
+            spawnedPuzzleData.m_startPuzzleHeight = m_runningDistancePS;
+            spawnedPuzzleData.m_endPuzzleHeight = m_runningDistancePS + puzzleData.Height;
+            spawnedPuzzleData.m_puzzleData = puzzleData;
+            m_spawnedPuzzles.Enqueue(spawnedPuzzleData);
 
             float GetT(int i_y)
             {
@@ -163,9 +208,12 @@ namespace Puzzles
                             rotationToSpawn = Quaternion.LookRotation(splineTransformData.m_worldFwd.normalized, hit.normal.normalized);
                         }
 
-                        spawnedObjects[x, y] = Instantiate(cell.m_prefabToSpawn, positionToSpawn, rotationToSpawn, transform);
+                        spawnedPuzzleData.m_spawnedObjects[x, y] = Instantiate(cell.m_prefabToSpawn, positionToSpawn, rotationToSpawn, transform);
+                        spawnedPuzzleData.m_spawnedObjects[x, y].transform.localScale *= m_modelScaler;
                     }
                 }
+
+                yield return 0;
             }
 
             // Link
@@ -178,8 +226,8 @@ namespace Puzzles
                     {
                         foreach (Vector2Int cellCoords in cell.m_cellsToLinkTo)
                         {
-                            GameObject objectToLinkFrom = spawnedObjects[x, y];
-                            GameObject objectToLinkTo = spawnedObjects[cellCoords.x, cellCoords.y];
+                            GameObject objectToLinkFrom = spawnedPuzzleData.m_spawnedObjects[x, y];
+                            GameObject objectToLinkTo = spawnedPuzzleData.m_spawnedObjects[cellCoords.x, cellCoords.y];
                             foreach (IActivator activator in objectToLinkFrom.GetComponents<IActivator>())
                             {
                                 foreach (IActivatee activatee in objectToLinkTo.GetComponents<IActivatee>())
@@ -191,8 +239,6 @@ namespace Puzzles
                     }
                 }
             }
-
-            return puzzleData;
         }
     }
 }
