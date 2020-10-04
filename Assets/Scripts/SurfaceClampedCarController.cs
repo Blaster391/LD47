@@ -29,6 +29,9 @@ public class SurfaceClampedCarController : MonoBehaviour
     private bool m_active = true;
     private int lapCount = 0;
 
+    private float m_distTrav = 0;
+    private float m_trackLength;
+
     private void Start()
     {
         m_curSpeed = m_minSpeed;
@@ -44,8 +47,20 @@ public class SurfaceClampedCarController : MonoBehaviour
         {
             life.OnDeath.AddListener(OnDeath);
         }
+        QualitySettings.vSyncCount = 1;
+
+        m_trackLength = m_spline.Length;
     }
 
+    private float GetTotalSplineTraveled()
+    {
+        return m_distTrav / m_trackLength;
+    }
+
+    private float GetClampedSpineTraveled()
+    {
+        return m_distTrav % m_trackLength;
+    }
 
     void UpdateTransform(Vector3 i_desiredPos, Vector3 i_desiredF)
     {
@@ -68,6 +83,8 @@ public class SurfaceClampedCarController : MonoBehaviour
 
             Quaternion rot = Quaternion.LookRotation(m_avgFwdBuffer.GetAverage(), m_avgUpBuffer.GetAverage()); 
             transform.rotation = rot;
+
+            m_distTrav += (i_desiredPos - transform.position).magnitude;
             transform.position = i_desiredPos;
         }
     }
@@ -84,7 +101,7 @@ public class SurfaceClampedCarController : MonoBehaviour
         Vector3 desiredPos;
 
         int splineIndPrev = m_curSplineIndex;
-        m_curSpeed = Mathf.Clamp(m_curSpeed + Input.GetAxis("Vertical") * accel * Time.deltaTime, m_minSpeed, m_maxSpeed);
+        m_curSpeed = Mathf.Clamp(m_curSpeed + Input.GetAxis("Vertical") * accel * Time.fixedDeltaTime, m_minSpeed, m_maxSpeed);
         m_spline.Lookahead(ref m_curSplineIndex, m_curSpeed, ref m_curSplineT, out desiredF, out desiredPos);
 
         if (m_curSplineIndex == 0 && splineIndPrev != 0)
