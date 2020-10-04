@@ -89,15 +89,7 @@ public class LevelScoreManager : MonoBehaviour
         };
 
 
-        Score score = new Score();
-        score.User = PlayerInfo.Instance.Id;
-
-        score.Level = _levelName;
-        score.ScoreValue = Mathf.RoundToInt(playerScore.Score);
-
-        score.ExtraData.Add("Username", PlayerInfo.Instance.Username);
-        score.ExtraData.Add("Time", playerScore.TotalTime.ToString());
-        score.ExtraData.Add("Lap", playerScore.Lap.ToString());
+        Score score = MakePlayerScore();
 
         scoreboardAPI.SubmitResult(score, callback);
         
@@ -140,7 +132,6 @@ public class LevelScoreManager : MonoBehaviour
         score.ExtraData.Add("Username", PlayerInfo.Instance.Username);
         score.ExtraData.Add("Time", playerScore.PreviousLapTime.ToString());
         score.ExtraData.Add("CompletedLaps", playerScore.Lap.ToString());
-
         scoreboardAPI.SubmitResult(score, callback);
 
     }
@@ -174,8 +165,42 @@ public class LevelScoreManager : MonoBehaviour
             return true;
         };
 
-
         scoreboardAPI.GetTotalForLevel(callback, _levelName + "_LAP");
 
+    }
+
+    private void GetScores()
+    {
+        if(PlayerInfo.Instance.Username == "")
+        {
+            return;
+        }
+
+        Score localScore = MakePlayerScore();
+
+        var scoreboardAPI = PlayerInfo.Instance?.GetComponent<ScoreboardComponent>();
+
+    }
+
+    private Score MakePlayerScore()
+    {
+
+        Score score = new Score();
+        var playerScore = PlayerLife.Instance.GetComponent<PlayerScore>();
+        if(!playerScore)
+        {
+            return score;
+        }
+
+        score.User = PlayerInfo.Instance.Id;
+
+        score.Level = _levelName;
+        score.ScoreValue = Mathf.RoundToInt(playerScore.Score);
+
+        score.ExtraData.Add("Username", PlayerInfo.Instance.Username);
+        score.ExtraData.Add("Time", playerScore.TotalTime.ToString());
+        score.ExtraData.Add("Lap", playerScore.Lap.ToString());
+
+        return score;
     }
 }
