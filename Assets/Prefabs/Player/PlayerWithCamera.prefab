@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4113139706347295331}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: DummyTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 6188129452444553797}
   - component: {fileID: 6568232875781788910}
   - component: {fileID: 5325590456049248329}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PlayerCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4113139707282617660}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PlayerWithCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,10 +400,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4113139707282617660}
     m_Modifications:
+    - target: {fileID: 1113197629795998512, guid: 91acd046deab9da45a28b3d8c76af33b, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 1199521339871842612, guid: 91acd046deab9da45a28b3d8c76af33b, type: 3}
       propertyPath: _musicSource1
       value: 
       objectReference: {fileID: 5325590456049248329}
+    - target: {fileID: 3358510623853401240, guid: 91acd046deab9da45a28b3d8c76af33b, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127229370457499789, guid: 91acd046deab9da45a28b3d8c76af33b, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4848933996499922273, guid: 91acd046deab9da45a28b3d8c76af33b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -52.348953
@@ -451,6 +463,26 @@ PrefabInstance:
     - target: {fileID: 4848933996499922279, guid: 91acd046deab9da45a28b3d8c76af33b, type: 3}
       propertyPath: m_Name
       value: PlayerCarBase
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848933996499922279, guid: 91acd046deab9da45a28b3d8c76af33b, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050425961055122350, guid: 91acd046deab9da45a28b3d8c76af33b, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731875159860714889, guid: 91acd046deab9da45a28b3d8c76af33b, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673219835427076114, guid: 91acd046deab9da45a28b3d8c76af33b, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7493914333760306182, guid: 91acd046deab9da45a28b3d8c76af33b, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91acd046deab9da45a28b3d8c76af33b, type: 3}
