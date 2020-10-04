@@ -226,6 +226,10 @@ PrefabInstance:
       propertyPath: m_spline
       value: 
       objectReference: {fileID: 1294261481}
+    - target: {fileID: 4113139706017204394, guid: cea282422ba6ad14cb20e7004fb00585, type: 3}
+      propertyPath: _speedo
+      value: 
+      objectReference: {fileID: 1931831637}
     - target: {fileID: 4113139706017204404, guid: cea282422ba6ad14cb20e7004fb00585, type: 3}
       propertyPath: _hudStats
       value: 
@@ -511,6 +515,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e97dafe5ad82baf449be18249293c8af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1931831637 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8798677343567968240, guid: 3836f9f2516418844b66a4086ae1a40c, type: 3}
+  m_PrefabInstance: {fileID: 1608984564}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d24ed70486c89d459fa6aa427abde1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2105494303

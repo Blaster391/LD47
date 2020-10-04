@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SurfaceClampedCarController : MonoBehaviour
 {
+    [SerializeField]
+    private Speedometer _speedo = null;
+
     public LayerMask m_trackLayer;
     public float accel = 0.001f;
     public float m_minSpeed = 0.02f;
@@ -94,6 +97,7 @@ public class SurfaceClampedCarController : MonoBehaviour
         }
 
         UpdateTransform(desiredPos, desiredF);
+        UpdateSpeedo();
     }
 
     private void OnLapComplete()
@@ -108,5 +112,14 @@ public class SurfaceClampedCarController : MonoBehaviour
     private void OnDeath(Vector3 lol)
     {
         m_active = false;
+    }
+
+    private void UpdateSpeedo()
+    {
+        if(_speedo)
+        {
+            _speedo.MaxSpeed = m_maxSpeed;
+            _speedo.CurrentSpeed = m_curSpeed;
+        }
     }
 }
