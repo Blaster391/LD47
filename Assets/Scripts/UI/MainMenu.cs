@@ -53,6 +53,6 @@ public class MainMenu : MonoBehaviour
 
     public void OnVehicleSelected()
     {
-        SceneManager.LoadScene("Final");
+        SceneManager.LoadScene("Main");
     }
 }
