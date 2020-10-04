@@ -142,7 +142,7 @@ MonoBehaviour:
   _forwardTilt: 17.5
   _useSmoothing: 1
   _maxMoveDelta: 5000
-  _maxTurnDelta: 2400
+  _maxTurnDelta: 3000
 --- !u!114 &6188129452444553797
 MonoBehaviour:
   m_ObjectHideFlags: 0

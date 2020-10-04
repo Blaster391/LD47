@@ -26,6 +26,10 @@ namespace Puzzles
 
         public int m_initialSpaceCellSize = 10;
 
+        public float m_upwardProjectionLengthBeforeDownwardRaycast = 1f;
+        public float m_downwardRaycastLength = 2f;
+        public LayerMask m_trackLayer;
+
         // Internal
         private Dictionary<int, GameObject[,]> m_spawnedObjects = new Dictionary<int, GameObject[,]>();
 
@@ -38,7 +42,7 @@ namespace Puzzles
         private float m_trackTPerCell = 0;
 
         // Updated values
-        private float m_forwardCellsPerSideways = 1f; // Currently not actually updated as expected. Can just expose and tweak tbh
+        private float m_forwardCellsPerSideways = 2f; // Currently not actually updated as expected. Can just expose and tweak tbh
 
         void Start()
         {
@@ -50,15 +54,19 @@ namespace Puzzles
             // Cache some values
             m_trackLengthWS = m_spline.Length;
             m_trackLengthPS = m_trackLengthWS / m_cellSize;
-            m_trackTPerCell = m_cellSize / m_spline.Length;
+            m_trackTPerCell = m_cellSize / m_trackLengthWS;
 
             // For now lets just try and spawn one puzzle
             Generate();
         }
 
+        List<SplineTransformData> m_splineTransformsCalulated = new List<SplineTransformData>();
         void Update()
         {
-
+            foreach(SplineTransformData std in m_splineTransformsCalulated)
+            {
+                Debug.DrawLine(std.m_worldPos, std.m_worldPos + std.m_worldUp * 5, Color.green);
+            }
         }
 
         private void Generate()
@@ -75,7 +83,8 @@ namespace Puzzles
                     break;
                 }
 
-                PuzzleData puzzleData = GeneratePuzzle(puzzleIndex, selectedPuzzle.Generator, (m_runningDistancePS / m_trackLengthPS) % 1f);
+                float totalTrackT = m_runningDistancePS / m_trackLengthPS;
+                PuzzleData puzzleData = GeneratePuzzle(puzzleIndex, selectedPuzzle.Generator, totalTrackT, totalTrackT % 1f);
 
                 m_runningDistancePS += puzzleData.Height;
                 m_runningDifficulty = Mathf.Min(m_runningDifficulty + m_difficultyIncreasePerCell * puzzleData.Height, 1f);
@@ -103,7 +112,7 @@ namespace Puzzles
             return possiblePuzzles[Random.Range(0, possiblePuzzles.Count)];
         }
 
-        private PuzzleData GeneratePuzzle(int i_puzzleIndex, IPuzzleGenerator i_puzzleGeneratorIF, float i_startingSplineT)
+        private PuzzleData GeneratePuzzle(int i_puzzleIndex, IPuzzleGenerator i_puzzleGeneratorIF, float i_startingSplineT, float i_startingSplineTClamped)
         {
             PuzzleData puzzleData = i_puzzleGeneratorIF.GeneratePuzzle(m_trackWidthInCells, m_runningDifficulty, m_forwardCellsPerSideways);
 
@@ -114,27 +123,47 @@ namespace Puzzles
 
             float GetT(int i_y)
             {
-                return i_startingSplineT + i_y * m_trackTPerCell;
+                return i_startingSplineTClamped + i_y * m_trackTPerCell;
             }
 
             // Lets figure out wtf we need to spawn this crap
             for (int y = 0; y < puzzleData.Height; ++y)
             {
-                // Every time we go up one we need to find our new stuff
-                Vector3 splinePos, splineFwd;
-                int segementIndex = 0;
+                // Every time we go up one we need to find our new transform info
                 float splineT = GetT(y);
-                m_spline.GetSplineTransform(segementIndex, splineT, out splineFwd, out splinePos);
+                SplineTransformData splineTransformData = m_spline.CalculateAproxSplineTransformData(splineT);
+
+                int timesAroundTrack = Mathf.FloorToInt(i_startingSplineT);
+                if (timesAroundTrack % 2 == 1) // If odd, flip
+                {
+                    splineTransformData.m_worldUp = -splineTransformData.m_worldUp;
+                }
+                m_splineTransformsCalulated.Add(splineTransformData);
+
+                Vector3 puzzleLeftPos = splineTransformData.m_worldPos - (Vector3.Cross(splineTransformData.m_worldUp.normalized, splineTransformData.m_worldFwd.normalized) * m_cellSize * (m_trackWidthInCells - 1) / 2f);
+                Quaternion objectRotation = Quaternion.LookRotation(splineTransformData.m_worldFwd.normalized, splineTransformData.m_worldUp.normalized);
 
                 for (int x = 0; x < puzzleData.Width; ++x)
                 {
                     PuzzleCell cell = puzzleData.GetCell(x, y);
                     if (cell.m_prefabToSpawn != null)
                     {
+                        Vector3 positionToSpawn = puzzleLeftPos + (objectRotation * new Vector3(x * m_cellSize, 0, 0));
+                        Quaternion rotationToSpawn = objectRotation;
 
-                        // So we have the center of the spline
+                        // Adjust because the track isn't actually flat all the way along
 
-                        //spawnedObjects[x, y] = Instantiate(cell.m_prefabToSpawn, i_startingPosition + new Vector3(x * m_cellSize, 0, y * m_cellSize), Quaternion.identity, transform);
+                        // Lift above the track
+                        Vector3 raycastFrom = positionToSpawn + splineTransformData.m_worldUp * m_upwardProjectionLengthBeforeDownwardRaycast;
+
+                        if(Physics.Raycast(new Ray(raycastFrom, -splineTransformData.m_worldUp), out RaycastHit hit, m_downwardRaycastLength, m_trackLayer))
+                        {
+                            // Adjust
+                            positionToSpawn = hit.point;
+                            rotationToSpawn = Quaternion.LookRotation(splineTransformData.m_worldFwd.normalized, hit.normal.normalized);
+                        }
+
+                        spawnedObjects[x, y] = Instantiate(cell.m_prefabToSpawn, positionToSpawn, rotationToSpawn, transform);
                     }
                 }
             }

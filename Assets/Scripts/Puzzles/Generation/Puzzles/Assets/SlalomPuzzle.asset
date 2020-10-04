@@ -17,8 +17,8 @@ MonoBehaviour:
   m_visibilityMin: 0
   m_visibilityMax: 1
   m_data:
-    m_slalomBarriers: 4
-    m_extraRoadWidthPropMinDif: 0.25
+    m_slalomBarriers: 3
+    m_extraRoadWidthPropMinDif: 0.5
     m_extraRoadWidthPropMaxDif: 0
     m_extraSlalomHeightPerBarrierMinDif: 2
     m_extraSlalomHeightPerBarrierMaxDif: 0
