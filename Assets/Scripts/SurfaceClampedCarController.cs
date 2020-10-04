@@ -52,7 +52,7 @@ public class SurfaceClampedCarController : MonoBehaviour
         m_curStrafe = Mathf.Clamp(m_curStrafe + Input.GetAxis("Horizontal") * m_strafeDelta, -m_strafeMax, m_strafeMax);
 
         //Calculate the right vector at the desired positon based on world up and desired f
-        Vector3 right = Vector3.Normalize( Vector3.Cross(i_desiredF, Vector3.up)); //TODO, acount or dont allow forward to equal up
+        Vector3 right = Vector3.Normalize( Vector3.Cross(i_desiredF, transform.up)); //TODO, acount or dont allow forward to equal up
         i_desiredPos += m_curStrafe * right;
 
         //We have a desired position, now lets raycast down from there to see where the track is 
@@ -71,6 +71,9 @@ public class SurfaceClampedCarController : MonoBehaviour
 
             transform.rotation = rot;// Quaternion.RotateTowards(transform.rotation, rot, Time.deltaTime * rotSpeed);
             transform.position = i_desiredPos;// Vector3.MoveTowards(transform.position, i_desiredPos, Time.deltaTime * movSpeed);
+            Debug.DrawLine(i_desiredPos, i_desiredPos + i_desiredF * 3f, Color.cyan);
+            Debug.DrawLine(i_desiredPos, i_desiredPos + right * 3f, Color.red);
+
 
         }
         else
@@ -95,7 +98,6 @@ public class SurfaceClampedCarController : MonoBehaviour
         m_spline.Lookahead(ref m_curSplineIndex, m_curSpeed, ref m_curSplineT, out desiredF, out desiredPos);
 
         Debug.Log("Ind " + m_curSplineIndex + "T " + m_curSplineT);
-        Debug.DrawLine(desiredPos, desiredPos + desiredF * 3f);
 
         UpdateTransform(desiredPos, desiredF);
     }
