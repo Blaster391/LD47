@@ -313,6 +313,9 @@ public class Spline : MonoBehaviour
 
     void OnDrawGizmos()
     {
+#if UNITY_EDITOR
+        FindPoints();
+#endif
         Gizmos.color = Color.white;
         CalculateSplineSegemnts();
 

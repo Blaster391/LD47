@@ -87,9 +87,9 @@ MonoBehaviour:
   m_trackLayer:
     serializedVersion: 2
     m_Bits: 512
-  accel: 0.05
+  accel: 0.4
   m_minSpeed: 0.01
-  m_maxSpeed: 0.2
+  m_maxSpeed: 1.4
   m_strafeDelta: 0.1
   m_strafeMax: 7
   m_spline: {fileID: 0}
@@ -154,7 +154,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -354,7 +354,7 @@ MonoBehaviour:
   _engineClip: {fileID: 8300000, guid: b8d82eef0d3644088babd5bf50a87f63, type: 3}
   _deathClip: {fileID: 8300000, guid: 8a316ca7e05864928b5109b4dbd20db0, type: 3}
   _lowSpeedPitch: 0
-  _highSpeedPitch: 2
+  _highSpeedPitch: 1.6
 --- !u!82 &6758627045852250847
 AudioSource:
   m_ObjectHideFlags: 0
