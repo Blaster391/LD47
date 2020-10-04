@@ -67,7 +67,7 @@ namespace Scoreboard
                 //SubmitResult(score, callback);
             }
 
-            public void GetHighscores(Func<List<ScoreboardCore.Data.ScoreResult>, bool, bool> _onRequestComplete, string level)
+            public void GetHighscores(Func<List<ScoreboardCore.Data.ScoreResult>, bool, bool> _onRequestComplete, string level, bool _highscoresOnly = true, int _resultsSize = 10)
             {
                 if(m_connection == null)
                 {
@@ -75,7 +75,7 @@ namespace Scoreboard
                     return;
                 }
 
-                StartCoroutine(GetHighscoresCoroutine(_onRequestComplete, level));
+                StartCoroutine(GetHighscoresCoroutine(_onRequestComplete, level, _highscoresOnly, _resultsSize));
             }
 
             public void GetTotalForLevel(Func<int, bool, bool> _onRequestComplete, string level)
@@ -121,10 +121,16 @@ namespace Scoreboard
                 }
             }
 
-            private IEnumerator GetHighscoresCoroutine(Func<List<ScoreboardCore.Data.ScoreResult>, bool, bool> _onRequestComplete, string level)
+            private IEnumerator GetHighscoresCoroutine(Func<List<ScoreboardCore.Data.ScoreResult>, bool, bool> _onRequestComplete, string level, bool _highscoresOnly = true, int _resultsSize = 10)
             {
 
                 string getUrl = "/api/scoreboard/" + m_connection.GameName + "?level=" + level;
+                getUrl += $"&amount={_resultsSize}";
+                if (_highscoresOnly)
+                {
+                    getUrl += "&highscoreOnly=true";
+                }
+
                 var request = UnityWebRequest.Get(m_connection.DatabaseAddress + getUrl);
                 yield return request.SendWebRequest();
 

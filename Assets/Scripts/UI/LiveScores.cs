@@ -68,17 +68,36 @@ public class LiveScores : MonoBehaviour
             return;
         }
 
-        if(_relativeScores.Count == 0)
+        _relativeScoresText.text = "";
+        if (_relativeScores.Count > 0)
         {
-            _relativeScoresText.text = "";
+            foreach(var score in _relativeScores)
+            {
+                if(_relativeScoresText.text != "")
+                {
+                    _relativeScoresText.text += '\n';
+                }
+
+                _relativeScoresText.text += FormatScore(score);
+            }
         }
 
-        if (_highScores.Count == 0)
+        _highScoresText.text = "";
+        if (_highScores.Count > 0)
         {
-            _relativeScoresText.text = "";
+            foreach (var score in _highScores)
+            {
+                if (_highScoresText.text != "")
+                {
+                    _highScoresText.text += '\n';
+                }
+
+                _highScoresText.text += FormatScore(score);
+            }
         }
 
-        if(_highScores.Count != 0 && _relativeScores.Count != 0)
+
+        if (_highScores.Count != 0 && _relativeScores.Count != 0)
         {
             _scoresSeparatorText.text = "-----------------------";
         }
@@ -86,5 +105,10 @@ public class LiveScores : MonoBehaviour
         {
             _scoresSeparatorText.text = "";
         }
+    }
+
+    private string FormatScore(Score _score)
+    {
+        return $"{_score.Ranking}. {_score.Username} - {_score.ScoreValue}";
     }
 }
