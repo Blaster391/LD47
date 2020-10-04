@@ -37,8 +37,16 @@ public class PlayerInfo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Guid guid = Guid.NewGuid();
-        _id = PlayerPrefs.GetString("Player_ID", guid.ToString());
+
+        if(!PlayerPrefs.HasKey("Player_ID"))
+        {
+            Guid guid = Guid.NewGuid();
+            PlayerPrefs.SetString("Player_ID", guid.ToString());
+        }
+
+        _id = PlayerPrefs.GetString("Player_ID");
+ 
+
         _username = PlayerPrefs.GetString("Player_Name", _username);
         PlayerPrefs.Save();
     }
