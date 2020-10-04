@@ -96,7 +96,7 @@ public class LevelScoreManager : MonoBehaviour
 
         score.ExtraData.Add("Username", PlayerInfo.Instance.Username);
         score.ExtraData.Add("Time", playerScore.PreviousLapTime.ToString());
-        score.ExtraData.Add("Lap", playerScore.Lap.ToString());
+        score.ExtraData.Add("CompletedLaps", playerScore.Lap.ToString());
 
         scoreboardAPI.SubmitResult(score, callback);
 

@@ -123,7 +123,11 @@ public class SurfaceClampedCarController : MonoBehaviour
 
     private void OnLapComplete()
     {
-
+        var playerScore = GetComponent<PlayerScore>();
+        if(playerScore)
+        {
+            playerScore.CompleteLap();
+        }
     }
 
 

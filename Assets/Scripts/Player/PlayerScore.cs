@@ -54,7 +54,7 @@ public class PlayerScore : MonoBehaviour
     {
         if(_life.IsAlive)
         {
-            _score += Time.deltaTime * _suvivalScore;
+            AddScore(Time.deltaTime * _suvivalScore);
 
             if(_hudStats)
             {
