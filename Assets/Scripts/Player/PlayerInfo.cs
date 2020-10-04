@@ -12,7 +12,7 @@ public class PlayerInfo : MonoBehaviour
     public string Username { get { return _username; } 
         set
         {
-            _username = value;
+            _username = value.Trim();
             PlayerPrefs.SetString("Player_Name", _username);
             PlayerPrefs.Save();
         }

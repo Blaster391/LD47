@@ -135,6 +135,7 @@ MonoBehaviour:
   _height: 5
   _distance: 8
   _wallAvoidDist: 0.25
+  _forwardTilt: 17.5
   _useSmoothing: 1
   _maxMoveDelta: 5000
   _maxTurnDelta: 2400
