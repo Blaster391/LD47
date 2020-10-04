@@ -13,21 +13,39 @@ namespace Puzzles
     {
         public PuzzleData(int i_width, int i_height)
         {
-            m_puzzleCells = new PuzzleCell[i_width, i_height];
+            for(int x = 0; x < i_width; ++x)
+            {
+                m_puzzleCells.Add(new List<PuzzleCell>());
+
+                for(int y = 0; y < i_height; ++y)
+                {
+                    m_puzzleCells[x].Add(new PuzzleCell());
+                }
+            }
         }
 
-        public int Width { get { return m_puzzleCells.GetLength(0); } }
-        public int Height { get { return m_puzzleCells.GetLength(1); } }
+        public int Width { get { return m_puzzleCells.Count; } }
+        public int Height { get { return m_puzzleCells[0].Count; } }
 
         public PuzzleCell GetCell(int i_x, int i_y)
         {
-            if(m_puzzleCells[i_x, i_y] == null)
+            return m_puzzleCells[i_x][i_y];
+        }
+        public void AddRow()
+        {
+            for (int x = 0; x < Width; ++x)
             {
-                m_puzzleCells[i_x, i_y] = new PuzzleCell();
+                m_puzzleCells[x].Add(new PuzzleCell());
             }
-            return m_puzzleCells[i_x, i_y];
+        }
+        public void AddRows(int i_rows)
+        {
+            for (int i = 0; i < i_rows; ++i)
+            {
+                AddRow();
+            }
         }
 
-        private PuzzleCell[,] m_puzzleCells;
+        private List<List<PuzzleCell>> m_puzzleCells = new List<List<PuzzleCell>>();
     }
 }

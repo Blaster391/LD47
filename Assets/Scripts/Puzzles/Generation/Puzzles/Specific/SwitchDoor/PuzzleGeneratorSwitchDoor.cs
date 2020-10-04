@@ -59,6 +59,13 @@ namespace Puzzles
             // Link
             switchCell.m_cellsToLinkTo.Add(new Vector2Int(gateX, gateY));
 
+            // Add empty cells at the end so the player has time to get back to their next thingy
+            float halfWidth = (i_width - 1) / 2f;
+            int gateOffsetFromCenter = Mathf.CeilToInt(Mathf.Abs(gateX - halfWidth));
+            int extraCellsNeeded = Mathf.CeilToInt(halfWidth) + gateOffsetFromCenter + 1;
+
+            puzzleData.AddRows(extraCellsNeeded);
+
             return puzzleData;
         }
 
