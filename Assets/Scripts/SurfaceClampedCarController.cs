@@ -52,12 +52,12 @@ public class SurfaceClampedCarController : MonoBehaviour
         m_trackLength = m_spline.Length;
     }
 
-    private float GetTotalSplineTraveled()
+    public float GetTotalSplineTraveled()
     {
         return m_distTrav / m_trackLength;
     }
 
-    private float GetClampedSpineTraveled()
+    public float GetClampedSpineTraveled()
     {
         return m_distTrav % m_trackLength;
     }
