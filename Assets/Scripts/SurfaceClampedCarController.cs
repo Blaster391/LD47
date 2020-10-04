@@ -16,7 +16,9 @@ public class SurfaceClampedCarController : MonoBehaviour
     public bool fixedUpdateMode = false;
     public float m_curSpeed = 0.0f;
     public float m_floatDistanceMult = 0.5f;
-    public uint m_smoothingFrames = 10;
+    public uint m_smoothingFramesU = 10;
+    public uint m_smoothingFramesF = 10;
+
     public float m_rayOffset = 1.25f;
 
     private SlidingAverageBuffer m_avgUpBuffer;
@@ -30,8 +32,8 @@ public class SurfaceClampedCarController : MonoBehaviour
     private void Start()
     {
         m_curSpeed = m_minSpeed;
-        m_avgUpBuffer = new SlidingAverageBuffer(m_smoothingFrames);
-        m_avgFwdBuffer = new SlidingAverageBuffer(m_smoothingFrames);
+        m_avgUpBuffer = new SlidingAverageBuffer(m_smoothingFramesU);
+        m_avgFwdBuffer = new SlidingAverageBuffer(m_smoothingFramesF);
 
         //Place car in correct start position
         m_spline.GetSplineTransform(0, 0, out Vector3 fwd, out Vector3 pos);
@@ -47,7 +49,6 @@ public class SurfaceClampedCarController : MonoBehaviour
 
     void UpdateTransform(Vector3 i_desiredPos, Vector3 i_desiredF)
     {
-
         //Apply strafing
         m_curStrafe = Mathf.Clamp(m_curStrafe + -Input.GetAxis("Horizontal") * m_strafeDelta, -m_strafeMax, m_strafeMax);
 
@@ -56,31 +57,40 @@ public class SurfaceClampedCarController : MonoBehaviour
         i_desiredPos += m_curStrafe * right;
 
         //We have a desired position, now lets raycast down from there to see where the track is 
-        if (Physics.Raycast(new Ray(i_desiredPos + transform.up * m_rayOffset, -transform.up), out RaycastHit hit, float.PositiveInfinity, m_trackLayer))
+        Physics.Raycast(new Ray(i_desiredPos + transform.up * m_rayOffset, -transform.up), out RaycastHit hit, float.PositiveInfinity, m_trackLayer);
         {
             //From this we can adjust the position to be above the track and set the cars up vector
-            i_desiredPos += hit.normal * m_floatDistanceMult;
             Vector3 desiredU = hit.normal;
 
             m_avgFwdBuffer.PushValue(i_desiredF);
             m_avgUpBuffer.PushValue(desiredU);
+            i_desiredPos += m_avgUpBuffer.GetAverage() * m_floatDistanceMult;
 
             Quaternion rot = Quaternion.LookRotation(m_avgFwdBuffer.GetAverage(), m_avgUpBuffer.GetAverage()); //Quaternion.LookRotation(i_desiredF, desiredU);// Quaternion.LookRotation(m_avgFwdBuffer.GetAverage(), m_avgUpBuffer.GetAverage());
             float rotSpeed = 5000;
             float movSpeed = 75;
 
+
             transform.rotation = rot;// Quaternion.RotateTowards(transform.rotation, rot, Time.deltaTime * rotSpeed);
             transform.position = i_desiredPos;// Vector3.MoveTowards(transform.position, i_desiredPos, Time.deltaTime * movSpeed);
             Debug.DrawLine(i_desiredPos, i_desiredPos + i_desiredF * 3f, Color.cyan);
             Debug.DrawLine(i_desiredPos, i_desiredPos + right * 3f, Color.red);
-
+            spherePos2 = i_desiredPos;
 
         }
-        else
-        {
-            Debug.LogError("SPLINE HAS GIVEN US A POSITION NOT ON THE TRACK!");
-            return;
-        }
+    }
+
+
+    Vector3 spherePos1;
+    Vector3 spherePos2;
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(spherePos1, 0.1f);
+
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawSphere(spherePos2, 0.1f);
     }
 
     private void UpdateInternal()
@@ -94,13 +104,28 @@ public class SurfaceClampedCarController : MonoBehaviour
         Vector3 desiredF;
         Vector3 desiredPos;
 
+        int splineIndPrev = m_curSplineIndex;
         m_curSpeed = Mathf.Clamp(m_curSpeed + Input.GetAxis("Vertical") * accel * Time.deltaTime, m_minSpeed, m_maxSpeed);
         m_spline.Lookahead(ref m_curSplineIndex, m_curSpeed, ref m_curSplineT, out desiredF, out desiredPos);
 
-        Debug.Log("Ind " + m_curSplineIndex + "T " + m_curSplineT);
+        if(m_curSplineIndex == 0 && splineIndPrev != 0)
+        {
+            OnLapComplete();
+        }
+        
 
+       // Debug.Log("Ind " + m_curSplineIndex + "T " + m_curSplineT);
+
+        spherePos1 = desiredPos;
         UpdateTransform(desiredPos, desiredF);
     }
+
+
+    private void OnLapComplete()
+    {
+
+    }
+
 
     private void Update()
     {
