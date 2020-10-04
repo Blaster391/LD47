@@ -230,21 +230,25 @@ PrefabInstance:
       propertyPath: _hudStats
       value: 
       objectReference: {fileID: 1608984565}
+    - target: {fileID: 4113139706017204406, guid: cea282422ba6ad14cb20e7004fb00585, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -16.66
+      objectReference: {fileID: 0}
     - target: {fileID: 4113139706425290188, guid: cea282422ba6ad14cb20e7004fb00585, type: 3}
       propertyPath: m_LocalPosition.x
       value: -60.18
       objectReference: {fileID: 0}
     - target: {fileID: 4113139707282617660, guid: cea282422ba6ad14cb20e7004fb00585, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 150.63232
+      value: 147.63
       objectReference: {fileID: 0}
     - target: {fileID: 4113139707282617660, guid: cea282422ba6ad14cb20e7004fb00585, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.790002
+      value: 6.38
       objectReference: {fileID: 0}
     - target: {fileID: 4113139707282617660, guid: cea282422ba6ad14cb20e7004fb00585, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -428.89645
+      value: -423.03
       objectReference: {fileID: 0}
     - target: {fileID: 4113139707282617660, guid: cea282422ba6ad14cb20e7004fb00585, type: 3}
       propertyPath: m_LocalRotation.x
