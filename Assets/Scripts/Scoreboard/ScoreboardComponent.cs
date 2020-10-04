@@ -35,16 +35,36 @@ namespace Scoreboard
             {
                 TextAsset connectionText = Resources.Load<TextAsset>(m_scoreboardConnectionFile);
 
+                if(connectionText == null)
+                {
+                    return;
+                }
+
                 m_connection = JsonConvert.DeserializeObject<ScoreboardConnection>(connectionText.text);
 
                 // For testing
                 //Score score = new Score();
-                //score.Level = "Test";
-                //score.User = "Oscar Biggs";
-                //score.ScoreValue = 123;
-                //score.ExtraData.Add("test", "data");
+                //score.Level = "Lap";
+                //score.User = "TEST_ID_3";
+                //score.ScoreValue = 999;
+                //score.ExtraData.Add("Username", "Shane");
 
-                //SubmitResult(score);
+
+                //Func<bool, string, bool> callback = (success, result) =>
+                //{
+                //    if (success)
+                //    {
+                //        Debug.Log("SUCCESS");
+                //    }
+                //    else
+                //    {
+                //        Debug.Log("FAIL");
+                //    }
+
+                //    return true;
+                //};
+
+                //SubmitResult(score, callback);
             }
 
             public void GetHighscores(Func<List<ScoreboardCore.Data.ScoreResult>, bool, bool> _onRequestComplete, string level)
