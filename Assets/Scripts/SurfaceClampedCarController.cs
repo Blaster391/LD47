@@ -72,7 +72,7 @@ public class SurfaceClampedCarController : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (!m_active)
         {
