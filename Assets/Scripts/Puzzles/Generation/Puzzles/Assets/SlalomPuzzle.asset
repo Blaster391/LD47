@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bcbce60ac08ae246a98483963c5f21a, type: 3}
+  m_Name: SlalomPuzzle
+  m_EditorClassIdentifier: 
+  m_difficultyMin: 0
+  m_difficultyMax: 1
+  m_visibilityMin: 0
+  m_visibilityMax: 1
+  m_data:
+    m_slalomBarriers: 4
+    m_extraRoadWidthPropMinDif: 0.25
+    m_extraRoadWidthPropMaxDif: 0
+    m_extraSlalomHeightPerBarrierMinDif: 2
+    m_extraSlalomHeightPerBarrierMaxDif: 0
+    m_slalomWallPrefab: {fileID: 215526712701257797, guid: 76b379d09a9e1884da928c7d70113c90, type: 3}
+    m_leftWallPrefab: {fileID: 215526712701257797, guid: de71910d2fcb78943ac3558c676387ae, type: 3}
+    m_rightWallPrefab: {fileID: 215526712701257797, guid: 9bd0a201e3ca18048b0ba09eea47ff61, type: 3}
+    m_leftDiagonalWallPrefab: {fileID: 215526712701257797, guid: 54b3e1f685a768c4ca6acba650c0af88, type: 3}
+    m_rightDiagonalWallPrefab: {fileID: 215526712701257797, guid: 536c6f4e30de0124887249aaadf9f873, type: 3}

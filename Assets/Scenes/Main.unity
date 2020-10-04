@@ -238,13 +238,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -16.66
       objectReference: {fileID: 0}
+    - target: {fileID: 4113139706425290177, guid: cea282422ba6ad14cb20e7004fb00585, type: 3}
+      propertyPath: _forwardTilt
+      value: 17.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4113139706425290188, guid: cea282422ba6ad14cb20e7004fb00585, type: 3}
       propertyPath: m_LocalPosition.x
       value: -60.18
       objectReference: {fileID: 0}
     - target: {fileID: 4113139707282617660, guid: cea282422ba6ad14cb20e7004fb00585, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 147.63
+      value: 148.31
       objectReference: {fileID: 0}
     - target: {fileID: 4113139707282617660, guid: cea282422ba6ad14cb20e7004fb00585, type: 3}
       propertyPath: m_LocalPosition.y
@@ -252,7 +256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4113139707282617660, guid: cea282422ba6ad14cb20e7004fb00585, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -423.03
+      value: -425.43
       objectReference: {fileID: 0}
     - target: {fileID: 4113139707282617660, guid: cea282422ba6ad14cb20e7004fb00585, type: 3}
       propertyPath: m_LocalRotation.x
@@ -640,5 +644,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrackMain
       objectReference: {fileID: 0}
+    - target: {fileID: 7400928997761241657, guid: 06dde37de09398b4fa977a6c9fc1a86b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -2782119283110082793, guid: 4772d2cf625400c49879d25eff93a046, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06dde37de09398b4fa977a6c9fc1a86b, type: 3}

@@ -10,11 +10,25 @@ public class PlayerCamera : MonoBehaviour
     private Transform _dummyTransform = null;
 
     [SerializeField]
-    private float _height = 1.0f;
+    private float _slowestSpeed = 1.0f;
     [SerializeField]
-    private float _distance = 5.0f;
+    private float _fastestSpeed = 1.0f;
+
+    [SerializeField]
+    private float _slowestHeight = 1.0f;
+    [SerializeField]
+    private float _fastestHeight = 1.0f;
+
+    [SerializeField]
+    private float _slowestDistance = 5.0f;
+    [SerializeField]
+    private float _fastestDistance = 5.0f;
+
     [SerializeField]
     private float _wallAvoidDist = 0.25f;
+    [SerializeField]
+    private float _forwardTilt = 10.0f;
+
 
     [SerializeField]
     private bool _useSmoothing = true;
@@ -22,6 +36,7 @@ public class PlayerCamera : MonoBehaviour
     private float _maxMoveDelta = 1.0f;
     [SerializeField]
     private float _maxTurnDelta = 1.0f;
+
 
     private float _averageSpeed = 0.0f;
 
@@ -51,6 +66,15 @@ public class PlayerCamera : MonoBehaviour
             return;
         }
 
+        float currentSpeed = _carController.m_curSpeed;
+        currentSpeed = Mathf.Min(currentSpeed, _fastestSpeed);
+        currentSpeed = Mathf.Max(currentSpeed, _slowestSpeed);
+
+        float speedDiff = _fastestSpeed - _slowestSpeed;
+
+        float speedProp = (currentSpeed - _slowestSpeed) / speedDiff;
+        float height = Mathf.Lerp(_slowestHeight, _fastestHeight, speedProp);
+        float distance = Mathf.Lerp(_slowestDistance, _fastestDistance, speedProp);
 
         if (_carController)
         {
@@ -58,7 +82,7 @@ public class PlayerCamera : MonoBehaviour
             _averageSpeed /= 2.0f;
         }
 
-        _dummyTransform.position = _focus.transform.position + (_focus.transform.up * _height) - (_focus.transform.forward * _distance);
+        _dummyTransform.position = _focus.transform.position + (_focus.transform.up * height) - (_focus.transform.forward * distance);
         _dummyTransform.LookAt(_focus.transform.position, _focus.transform.up);
 
 
@@ -70,6 +94,7 @@ public class PlayerCamera : MonoBehaviour
             _dummyTransform.LookAt(_focus.transform, _focus.transform.up);
         }
 
+        _dummyTransform.Rotate(new Vector3(-1, 0, 0), _forwardTilt);
 
         if (_useSmoothing)
         {
