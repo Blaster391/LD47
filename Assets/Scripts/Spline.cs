@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
+using System.Linq;
 
 public class Spline : MonoBehaviour
 {
     const float c_resolutionDebug = 0.2f;
     public float m_segmentLengthDelta = 0.01f; //MUST BE SAME AS MIN SPEED
+
+    public float Length { get { return m_segments.Sum(segment => segment.m_length); } }
+    public Vector3 Start { get { Vector3 startPos, fwd; GetSplineTransform(0, 0, out fwd, out startPos); return startPos; } }
 
     //Each segment of the spline can be defined by the four spline paramaters.
     private struct Segment

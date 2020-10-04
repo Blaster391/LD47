@@ -27,6 +27,7 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         _firstButton.Select();
+        _nameText.text = PlayerInfo.Instance.Username;
     }
 
     public void OnPlayButtonSelected()
@@ -45,6 +46,8 @@ public class MainMenu : MonoBehaviour
     public void OnNameInputted()
     {
         string playerName = _nameText.text;
+
+        PlayerInfo.Instance.Username = playerName;
 
         _inputField.gameObject.SetActive(false);
 
