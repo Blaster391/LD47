@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -206,6 +206,10 @@ public class Spline : MonoBehaviour
     //Update the index and curT, and return a new position and forward vec
     public void Lookahead(ref int io_index, float i_speed, ref float io_curT, out Vector3 o_fwd, out Vector3 o_pos)
     {
+        //Normalise the speed
+        float speedNorm = i_speed / m_segments[io_index].m_length;
+
+
         //Get our current spline pos and our next spline pos.
         Vector3 curPos = GetIntraSegmentPos(io_index, io_curT);
         io_curT = Mathf.Min(io_curT + i_speed, 1.0f);
