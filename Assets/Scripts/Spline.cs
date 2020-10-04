@@ -6,6 +6,7 @@ using UnityEngine.Assertions;
 public class Spline : MonoBehaviour
 {
     const float c_resolutionDebug = 0.2f;
+    public float m_segmentLengthDelta = 0.01f; //MUST BE SAME AS MIN SPEED
 
     //Each segment of the spline can be defined by the four spline paramaters.
     private struct Segment
@@ -16,18 +17,20 @@ public class Spline : MonoBehaviour
             m_b = b;
             m_c = c;
             m_d = d;
+            m_length = 0;
         }
 
         public Vector3 m_a;
         public Vector3 m_b;
         public Vector3 m_c;
         public Vector3 m_d;
+        public float m_length;
     }
 
     public Transform[] m_splinePoints;
     private Segment[] m_segments;
 
-    private void Start()
+    private void Awake()
     {
         CalculateSplineSegemnts();
     }
@@ -56,6 +59,17 @@ public class Spline : MonoBehaviour
         Vector3 c = (2.0f * p0) - (5.0f * p1) + (4.0f * p2) - p3;
         Vector3 d = -p0 + (3.0f * p1) - (3.0f * p2) + p3;
         o_segment = new Segment(a, b, c, d);
+
+        //Walk the segment to determine its length 
+        Vector3 prevPos = p1;
+        for (int i = 0; i < (int)(1f / m_segmentLengthDelta); ++i)
+        {
+            float t = (i + 1) * c_resolutionDebug;
+
+            Vector3 curPos = GetIntraSegmentPos(o_segment, t);
+            o_segment.m_length += Vector3.Magnitude(curPos - prevPos);
+            prevPos = curPos;
+        }
     }
 
     //Get position some arbitrary distance along a spline segment
@@ -65,6 +79,36 @@ public class Spline : MonoBehaviour
         return 0.5f * (i_segment.m_a + (i_segment.m_b * t) + (i_segment.m_c * Mathf.Pow(t, 2)) + (i_segment.m_d * Mathf.Pow(t, 3)));
     }
 
+
+    //Update the index and curT, and return a new position and forward vec
+    public void Lookahead(ref int io_index, float i_speed, ref float io_curT, out Vector3 o_fwd, out Vector3 o_pos)
+    {
+        //Get our current spline pos and our next spline pos.
+        Vector3 curPos = GetIntraSegmentPos(io_index, io_curT);
+        io_curT = Mathf.Min(io_curT + i_speed, 1.0f);
+        o_pos = GetIntraSegmentPos(io_index, io_curT);
+        o_fwd = Vector3.Normalize(o_pos - curPos);
+
+        //Have we reached end of cur segment?
+        if(Mathf.Approximately(io_curT, 1.0f))
+        {
+            io_curT = 0;
+            io_index = ClampIndex(io_index + 1);
+        }
+    }
+
+    public void GetSplineTransform(int io_index, float i_t, out Vector3 o_fwd, out Vector3 o_pos)
+    {
+        if(i_t == 1)
+        {
+            Debug.LogError("do not");
+        }
+        o_pos = GetIntraSegmentPos(io_index, i_t);
+        float peekT = Mathf.Min(i_t + m_segmentLengthDelta, 1);
+        Vector3 o_peekPos = GetIntraSegmentPos(io_index, peekT);
+
+        o_fwd = Vector3.Normalize(o_peekPos - o_pos);
+    }
 
     public Vector3 GetSplineForwardVec(int i_segmentInd, Vector3 i_curPos, Vector3 i_predictedPosition, ref bool o_incSplineInd)
     {
