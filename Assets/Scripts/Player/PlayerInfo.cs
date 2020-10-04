@@ -15,8 +15,6 @@ public class PlayerInfo : MonoBehaviour
             _username = value;
             PlayerPrefs.SetString("Player_Name", _username);
             PlayerPrefs.Save();
-
-            Debug.Log("Player Prefs Saved");
         }
     }
 
@@ -42,8 +40,6 @@ public class PlayerInfo : MonoBehaviour
         Guid guid = Guid.NewGuid();
         _id = PlayerPrefs.GetString("Player_ID", guid.ToString());
         _username = PlayerPrefs.GetString("Player_Name", _username);
-        Debug.Log(PlayerInfo.Instance.Username);
-
         PlayerPrefs.Save();
     }
 }
