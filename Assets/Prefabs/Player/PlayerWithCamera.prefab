@@ -132,8 +132,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _focus: {fileID: 4113139706017204400}
   _dummyTransform: {fileID: 4113139706347295331}
-  _height: 5
-  _distance: 8
+  _slowestSpeed: 0.01
+  _fastestSpeed: 0.5
+  _slowestHeight: 5
+  _fastestHeight: 1
+  _slowestDistance: 8
+  _fastestDistance: 14
   _wallAvoidDist: 0.25
   _forwardTilt: 17.5
   _useSmoothing: 1
