@@ -32,9 +32,10 @@ namespace Puzzles
              *  |---- ---|
              */
 
+            int openingGapWidth = 1 + Mathf.CeilToInt(Mathf.Lerp(m_data.m_extraEntryWidthMinDif, m_data.m_extraEntryWidthMaxDif, i_difficulty));
 
             // Now figure out how much height we need for the SimpleSlalom
-            int slalomVerticalSpacePerBarrier = Mathf.CeilToInt((i_width - 1) * i_forwardCellsPerSideways) + Mathf.CeilToInt(Mathf.Lerp(m_data.m_extraHeightPerBarrierMinDif, m_data.m_extraHeightPerBarrierMaxDif, i_difficulty));
+            int slalomVerticalSpacePerBarrier = Mathf.CeilToInt((i_width - openingGapWidth) * i_forwardCellsPerSideways) + Mathf.CeilToInt(Mathf.Lerp(m_data.m_extraHeightPerBarrierMinDif, m_data.m_extraHeightPerBarrierMaxDif, i_difficulty));
             int slalomHeight = m_data.m_slalomBarriers + (m_data.m_slalomBarriers - 1) * slalomVerticalSpacePerBarrier;
 
             // Super simple to start
@@ -50,7 +51,6 @@ namespace Puzzles
 
             // SimpleSlalom
             bool isLeft = (Random.Range(0f, 1f) > 0.5f) ? true : false;
-            int openingGapWidth = 1 + Mathf.CeilToInt(Mathf.Lerp(m_data.m_extraEntryWidthMinDif, m_data.m_extraEntryWidthMaxDif, i_difficulty));
             for(int barrierIndex = 0; barrierIndex < m_data.m_slalomBarriers; ++barrierIndex)
             {
                 int gapStartIndex = (isLeft ? 0 : i_width - openingGapWidth);
