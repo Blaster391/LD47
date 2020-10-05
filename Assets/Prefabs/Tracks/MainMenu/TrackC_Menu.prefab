@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4b91eddb824c441bd1500ca6b6fd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PublicName: TODO Oval
+  PublicName: Hawkins Superhighway
 --- !u!1001 &4436916488413699668
 PrefabInstance:
   m_ObjectHideFlags: 0

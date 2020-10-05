@@ -47,6 +47,7 @@ MonoBehaviour:
   m_car: {fileID: 0}
   m_clutter:
   - {fileID: 5413204410443819966, guid: f052a112327432045bfacc5466ac2a4b, type: 3}
+  - {fileID: 2169955065508341867, guid: 1f82393825508aa42a814d946791c552, type: 3}
   m_clutterMin: 0
   m_clutterMax: 10
   m_puzzlesToSpawn:
