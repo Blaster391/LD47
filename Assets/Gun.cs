@@ -39,13 +39,13 @@ public class Gun : MonoBehaviour
         Vector3 upToUse = cosUp > 0 ? Vector3.up : Vector3.down; 
         float cosFwd = Vector3.Dot(upToUse, PlayerLife.Instance.transform.forward);
         //Going up a hill
-        if(cosFwd > 0.03)
+        if(cosFwd > 0.06)
         {
             transform.localRotation = Quaternion.Euler(-m_maxRotate + 90, 0, 0);
 
         }
         //Going down
-        else if(cosFwd < -0.03)
+        else if(cosFwd < -0.06)
         {
             transform.localRotation = Quaternion.Euler(m_maxRotate + 90, 0, 0);
 
