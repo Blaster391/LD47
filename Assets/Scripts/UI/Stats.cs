@@ -63,7 +63,7 @@ public class Stats : MonoBehaviour
 
     private string FormatTimeAlive()
     {
-        string timeAlive = $"{_currentStats.secondsAlive / SECONDS_PER_MINUTE:0}m ";
+        string timeAlive = $"{Mathf.Floor(_currentStats.secondsAlive / SECONDS_PER_MINUTE):0}m ";
         timeAlive += $"{_currentStats.secondsAlive % SECONDS_PER_MINUTE:0}s";
 
         return timeAlive;
