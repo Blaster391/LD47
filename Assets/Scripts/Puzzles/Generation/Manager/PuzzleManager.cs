@@ -39,7 +39,7 @@ namespace Puzzles
 
         // Internal
 
-        private struct SpawnedPuzzle
+        private class SpawnedPuzzle
         {
             public GameObject[,] m_spawnedObjects;
             public int m_startPuzzleHeight;
