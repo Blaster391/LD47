@@ -63,6 +63,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8898932142ad80043a73808947a0ea60, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ac0c95fedcf64c4597fa16df7fd0bb9, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8898932142ad80043a73808947a0ea60, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9c075c846da21b541a09f7e1c23002c1, type: 2}
     - target: {fileID: 919132149155446097, guid: 8898932142ad80043a73808947a0ea60, type: 3}
       propertyPath: m_Name
       value: Weapon_Small_Base
@@ -317,6 +325,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3ddc915eb8ef23846a7aaeb314c5a0b0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f9babaab5a6964844b48e11db829384d, type: 2}
     - target: {fileID: 919132149155446097, guid: 3ddc915eb8ef23846a7aaeb314c5a0b0, type: 3}
       propertyPath: m_Name
       value: Weapon_Small_Barrel
