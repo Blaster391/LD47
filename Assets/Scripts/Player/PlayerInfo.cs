@@ -34,8 +34,12 @@ public class PlayerInfo : MonoBehaviour
     private static PlayerInfo m_instance = null;
     public static PlayerInfo Instance { get { return m_instance; } }
 
+    Resolution _initialRes;
     void Awake()
     {
+        _initialRes = Screen.currentResolution;
+        Screen.SetResolution(_initialRes.width, _initialRes.height, FullScreenMode.FullScreenWindow);
+
         if (m_instance == null)
         {
             m_instance = this;
@@ -65,5 +69,30 @@ public class PlayerInfo : MonoBehaviour
 
         _username = PlayerPrefs.GetString("Player_Name", _username);
         PlayerPrefs.Save();
+    }
+
+
+    bool _lockedTo1080 = false;
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.F12))
+        {
+            if(_initialRes.width < 1920)
+            {
+                return;
+            }
+            
+            if (!_lockedTo1080)
+            {
+                Screen.SetResolution(1920, 1080, FullScreenMode.ExclusiveFullScreen);
+            }
+            else
+            {
+                Screen.SetResolution(_initialRes.width, _initialRes.height, FullScreenMode.FullScreenWindow);
+            }
+
+            _lockedTo1080 = !_lockedTo1080;
+        }
+
     }
 }
