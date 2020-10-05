@@ -232,7 +232,7 @@ namespace Puzzles
                             rotationToSpawn = Quaternion.LookRotation(splineTransformData.m_worldFwd.normalized, hit.normal.normalized);
                         }
 
-                        spawnedPuzzleData.m_spawnedObjects[x, y] = Instantiate(cell.m_prefabToSpawn, positionToSpawn, rotationToSpawn, transform);
+                        spawnedPuzzleData.m_spawnedObjects[x, y] = Instantiate(cell.m_prefabToSpawn, positionToSpawn, cell.m_prefabRotation * rotationToSpawn, transform);
                         spawnedPuzzleData.m_spawnedObjects[x, y].transform.localScale *= m_modelScaler;
                     }
                 }

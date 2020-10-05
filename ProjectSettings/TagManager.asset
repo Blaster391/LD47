@@ -6,6 +6,7 @@ TagManager:
   tags:
   - HUD
   - Target
+  - Car
   layers:
   - Default
   - TransparentFX
