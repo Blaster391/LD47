@@ -180,8 +180,12 @@ public class DestructionFX : MonoBehaviour
 
     public void PlayShotSound()
     {
-        _audioSource.clip = _shotAudio;
-        _audioSource.Play();
+        if(_audioSource && _shotAudio)
+        {
+            _audioSource.clip = _shotAudio;
+            _audioSource.Play();
+        }
+
     }
 
     public void Construct(Vector3 collisionPosition)
