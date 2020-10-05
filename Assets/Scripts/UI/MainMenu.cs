@@ -66,6 +66,7 @@ public class MainMenu : MonoBehaviour
         _controlButs.SetActive(true);
         _inputField.SetTextWithoutNotify(PlayerInfo.Instance.Username);
         _nameText.text = PlayerInfo.Instance.Username;
+        OnNameChanged();
     }
 
     public void OnLeaderboardSelected()
@@ -87,7 +88,8 @@ public class MainMenu : MonoBehaviour
 
     public void OnNameChanged()
     {
-        if (_inputField.text.Length == 0)
+        string name = _inputField.text.Trim();
+        if (name.Length == 0)
         {
             _submitButton.interactable = false;
         }
@@ -102,10 +104,13 @@ public class MainMenu : MonoBehaviour
         switch (_leStage)
         {
             case EMenuStage.NameEntry:
-                PlayerInfo.Instance.Username = _nameText.text;
-                _leStage = EMenuStage.VroomVrooms;
-                _nameEntry.SetActive(false);
-                _vehicleSelect.SetActive(true);
+                if(_nameText.text.Trim() != string.Empty)
+                {
+                    PlayerInfo.Instance.Username = _nameText.text;
+                    _leStage = EMenuStage.VroomVrooms;
+                    _nameEntry.SetActive(false);
+                    _vehicleSelect.SetActive(true);
+                }
                 break;
             case EMenuStage.VroomVrooms:
                 _titleText.text = _trackTitle;
