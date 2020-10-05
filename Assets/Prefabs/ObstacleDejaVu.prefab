@@ -88,6 +88,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2169955065508341876}
     m_Modifications:
+    - target: {fileID: 792736004464423288, guid: 554f5241bc5f4754a943bf770f723e15, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079910492587314541, guid: 554f5241bc5f4754a943bf770f723e15, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7015456026371138259, guid: 554f5241bc5f4754a943bf770f723e15, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -132,9 +140,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7173452502270088782, guid: 554f5241bc5f4754a943bf770f723e15, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7642670942376294505, guid: 554f5241bc5f4754a943bf770f723e15, type: 3}
       propertyPath: m_Name
       value: BaseDejaVuRender
+      objectReference: {fileID: 0}
+    - target: {fileID: 8721085137444625906, guid: 554f5241bc5f4754a943bf770f723e15, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 554f5241bc5f4754a943bf770f723e15, type: 3}
