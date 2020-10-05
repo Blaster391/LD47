@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: aiStandardSurface1
-    second: {fileID: 2100000, guid: 245606e1126b6524caa4ef3c65043131, type: 2}
+      name: BaseMetal
+    second: {fileID: -2782119283110082793, guid: 4772d2cf625400c49879d25eff93a046, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Neon
+    second: {fileID: 2100000, guid: bd70fd03ebb2f36408d8a8eea87ca162, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
