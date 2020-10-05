@@ -78,6 +78,7 @@ namespace Puzzles
             {
                 int randomObject = Random.Range(0, _randomObjects.Count);
                 potentialCell[i].m_prefabToSpawn = _randomObjects[randomObject];
+                potentialCell[i].m_prefabRotation = Quaternion.AngleAxis(Random.value * 360, new Vector3(0, 1, 0));
             }
         }
 
