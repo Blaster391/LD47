@@ -45,6 +45,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_spline: {fileID: 0}
   m_car: {fileID: 0}
+  m_clutter:
+  - {fileID: 5413204410443819966, guid: f052a112327432045bfacc5466ac2a4b, type: 3}
+  m_clutterMin: 0
+  m_clutterMax: 10
   m_puzzlesToSpawn:
   - {fileID: 11400000, guid: abd271f63519acb498492755a287580c, type: 2}
   - {fileID: 11400000, guid: 2aeaf3e64a8d4e148aa365c422bd9945, type: 2}

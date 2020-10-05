@@ -47,5 +47,51 @@ namespace Puzzles
         }
 
         private List<List<PuzzleCell>> m_puzzleCells = new List<List<PuzzleCell>>();
+
+
+        public void FillRandomClutter(List<GameObject> _randomObjects, int _minClutter, int _maxClutter)
+        {
+            if(_randomObjects.Count == 0)
+            {
+                return;
+            }
+
+            List<PuzzleCell> potentialCell = new List<PuzzleCell>();
+            for (int x = 0; x < Width; ++x)
+            {
+                for (int y = 0; y < Height; ++y)
+                {
+                    if(m_puzzleCells[x][y].m_prefabToSpawn == null)
+                    {
+                        potentialCell.Add(m_puzzleCells[x][y]);
+                    }
+                }
+            }
+
+            Shuffle(potentialCell);
+
+
+            int randomClutterAmount = Random.Range(_minClutter, _maxClutter);
+            randomClutterAmount = Mathf.Min(randomClutterAmount, potentialCell.Count);
+
+            for (int i = 0; i < randomClutterAmount; ++i)
+            {
+                int randomObject = Random.Range(0, _randomObjects.Count - 1);
+                potentialCell[i].m_prefabToSpawn = _randomObjects[randomObject];
+            }
+        }
+
+        public void Shuffle<T>(IList<T> ts)
+        {
+            var count = ts.Count;
+            var last = count - 1;
+            for (var i = 0; i < last; ++i)
+            {
+                var r = UnityEngine.Random.Range(i, count);
+                var tmp = ts[i];
+                ts[i] = ts[r];
+                ts[r] = tmp;
+            }
+        }
     }
 }

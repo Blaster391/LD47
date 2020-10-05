@@ -42,5 +42,11 @@ public class ScoreOnTrigger : MonoBehaviour
         {
             destructionComponent.Destruct(collider.gameObject);
         }
+
+        var audioSource = GetComponent<AudioSource>();
+        if(audioSource)
+        {
+            audioSource.Play();
+        }
     }
 }

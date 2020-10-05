@@ -22,7 +22,7 @@ public class SpinComponent : MonoBehaviour
     {
         transform.Rotate(new Vector3(0, 1, 0), Random.value * 360);
         _currentBob = Mathf.Sin(Random.value * 2.0f - 1.0f) * _bobAmount;
-        _intialPosition = transform.position;
+        _intialPosition = transform.position + transform.up * _bobAmount * 2.0f;
     }
 
     // Update is called once per frame
