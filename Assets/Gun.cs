@@ -24,7 +24,11 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+        if(!PlayerLife.Instance || !PlayerLife.Instance.IsAlive)
+        {
+            return;
+        }
+
 
         m_tSinceFire += Time.deltaTime;
         if(Input.GetKey(m_fire) && m_tSinceFire >= m_fireRate)
