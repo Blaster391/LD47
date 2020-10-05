@@ -13,5 +13,10 @@ public class PlayerLevelReset : MonoBehaviour
             var activeScene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(activeScene.name, LoadSceneMode.Single);
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape)) // TODO input system
+        {
+            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        }
     }
 }
