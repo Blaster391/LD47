@@ -33,6 +33,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private GameObject _vehicleSelect;
     [SerializeField]
+    private GameObject _carSpins;
+    [SerializeField]
     private TMP_Text _titleText;
     [SerializeField]
     private string _vehicleTitle;
@@ -40,6 +42,8 @@ public class MainMenu : MonoBehaviour
     [Header("Stage 4 - Track")]
     [SerializeField]
     private string _trackTitle;
+    [SerializeField]
+    private GameObject _trackSpins;
 
     [Header("Stage 1.1 - Leaderboard")]
     [SerializeField]
@@ -105,6 +109,8 @@ public class MainMenu : MonoBehaviour
             case EMenuStage.VroomVrooms:
                 _titleText.text = _trackTitle;
                 _leStage = EMenuStage.LoopDeLoop;
+                _carSpins.SetActive(false);
+                _trackSpins.SetActive(true);
                 break;
             case EMenuStage.LoopDeLoop:
                 SceneManager.LoadScene("Main");
@@ -130,6 +136,8 @@ public class MainMenu : MonoBehaviour
             case EMenuStage.LoopDeLoop:
                 _titleText.text = _vehicleTitle;
                 _leStage = EMenuStage.VroomVrooms;
+                _trackSpins.SetActive(false);
+                _carSpins.SetActive(true);
                 break;
         }
     }

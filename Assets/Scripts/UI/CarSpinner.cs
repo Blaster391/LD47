@@ -17,6 +17,11 @@ public class CarSpinner : MonoBehaviour
         _startingRotation = transform.rotation.eulerAngles.y;
     }
 
+    private void OnDisable()
+    {
+        ResetRot();
+    }
+
     private void Update()
     {
         transform.Rotate(transform.up, _rotationSpeed * Time.deltaTime);
@@ -24,6 +29,8 @@ public class CarSpinner : MonoBehaviour
 
     public void ChangeCar(int moveDir)
     {
+        if (!isActiveAndEnabled) { return; }
+
         _carList[_currentCar].SetActive(false);
         ResetRot();
 
