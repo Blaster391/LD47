@@ -63,7 +63,7 @@ public class GameOverDataCont : MonoBehaviour
 
     private string FormatTimeAlive(float time)
     {
-        string timeAlive = $"{time / SECONDS_PER_MINUTE:0}m ";
+        string timeAlive = $"{Mathf.Floor(time / SECONDS_PER_MINUTE):0}m ";
         timeAlive += $"{time % SECONDS_PER_MINUTE:0}s";
 
         return timeAlive;

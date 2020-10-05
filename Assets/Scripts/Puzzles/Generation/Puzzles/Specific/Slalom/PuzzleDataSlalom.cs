@@ -20,7 +20,6 @@ public class PuzzleDataSlalom
     public GameObject m_leftDiagonalWallPrefab;
     public GameObject m_rightDiagonalWallPrefab;
 
-
     // Stuff
     public GameObject m_cassettePrefab;
     public List<GameObject> m_carPrefabs = new List<GameObject>();
