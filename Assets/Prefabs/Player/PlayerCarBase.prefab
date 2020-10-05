@@ -119,7 +119,7 @@ MonoBehaviour:
   m_endMinSpeed: 0.6
   m_startMaxSpeed: 0.6
   m_endMaxSpeed: 1
-  m_speedUpTime: 60
+  m_speedUpTime: 120
   m_baselineSpeedProp: 0.5
   m_speedDecayRate: 0.25
 --- !u!114 &4848933996499922300

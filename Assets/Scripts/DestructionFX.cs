@@ -158,7 +158,7 @@ public class DestructionFX : MonoBehaviour
                 return;
             }
 
-            if(_destructOnShoot)
+            if(_destructOnShoot && collision.gameObject.GetComponent<Bullet>())
             {
                 PlayShotSound();
             }
