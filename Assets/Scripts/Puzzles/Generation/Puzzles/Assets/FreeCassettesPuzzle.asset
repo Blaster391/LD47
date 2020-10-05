@@ -9,16 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 714e4c68e2e8de641808574629add903, type: 3}
-  m_Name: RandomWallsPuzzle
+  m_Script: {fileID: 11500000, guid: 6c6d14e63143a9a41b42ac4365f88923, type: 3}
+  m_Name: FreeCassettesPuzzle
   m_EditorClassIdentifier: 
-  m_difficultyMin: 0
+  m_difficultyMin: 0.9
   m_difficultyMax: 1
   m_visibilityMin: 0
   m_visibilityMax: 1
-  m_probability: 1
+  m_probability: 0.2
   m_data:
-    m_puzzleLength: 10
-    m_wallCellPercentageAtMinDif: 0.05
-    m_wallCellPercentageAtMaxDif: 0.1
-    m_wallPrefab: {fileID: 215526712701257797, guid: 76b379d09a9e1884da928c7d70113c90, type: 3}
+    m_lengthAtMinDif: 6
+    m_lengthAtMaxDif: 12
+    m_cassettesPropAtMinDif: 0.1
+    m_cassettesPropAtMaxDif: 0.4
+    m_cassettePrefab: {fileID: 5413204410443819966, guid: f052a112327432045bfacc5466ac2a4b, type: 3}

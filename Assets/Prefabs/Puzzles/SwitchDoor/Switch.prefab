@@ -144,6 +144,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_activate: 0
+  m_switchMesh: {fileID: 5462195729529107941}
+  m_activatedMat: {fileID: 2100000, guid: fa3a4cb29d16350438737b812d18f7b3, type: 2}
 --- !u!65 &6602963652990049100
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -311,5 +313,10 @@ PrefabInstance:
 --- !u!4 &6595155310017711754 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3501bac80ee9f6848bf1eed5f6f9fc9b, type: 3}
+  m_PrefabInstance: {fileID: 6632689213204490593}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &5462195729529107941 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 3501bac80ee9f6848bf1eed5f6f9fc9b, type: 3}
   m_PrefabInstance: {fileID: 6632689213204490593}
   m_PrefabAsset: {fileID: 0}

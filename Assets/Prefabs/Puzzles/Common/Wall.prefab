@@ -57,6 +57,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329df5f0750f75d4783bb4572d390f93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6227620288907636799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2321724993682754968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f56faa1f2aaa0d848bc19e3b738b9abf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destroyObjectOnDestruction: 0
+  _destructOnCollision: 0
+  _destructOnShoot: 1
+  _constructed: 1
+  _lowEndTime: 1
+  _highEndTime: 3
+  _shrinkDelay: 0.5
+  _burstSizeMax: 2
+  _burstSizeMin: 1
+  _burstTime: 1
+  _useShader: 0
 --- !u!1 &9024058018987904854
 GameObject:
   m_ObjectHideFlags: 0

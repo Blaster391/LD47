@@ -17,8 +17,8 @@ namespace Puzzles
         [SerializeField] private SurfaceClampedCarController m_car;
 
         [SerializeField] private List<GameObject> m_clutter = new List<GameObject>();
-        [SerializeField] private int m_clutterMin = 0;
-        [SerializeField] private int m_clutterMax = 10;
+        [SerializeField] private float m_clutterMinProp = 0f;
+        [SerializeField] private float m_clutterMaxProp = 0.15f;
 
         public List<PuzzleAsset> m_puzzlesToSpawn;
 
@@ -124,7 +124,8 @@ namespace Puzzles
                 }
 
                 float totalTrackT = m_runningDistancePS / m_trackLengthPS;
-                yield return GeneratePuzzle(selectedPuzzle.Generator, totalTrackT, totalTrackT % 1f);
+                float scaledDifficulty = Mathf.InverseLerp(selectedPuzzle.DifficultyMin, selectedPuzzle.DifficultyMax, m_runningDifficulty);
+                yield return GeneratePuzzle(selectedPuzzle.Generator, scaledDifficulty, totalTrackT, totalTrackT % 1f);
 
                 int puzzleHeight = m_spawnedPuzzles.Last().m_puzzleData.Height;
                 m_runningDistancePS += puzzleHeight;
@@ -153,11 +154,13 @@ namespace Puzzles
         private PuzzleAsset SelectPuzzle(float i_difficulty)
         {
             List<PuzzleAsset> possiblePuzzles = new List<PuzzleAsset>();
+            float totalProbability = 0f;
             foreach (PuzzleAsset availablePuzzle in m_puzzlesToSpawn)
             {
                 if (i_difficulty >= availablePuzzle.DifficultyMin && i_difficulty <= availablePuzzle.DifficultyMax)
                 {
                     possiblePuzzles.Add(availablePuzzle);
+                    totalProbability += availablePuzzle.Probability;
                 }
             }
 
@@ -166,19 +169,31 @@ namespace Puzzles
                 return null;
             }
 
+            float chosenValue = Random.Range(0f, totalProbability);
+
+            foreach(PuzzleAsset puzzle in possiblePuzzles)
+            {
+                if(chosenValue <= puzzle.Probability)
+                {
+                    return puzzle;
+                }
+                chosenValue -= puzzle.Probability;
+            }
+
+            // Fallback, shouldn't happen
             return possiblePuzzles[Random.Range(0, possiblePuzzles.Count)];
         }
 
-        private void AddRandomStuff(PuzzleData puzzleData)
+        private void AddRandomStuff(PuzzleData puzzleData, float i_difficulty)
         {
-            int max = Mathf.RoundToInt(m_runningDifficulty * m_clutterMax);
-            puzzleData.FillRandomClutter(m_clutter, m_clutterMin, max);
+            float maxProp = i_difficulty * m_clutterMaxProp;
+            puzzleData.FillRandomClutter(m_clutter, m_clutterMinProp, maxProp);
         }
 
-        private IEnumerator GeneratePuzzle(IPuzzleGenerator i_puzzleGeneratorIF, float i_startingSplineT, float i_startingSplineTClamped)
+        private IEnumerator GeneratePuzzle(IPuzzleGenerator i_puzzleGeneratorIF, float i_difficulty, float i_startingSplineT, float i_startingSplineTClamped)
         {
-            PuzzleData puzzleData = i_puzzleGeneratorIF.GeneratePuzzle(m_trackWidthInCells, m_runningDifficulty, m_forwardCellsPerSideways);
-            AddRandomStuff(puzzleData);
+            PuzzleData puzzleData = i_puzzleGeneratorIF.GeneratePuzzle(m_trackWidthInCells, i_difficulty, m_forwardCellsPerSideways);
+            AddRandomStuff(puzzleData, i_difficulty);
             SplineTransformData puzzleStartTransformData = m_spline.CalculateAproxSplineTransformData(i_startingSplineTClamped);
 
             Vector2Int gridSize = new Vector2Int(puzzleData.Width, puzzleData.Height);

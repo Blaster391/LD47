@@ -8,13 +8,16 @@ namespace Puzzles
     public class SwitchBehaviour : MonoBehaviour, IActivator
     {
         [SerializeField] private bool m_activate = false;
+
+        [SerializeField] private MeshRenderer m_switchMesh = null;
+        [SerializeField] private Material m_activatedMat = null;
         
         void Update()
         {
             // Manual testing
             if (m_activate)
             {
-                ActivateActivatees();
+                Activate();
                 m_activate = false;
             }
         }
@@ -23,13 +26,25 @@ namespace Puzzles
         {
             if (other.gameObject.tag == "Car")
             {
-                ActivateActivatees();
+                Activate();
             }
         }
 
+        // Public Assign
         public void AssignActivee(IActivatee i_activatee)
         {
             m_activatees.Add(i_activatee);
+        }
+
+        // Private Activation
+        private void Activate()
+        {
+            if(m_switchMesh != null && m_activatedMat != null)
+            {
+                m_switchMesh.material = m_activatedMat;
+            }
+
+            ActivateActivatees();
         }
 
         private void ActivateActivatees()

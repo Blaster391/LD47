@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7705d954f853334dade7bb05d7faf30, type: 3}
   m_Name: SimpleSlalomPuzzle
   m_EditorClassIdentifier: 
-  m_difficultyMin: 0
+  m_difficultyMin: 0.1
   m_difficultyMax: 1
   m_visibilityMin: 0
   m_visibilityMax: 1
+  m_probability: 0.8
   m_data:
     m_slalomBarriers: 3
     m_extraEntryWidthMinDif: 1
