@@ -31,6 +31,7 @@ public class Gun : MonoBehaviour
         {
             GameObject bullet = Instantiate(m_bulletPrefab, m_spawnTrans.position, transform.rotation);
             m_tSinceFire = 0;
+
             m_audioSource.PlayOneShot(m_shootSound);
 
         }
