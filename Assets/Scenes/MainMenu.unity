@@ -1432,7 +1432,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0eb8bc97efeec2c468898f3fcc7887c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0eb8bc97efeec2c468898f3fcc7887c6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1444,7 +1444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0eb8bc97efeec2c468898f3fcc7887c6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0eb8bc97efeec2c468898f3fcc7887c6, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1460,7 +1460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0eb8bc97efeec2c468898f3fcc7887c6, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0eb8bc97efeec2c468898f3fcc7887c6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2065,7 +2065,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f0f0888ead206df4c915ddda0ca9fc35, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f0f0888ead206df4c915ddda0ca9fc35, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2093,7 +2093,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f0f0888ead206df4c915ddda0ca9fc35, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f0f0888ead206df4c915ddda0ca9fc35, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2171,8 +2171,8 @@ MonoBehaviour:
   _rotationSpeed: 20
   _carList:
   - {fileID: 877867937}
-  - {fileID: 1867732784}
   - {fileID: 1838583603}
+  - {fileID: 1867732784}
 --- !u!4 &1849819953
 Transform:
   m_ObjectHideFlags: 0
@@ -2185,8 +2185,8 @@ Transform:
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 877867940}
-  - {fileID: 1867732785}
   - {fileID: 1838583604}
+  - {fileID: 1867732785}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: -125, z: 0}

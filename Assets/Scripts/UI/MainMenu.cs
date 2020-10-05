@@ -113,7 +113,17 @@ public class MainMenu : MonoBehaviour
                 _trackSpins.SetActive(true);
                 break;
             case EMenuStage.LoopDeLoop:
-                SceneManager.LoadScene("Main");
+                PlayerInfo.Instance.SelectedCar = _carSpins.GetComponent<CarSpinner>().CurrentCar;
+                switch (_trackSpins.GetComponent<CarSpinner>().CurrentCar)
+                {
+                    case 0:
+                        SceneManager.LoadScene("TrackB");
+                        break;
+                    case 1:
+                        SceneManager.LoadScene("TrackC");
+                        break;
+
+                }
                 break;
         }
     }
