@@ -195,6 +195,20 @@ namespace Puzzles
                 return (i_startingSplineTClamped + i_y * m_trackTPerCell) % 1f;
             }
 
+            // Work out if we need to offset the starting spline T
+            float trackLength = m_spline.Length;
+            float puzzleTLength = (puzzleData.Height * m_cellSize) / trackLength;
+            float totalAddedT = 0f;
+            while (!m_spline.DoesTRangeSupportPuzzles(i_startingSplineT, i_startingSplineT + puzzleTLength, out float nextValidT))
+            {
+                totalAddedT += (nextValidT - i_startingSplineT);
+                i_startingSplineT = nextValidT;
+                i_startingSplineTClamped = i_startingSplineT % 1f;
+                yield return 0;
+            }
+
+            m_runningDistancePS += Mathf.CeilToInt(totalAddedT * trackLength / m_cellSize);
+
             // Lets figure out wtf we need to spawn this crap
             for (int y = 0; y < puzzleData.Height; ++y)
             {

@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8147228100076657084, guid: 554f5241bc5f4754a943bf770f723e15, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: bac7487a7f77ce843a5737ffbc499ffd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 554f5241bc5f4754a943bf770f723e15, type: 3}
 --- !u!1 &7652565621193941581 stripped
@@ -204,6 +208,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1e34ec05785050149b601a7687c8a07e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9c075c846da21b541a09f7e1c23002c1, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 1e34ec05785050149b601a7687c8a07e, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ac0c95fedcf64c4597fa16df7fd0bb9, type: 2}
     - target: {fileID: 919132149155446097, guid: 1e34ec05785050149b601a7687c8a07e, type: 3}
       propertyPath: m_Name
       value: Weapon_Large_Base
@@ -335,6 +347,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1f4e508a2d74bad4188f58c5d3bd4aa3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f9babaab5a6964844b48e11db829384d, type: 2}
     - target: {fileID: 919132149155446097, guid: 1f4e508a2d74bad4188f58c5d3bd4aa3, type: 3}
       propertyPath: m_Name
       value: Weapon_Large_Barrel
