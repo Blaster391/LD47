@@ -378,6 +378,14 @@ PrefabInstance:
       propertyPath: _liveScores
       value: 
       objectReference: {fileID: 1426700671}
+    - target: {fileID: 5426303188129651525, guid: fb75feec804024142a58ebad0db4ba84, type: 3}
+      propertyPath: _totalUpdateRate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426303188129651525, guid: fb75feec804024142a58ebad0db4ba84, type: 3}
+      propertyPath: _scoreUpdateRate
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2126464620045188167, guid: fb75feec804024142a58ebad0db4ba84, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fb75feec804024142a58ebad0db4ba84, type: 3}

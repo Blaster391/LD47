@@ -12,9 +12,9 @@ public class LevelScoreManager : MonoBehaviour
     private string _levelName = "";
 
     [SerializeField]
-    private float _totalUpdateRate = 30.0f;
+    private float _totalUpdateRate = 2.5f;
     [SerializeField]
-    private float _scoreUpdateRate = 30.0f;
+    private float _scoreUpdateRate = 5.0f;
 
     [SerializeField]
     private LiveScores _liveScores = null;
@@ -330,7 +330,7 @@ public class LevelScoreManager : MonoBehaviour
         _liveScores.SetHighScores(resultScore);
 
         resultScore = new List<LiveScores.Score>();
-        if (index < _maxResultsCount - 2 && index > 2)
+        if (index < _maxResultsCount - 2 && index > 3)
         {
             
             for (int i = index - 1; i < index + 2; ++i)
