@@ -28,6 +28,7 @@ public class Spline : MonoBehaviour
             m_length = 0;
             m_startUp = Vector3.zero;
             m_endUp = Vector3.zero;
+            m_supportsPuzzles = true;
         }
 
         public Vector3 m_a;
@@ -38,9 +39,11 @@ public class Spline : MonoBehaviour
 
         public Vector3 m_startUp;
         public Vector3 m_endUp;
+
+        public bool m_supportsPuzzles;
     }
 
-    public Transform[] m_splinePoints;
+    public SplinePoint[] m_splinePoints;
     private Segment[] m_segments;
 
     [SerializeField]
@@ -59,12 +62,12 @@ public class Spline : MonoBehaviour
     private void FindPoints()
     {
         var points = GetComponentsInChildren<SplinePoint>();
-        m_splinePoints = new Transform[points.Length];
+        m_splinePoints = new SplinePoint[points.Length];
 
 
         for(int i = 0; i < points.Length; ++i)
         {
-            m_splinePoints[i] = points[i].transform;
+            m_splinePoints[i] = points[i];
         }
     }
 
@@ -79,17 +82,17 @@ public class Spline : MonoBehaviour
         int lastIndex = 0;
         float distTotal = 0;
         float distSeg = 0;
-        Vector3 prevPos = m_splinePoints[0].position;
+        Vector3 prevPos = m_splinePoints[0].transform.position;
         Vector3 fwd = Vector3.forward;
 
         bool walkDone = false;
         for (int j = 0; j < m_splinePoints.Length && !walkDone; ++j)
         {
             distSeg = 0;
-            Vector3 p0 = m_splinePoints[ClampIndex(j - 1)].position;
-            Vector3 p1 = m_splinePoints[j].position;
-            Vector3 p2 = m_splinePoints[ClampIndex(j + 1)].position;
-            Vector3 p3 = m_splinePoints[ClampIndex(j + 2)].position;
+            Vector3 p0 = m_splinePoints[ClampIndex(j - 1)].transform.position;
+            Vector3 p1 = m_splinePoints[j].transform.position;
+            Vector3 p2 = m_splinePoints[ClampIndex(j + 1)].transform.position;
+            Vector3 p3 = m_splinePoints[ClampIndex(j + 2)].transform.position;
 
             prevPos = p1;
             //Walk along the spline from p1 to p2, incrementing the time value
@@ -131,14 +134,14 @@ public class Spline : MonoBehaviour
     {
         m_segments = new Segment[m_splinePoints.Length];
 
-        Vector3 rayPositon = m_splinePoints[0].position;
+        Vector3 rayPositon = m_splinePoints[0].transform.position;
         Vector3 rayDirection = Vector3.down;
         for (int i = 0; i < m_splinePoints.Length; ++i)
         {
-            Vector3 p0 = m_splinePoints[ClampIndex(i - 1)].position;
-            Vector3 p1 = m_splinePoints[i].position;
-            Vector3 p2 = m_splinePoints[ClampIndex(i + 1)].position;
-            Vector3 p3 = m_splinePoints[ClampIndex(i + 2)].position;
+            Vector3 p0 = m_splinePoints[ClampIndex(i - 1)].transform.position;
+            Vector3 p1 = m_splinePoints[i].transform.position;
+            Vector3 p2 = m_splinePoints[ClampIndex(i + 1)].transform.position;
+            Vector3 p3 = m_splinePoints[ClampIndex(i + 2)].transform.position;
 
             if (Application.isPlaying)
             {
@@ -148,6 +151,11 @@ public class Spline : MonoBehaviour
             {
                 CalculateSegmentCoefficients(p0, p1, p2, p3, out m_segments[i]);
             }
+
+            SplinePoint pointA = m_splinePoints[i];
+            SplinePoint pointB = m_splinePoints[ClampIndex(i + 1)];
+
+            m_segments[i].m_supportsPuzzles = (pointA.SupportsPuzzles && pointB.SupportsPuzzles);
         }
     }
 
@@ -288,10 +296,10 @@ public class Spline : MonoBehaviour
     public float GetT(int i_splineIndex, Vector3 i_curPos)
     {
         //Get distance vec from pos i and i+1
-        Vector3 segVec = (m_splinePoints[ClampIndex(i_splineIndex + 1)].position - m_splinePoints[i_splineIndex].position);
+        Vector3 segVec = (m_splinePoints[ClampIndex(i_splineIndex + 1)].transform.position - m_splinePoints[i_splineIndex].transform.position);
 
         //Get distance vec from agent to start spline point of its current segment projected in dir of segment
-        float agentDist = Vector3.Dot(i_curPos - m_splinePoints[i_splineIndex].position, segVec.normalized);
+        float agentDist = Vector3.Dot(i_curPos - m_splinePoints[i_splineIndex].transform.position, segVec.normalized);
 
         //Get projection of agentVec along segVec to see how close we are to end of this segment
         return agentDist / segVec.magnitude;
@@ -301,6 +309,75 @@ public class Spline : MonoBehaviour
     public float GetSegmentLength(int i_segmenetIndex)
     {
         return m_segments[i_segmenetIndex].m_length;
+    }
+
+    private Segment GetSegmentAtT(float i_t, out int o_segmentIndex, out float o_trackLengthAtSegmentStart, out float o_trackLengthAtSegmentEnd)
+    {
+        float trackLength = Length;
+        float lengthAtT = (i_t % 1f) * trackLength;
+        float currentLength = 0f;
+        int segmentIndex = 0;
+        foreach(Segment segment in m_segments)
+        {
+            if(lengthAtT >= currentLength && lengthAtT < (currentLength + segment.m_length))
+            {
+                o_segmentIndex = segmentIndex;
+                float trackLengthOffset = Mathf.Floor(i_t) * trackLength;
+                o_trackLengthAtSegmentStart = currentLength + trackLengthOffset;
+                o_trackLengthAtSegmentEnd = currentLength + segment.m_length + trackLengthOffset;
+                return segment;
+            }
+            currentLength += segment.m_length;
+            ++segmentIndex;
+        }
+        o_segmentIndex = 0;
+        o_trackLengthAtSegmentStart = 0;
+        o_trackLengthAtSegmentEnd = m_segments[0].m_length;
+        return m_segments[0];
+    }
+
+    public bool DoesTRangeSupportPuzzles(float i_t1, float i_t2, out float o_nextValidT)
+    {
+        o_nextValidT = 0f;
+
+        int segmentIndex = 0;
+        float trackLengthAtSegmentEnd = 0f;
+
+        float trackLength = Length;
+        float checkLength = (i_t2 - i_t1) * trackLength;
+
+        Segment segmentAtT1 = GetSegmentAtT(i_t1, out segmentIndex, out _, out trackLengthAtSegmentEnd);
+
+        // See if we support puzzles all the way along
+        bool supportsPuzzles = true;
+        while(checkLength > 0)
+        {
+            Segment segment = m_segments[segmentIndex];
+            if(segment.m_supportsPuzzles)
+            {
+                trackLengthAtSegmentEnd += segment.m_length;
+                checkLength -= segment.m_length;
+                segmentIndex = ClampIndex(segmentIndex + 1);
+            }
+            else
+            {
+                supportsPuzzles = false;
+                break;
+            }
+        }
+
+        if(!supportsPuzzles)
+        {
+            // Find when puzzles next become available again
+            while (!m_segments[segmentIndex].m_supportsPuzzles)
+            {
+                trackLengthAtSegmentEnd += m_segments[segmentIndex].m_length;
+                segmentIndex = ClampIndex(segmentIndex + 1);
+            }
+            o_nextValidT = trackLengthAtSegmentEnd / Length;
+        }
+
+        return supportsPuzzles;
     }
 
     //Vector3 spherePos;
@@ -337,10 +414,10 @@ public class Spline : MonoBehaviour
    public void DrawSplineSegment(int index)
    {
         //Sample 4 points around index to get spline between it and the next
-        Vector3 p0 = m_splinePoints[ClampIndex(index - 1)].position;
-        Vector3 p1 = m_splinePoints[index].position;
-        Vector3 p2 = m_splinePoints[ClampIndex(index + 1)].position;
-        Vector3 p3 = m_splinePoints[ClampIndex(index + 2)].position;
+        Vector3 p0 = m_splinePoints[ClampIndex(index - 1)].transform.position;
+        Vector3 p1 = m_splinePoints[index].transform.position;
+        Vector3 p2 = m_splinePoints[ClampIndex(index + 1)].transform.position;
+        Vector3 p3 = m_splinePoints[ClampIndex(index + 2)].transform.position;
 
         Vector3 prevPos = p1;
         //Walk along the spline from p1 to p2, incrementing the time value

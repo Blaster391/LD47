@@ -6,7 +6,7 @@ namespace Puzzles
 {
     public class DoorBehaviour : MonoBehaviour, IActivatee
     {
-        [SerializeField] private GameObject m_bollardsObject = null;
+        [SerializeField] private BoxCollider m_bollardsObject = null;
         [SerializeField] private float m_timeToOpen = 0.2f;
 
         bool m_lower = false;
@@ -21,6 +21,7 @@ namespace Puzzles
         public void Activate()
         {
             m_lower = true;
+            m_bollardsObject.enabled = false;
         }
 
         private void Update()
