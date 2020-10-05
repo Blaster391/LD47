@@ -491,6 +491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _totalLapsText: {fileID: 977446861551781444}
+  _lapsSeparatorText: {fileID: 6857085350475746841}
   _highScoresText: {fileID: 3722916385564401151}
   _scoresSeparatorText: {fileID: 3853122427301522290}
   _relativeScoresText: {fileID: 54174735299127122}

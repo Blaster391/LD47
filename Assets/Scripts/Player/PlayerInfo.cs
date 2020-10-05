@@ -20,11 +20,15 @@ public class PlayerInfo : MonoBehaviour
 
     private int _selectedCar;
 
-    //public GameObject SelectedCar { get; set; }
     public int SelectedCar
     {
         get { return _selectedCar; }
-        set { _selectedCar = value; }
+        set 
+        { 
+            _selectedCar = value; 
+            PlayerPrefs.SetInt("Car", _selectedCar); 
+            PlayerPrefs.Save();
+        }
     }
 
     private static PlayerInfo m_instance = null;
@@ -50,6 +54,12 @@ public class PlayerInfo : MonoBehaviour
             PlayerPrefs.SetString("Player_ID", guid.ToString());
         }
 
+        if(!PlayerPrefs.HasKey("Car"))
+        {
+            PlayerPrefs.SetInt("Car", 0);
+        }
+
+        _selectedCar = PlayerPrefs.GetInt("Car");
         _id = PlayerPrefs.GetString("Player_ID");
  
 
