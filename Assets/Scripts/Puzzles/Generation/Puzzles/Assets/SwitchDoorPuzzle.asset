@@ -17,7 +17,12 @@ MonoBehaviour:
   m_visibilityMin: 0
   m_visibilityMax: 1
   m_data:
-    m_puzzleCellLength: 6
+    m_puzzleCellLengthHandicapMinDifficulty: 3
+    m_puzzleCellLengthHandicapMaxDifficulty: 0
+    m_switchesPresentMinDif: 4
+    m_switchesPresentMaxDif: 1
+    m_gatesPresentMinDif: 3
+    m_gatesPresentMaxDif: 1
     m_switchPrefab: {fileID: 5912890777751765622, guid: e5dacfc43070a434c8eba9dbc48b88de, type: 3}
     m_gatePrefab: {fileID: 174992776487085522, guid: 8455ea1f3070a62428e238eb91d100f7, type: 3}
     m_wallPrefab: {fileID: 215526712701257797, guid: 76b379d09a9e1884da928c7d70113c90, type: 3}
