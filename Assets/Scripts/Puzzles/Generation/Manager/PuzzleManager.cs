@@ -16,6 +16,10 @@ namespace Puzzles
         [SerializeField] private Spline m_spline;
         [SerializeField] private SurfaceClampedCarController m_car;
 
+        [SerializeField] private List<GameObject> m_clutter = new List<GameObject>();
+        [SerializeField] private int m_clutterMin = 0;
+        [SerializeField] private int m_clutterMax = 10;
+
         public List<PuzzleAsset> m_puzzlesToSpawn;
 
         // Currently assuming car is 1, cells 1.5x that.
@@ -165,9 +169,15 @@ namespace Puzzles
             return possiblePuzzles[Random.Range(0, possiblePuzzles.Count)];
         }
 
+        private void AddRandomStuff(PuzzleData puzzleData)
+        {
+            puzzleData.FillRandomClutter(m_clutter, m_clutterMin, m_clutterMax);
+        }
+
         private IEnumerator GeneratePuzzle(IPuzzleGenerator i_puzzleGeneratorIF, float i_startingSplineT, float i_startingSplineTClamped)
         {
             PuzzleData puzzleData = i_puzzleGeneratorIF.GeneratePuzzle(m_trackWidthInCells, m_runningDifficulty, m_forwardCellsPerSideways);
+            AddRandomStuff(puzzleData);
             SplineTransformData puzzleStartTransformData = m_spline.CalculateAproxSplineTransformData(i_startingSplineTClamped);
 
             Vector2Int gridSize = new Vector2Int(puzzleData.Width, puzzleData.Height);
