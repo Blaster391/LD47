@@ -128,13 +128,32 @@ public class LevelScoreManager : MonoBehaviour
             }
 
             _leaderboard.UpdateScores(leaderboardScores);
+            _leaderboard.gameObject.SetActive(true);
 
-
-            if(_gameOverData)
+            if (_gameOverData)
             {
                 GameOverData gameOverData = new GameOverData();
                 gameOverData.NewRank = _newHighscore;
                 gameOverData.RankNumber = _currentRank;
+
+                var playerScore = PlayerLife.Instance.GetComponent<PlayerScore>();
+                gameOverData.Laps = playerScore.Lap;
+                gameOverData.Score = Mathf.RoundToInt(playerScore.Score);
+                gameOverData.TimeAlive = playerScore.TotalTime;
+                gameOverData.UserName = PlayerInfo.Instance.Username;
+                gameOverData.TrackName = _publicLevelName;
+
+                _gameOverData.SetData(gameOverData);
+            }
+        }
+        else if(_leaderboard && _updateLeaderboard)
+        {
+            _leaderboard.gameObject.SetActive(false);
+
+            if (_gameOverData)
+            {
+                GameOverData gameOverData = new GameOverData();
+                gameOverData.NewRank = false;
 
                 var playerScore = PlayerLife.Instance.GetComponent<PlayerScore>();
                 gameOverData.Laps = playerScore.Lap;

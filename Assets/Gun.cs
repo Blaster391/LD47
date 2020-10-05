@@ -24,13 +24,18 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+        if(!PlayerLife.Instance || !PlayerLife.Instance.IsAlive)
+        {
+            return;
+        }
+
 
         m_tSinceFire += Time.deltaTime;
         if(Input.GetKey(m_fire) && m_tSinceFire >= m_fireRate)
         {
             GameObject bullet = Instantiate(m_bulletPrefab, m_spawnTrans.position, transform.rotation);
             m_tSinceFire = 0;
+
             m_audioSource.PlayOneShot(m_shootSound);
 
         }

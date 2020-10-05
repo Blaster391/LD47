@@ -18,7 +18,6 @@ public class DeathOnCollide : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("GET DEDED");
         if(collision.rigidbody)
         {
             var player = collision.rigidbody.GetComponent<PlayerLife>();

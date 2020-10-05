@@ -13,6 +13,11 @@ public class DestructionFX : MonoBehaviour
     public bool _destructOnShoot = true;
 
     [SerializeField]
+    private AudioSource _audioSource = null;
+    [SerializeField]
+    private AudioClip _shotAudio = null;
+
+    [SerializeField]
     public bool _constructed = true;
     [SerializeField]
     private float _lowEndTime = 1.0f;
@@ -97,7 +102,7 @@ public class DestructionFX : MonoBehaviour
                 _destructTime += Time.deltaTime;
                 _destructTime = Mathf.Min(_destructTime, maxTime);
             }
-            else if(_destroyObjectOnDestruction)
+            else if(_destroyObjectOnDestruction && (!_audioSource || !_audioSource.isPlaying))
             {
                 Destroy(gameObject);
             }
@@ -147,6 +152,11 @@ public class DestructionFX : MonoBehaviour
                 return;
             }
 
+            if(_destructOnShoot)
+            {
+                PlayShotSound();
+            }
+
             Vector3 collisionPoint = transform.position;
             if(collision.contacts.Length > 0)
             {
@@ -160,6 +170,12 @@ public class DestructionFX : MonoBehaviour
 
             Destruct(collisionPoint);
         }
+    }
+
+    public void PlayShotSound()
+    {
+        _audioSource.clip = _shotAudio;
+        _audioSource.Play();
     }
 
     public void Construct(Vector3 collisionPosition)

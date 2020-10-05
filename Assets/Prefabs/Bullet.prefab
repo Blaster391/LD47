@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_lifetime: 2.5
-  m_spawnV: 80
+  m_spawnV: 200
 --- !u!54 &4298535621813268266
 Rigidbody:
   m_ObjectHideFlags: 0

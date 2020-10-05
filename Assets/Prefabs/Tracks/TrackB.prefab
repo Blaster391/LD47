@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &509302593
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,6 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &540285299
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,6 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &694752871
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,6 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &696781091
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,6 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &967763362
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,49 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1241900685
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1241900686}
-  - component: {fileID: 1241900687}
-  m_Layer: 9
-  m_Name: SP1 (153)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1241900686
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241900685}
-  m_LocalRotation: {x: -0, y: 0.98329747, z: -0, w: -0.18200618}
-  m_LocalPosition: {x: -88853, y: 11282, z: 292493}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7386322309766777049}
-  m_RootOrder: 153
-  m_LocalEulerAnglesHint: {x: 0, y: 200.973, z: 0}
---- !u!114 &1241900687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241900685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1664147871
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,6 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1767482352
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,6 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &69312804407259376
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,7 +384,7 @@ Transform:
   - {fileID: 3464276208584117581}
   - {fileID: 6459063773713901350}
   m_Father: {fileID: 6830049553058020056}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2015114726842601620
 MeshFilter:
@@ -470,6 +435,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3924487570665925456
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071481735802195219}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1074636792967237213, guid: b20dbf8b5823d4f4ca38d39e4af2bed2, type: 3}
 --- !u!1 &157590532040188507
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,7 +685,7 @@ Transform:
   - {fileID: 3203182596543999811}
   - {fileID: 2727205496151006271}
   m_Father: {fileID: 6830049553058020056}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4111692960305133400
 MeshFilter:
@@ -1004,6 +983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &266467359778937792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,6 +1027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &273785222930894755
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,7 +1054,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 273785222930894755}
   m_LocalRotation: {x: 0.9980535, y: -0.0014217368, z: 0.024807302, w: 0.057199664}
-  m_LocalPosition: {x: 59.81836, y: -24.384056, z: -161.508}
+  m_LocalPosition: {x: 59.73, y: -26.01, z: -159.64}
   m_LocalScale: {x: 0.009999999, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 8568891909119386776}
@@ -1173,6 +1154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &317254260120339373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,6 +1198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &339631993378923238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,6 +1446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &448581956422899519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,6 +1490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &467100423010238480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,6 +1534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &479863306627804263
 GameObject:
   m_ObjectHideFlags: 0
@@ -1592,6 +1578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &487223164806578466
 GameObject:
   m_ObjectHideFlags: 0
@@ -1635,6 +1622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &684683179473416106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1678,6 +1666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &708538076614923351
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,6 +1710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &749618665996150620
 GameObject:
   m_ObjectHideFlags: 0
@@ -1764,6 +1754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &821716589557328829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1807,6 +1798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &860081071097821379
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,13 +1825,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860081071097821379}
   m_LocalRotation: {x: 0.8085259, y: 0.08334346, z: 0.57042485, w: -0.11813186}
-  m_LocalPosition: {x: 216.0264, y: -21.174955, z: -145.53098}
+  m_LocalPosition: {x: 216.49, y: -23.27, z: -146.11}
   m_LocalScale: {x: 0.01, y: 0.010000002, z: 0.010000001}
   m_Children:
   - {fileID: 259491815599686759}
   - {fileID: 4082498175628318483}
   m_Father: {fileID: 6830049553058020056}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1452986583179046271
 MeshFilter:
@@ -1916,7 +1908,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881317320242303455}
   m_LocalRotation: {x: 0.95539707, y: -0, z: -0.29532433, w: 0}
-  m_LocalPosition: {x: 76.10043, y: -25.650654, z: -111.52061}
+  m_LocalPosition: {x: 76.10043, y: -24.45, z: -111.52061}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.010000001}
   m_Children:
   - {fileID: 2405364114188197873}
@@ -2016,6 +2008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &948773346842636396
 GameObject:
   m_ObjectHideFlags: 0
@@ -2059,6 +2052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &980888949414106473
 GameObject:
   m_ObjectHideFlags: 0
@@ -2292,7 +2286,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7386322309766777049}
-  m_RootOrder: 163
+  m_RootOrder: 162
   m_LocalEulerAnglesHint: {x: 0, y: 99.965, z: 0}
 --- !u!114 &3563836227786608793
 MonoBehaviour:
@@ -2306,6 +2300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1045756957356433200
 GameObject:
   m_ObjectHideFlags: 0
@@ -2349,20 +2344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!64 &3924487570665925456
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071481735802195219}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1074636792967237213, guid: b20dbf8b5823d4f4ca38d39e4af2bed2, type: 3}
+  m_suitableForPuzzles: 1
 --- !u!1 &1084164412369829195
 GameObject:
   m_ObjectHideFlags: 0
@@ -2392,7 +2374,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7386322309766777049}
-  m_RootOrder: 154
+  m_RootOrder: 153
   m_LocalEulerAnglesHint: {x: 0, y: 126.167, z: 0}
 --- !u!114 &4908590511906777853
 MonoBehaviour:
@@ -2406,6 +2388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1146195622750160997
 GameObject:
   m_ObjectHideFlags: 0
@@ -2438,7 +2421,7 @@ Transform:
   - {fileID: 2148987632869040746}
   - {fileID: 6826110529503913230}
   m_Father: {fileID: 6830049553058020056}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1348868512752333910
 MeshFilter:
@@ -2532,6 +2515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1215362840591030580
 GameObject:
   m_ObjectHideFlags: 0
@@ -2575,6 +2559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1251136600544495810
 GameObject:
   m_ObjectHideFlags: 0
@@ -2701,6 +2686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1283628861740225762
 GameObject:
   m_ObjectHideFlags: 0
@@ -2744,6 +2730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1301974714492137176
 GameObject:
   m_ObjectHideFlags: 0
@@ -2787,6 +2774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1357771937295232608
 GameObject:
   m_ObjectHideFlags: 0
@@ -2830,6 +2818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1376973317805384106
 GameObject:
   m_ObjectHideFlags: 0
@@ -3011,7 +3000,6 @@ Transform:
   - {fileID: 1767482353}
   - {fileID: 967763363}
   - {fileID: 1664147872}
-  - {fileID: 1241900686}
   - {fileID: 5272254772060743657}
   - {fileID: 3733421815130865317}
   - {fileID: 4229829916973869247}
@@ -3051,178 +3039,177 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   m_splinePoints:
-  - {fileID: 711669352172469325}
-  - {fileID: 5710827893017371830}
-  - {fileID: 7135249477497480507}
-  - {fileID: 5784744441799498226}
-  - {fileID: 5166601319207232329}
-  - {fileID: 3270220997501725718}
-  - {fileID: 430430655482251289}
-  - {fileID: 7783796458763491807}
-  - {fileID: 793542850046736127}
-  - {fileID: 4114479498466785446}
-  - {fileID: 1888593041672606481}
-  - {fileID: 8016225197127909171}
-  - {fileID: 7812081377651668288}
-  - {fileID: 3228390955689909684}
-  - {fileID: 6152815346544229095}
-  - {fileID: 3511279775575812135}
-  - {fileID: 3580514642685682201}
-  - {fileID: 1314586616503260075}
-  - {fileID: 2106352724580753998}
-  - {fileID: 5469466622834850006}
-  - {fileID: 4350726087905403922}
-  - {fileID: 961473878029261065}
-  - {fileID: 776799824554808478}
-  - {fileID: 7787633407693817493}
-  - {fileID: 6716778864128393869}
-  - {fileID: 6061063446442565993}
-  - {fileID: 6142911503790662300}
-  - {fileID: 6516980894516096691}
-  - {fileID: 1235901295805497409}
-  - {fileID: 7501105252446434327}
-  - {fileID: 1485979815141603930}
-  - {fileID: 3709942601602687572}
-  - {fileID: 1667919340422472774}
-  - {fileID: 5178042939508835679}
-  - {fileID: 7465229577402975430}
-  - {fileID: 8651645393604814320}
-  - {fileID: 3203468223670191005}
-  - {fileID: 5987075857304327940}
-  - {fileID: 4204522075200648534}
-  - {fileID: 3933197596793800363}
-  - {fileID: 6481559466808070376}
-  - {fileID: 6027389903245013703}
-  - {fileID: 3802439889126087730}
-  - {fileID: 2611065439382874922}
-  - {fileID: 7750648320421368979}
-  - {fileID: 3878478007753921207}
-  - {fileID: 2174049713169047282}
-  - {fileID: 777044367408267900}
-  - {fileID: 3140041283498144062}
-  - {fileID: 1318969515004774551}
-  - {fileID: 3596448527180537218}
-  - {fileID: 5596608862320852642}
-  - {fileID: 7886378221062963310}
-  - {fileID: 5185722877867856110}
-  - {fileID: 5187797498204338696}
-  - {fileID: 3473841494990595110}
-  - {fileID: 7819486494742742915}
-  - {fileID: 4053234489926098842}
-  - {fileID: 3679800197843378676}
-  - {fileID: 4764683532414723381}
-  - {fileID: 4054959250505155692}
-  - {fileID: 7601543397832048734}
-  - {fileID: 45958435500990247}
-  - {fileID: 842180341105084453}
-  - {fileID: 7197402883978574199}
-  - {fileID: 5967862399397877956}
-  - {fileID: 4441343119423366611}
-  - {fileID: 1337163897720062579}
-  - {fileID: 1971170063663698130}
-  - {fileID: 8181450153108735293}
-  - {fileID: 6095190554135179821}
-  - {fileID: 6277111198113748800}
-  - {fileID: 2705989665294245339}
-  - {fileID: 2483569534906977562}
-  - {fileID: 3940874982126539698}
-  - {fileID: 3758828467218965822}
-  - {fileID: 469266118849220199}
-  - {fileID: 1622380871330053069}
-  - {fileID: 3764713140654540635}
-  - {fileID: 7382429732830035077}
-  - {fileID: 2871342867092012953}
-  - {fileID: 66931960222454879}
-  - {fileID: 2644044791214671115}
-  - {fileID: 9222685612650623301}
-  - {fileID: 3482486644521465966}
-  - {fileID: 6287348422033488015}
-  - {fileID: 5614451369432637931}
-  - {fileID: 206955471840186461}
-  - {fileID: 2963285634454529569}
-  - {fileID: 6552558562278974675}
-  - {fileID: 4230974967542560519}
-  - {fileID: 6393223078075901013}
-  - {fileID: 4570536828614538824}
-  - {fileID: 3971510002415859488}
-  - {fileID: 4457895293002022245}
-  - {fileID: 5312694943867144257}
-  - {fileID: 2201104390557761184}
-  - {fileID: 3126208551612923531}
-  - {fileID: 2106226399238789693}
-  - {fileID: 5427659542262457414}
-  - {fileID: 6952012386137808467}
-  - {fileID: 8016253187172789637}
-  - {fileID: 6876381618060330158}
-  - {fileID: 1144025420115287557}
-  - {fileID: 7263048806142574452}
-  - {fileID: 4162045902984434541}
-  - {fileID: 7511720047550160859}
-  - {fileID: 1261876250749979092}
-  - {fileID: 6288826172169978413}
-  - {fileID: 3761884513485101969}
-  - {fileID: 7202798631653646709}
-  - {fileID: 2423219290236564892}
-  - {fileID: 4092428182805370284}
-  - {fileID: 3004464533353669516}
-  - {fileID: 3967173665741155685}
-  - {fileID: 4471571254338576365}
-  - {fileID: 3369725754698042630}
-  - {fileID: 4069291169946082582}
-  - {fileID: 6523714945199170991}
-  - {fileID: 888128339059394587}
-  - {fileID: 5872701533347092616}
-  - {fileID: 2845517034262323397}
-  - {fileID: 4153601088624506925}
-  - {fileID: 3112209872563980236}
-  - {fileID: 3754732639751686920}
-  - {fileID: 7918717286185108795}
-  - {fileID: 3585925794598252771}
-  - {fileID: 3712483821447118882}
-  - {fileID: 545675423351269590}
-  - {fileID: 3659563035976923897}
-  - {fileID: 3559291636206573294}
-  - {fileID: 1140829425392280106}
-  - {fileID: 5056283678247952479}
-  - {fileID: 45176991141084144}
-  - {fileID: 2217770516473576428}
-  - {fileID: 6248622670376638066}
-  - {fileID: 332973094810381737}
-  - {fileID: 7438425072137798964}
-  - {fileID: 6809743175561645887}
-  - {fileID: 2591842723768618038}
-  - {fileID: 2762593054460591265}
-  - {fileID: 3403691469846619267}
-  - {fileID: 634861771976007076}
-  - {fileID: 944227716381916664}
-  - {fileID: 287418438810010639}
-  - {fileID: 540285300}
-  - {fileID: 509302594}
-  - {fileID: 696781092}
-  - {fileID: 204864483}
-  - {fileID: 694752872}
-  - {fileID: 1767482353}
-  - {fileID: 967763363}
-  - {fileID: 1664147872}
-  - {fileID: 1241900686}
-  - {fileID: 5272254772060743657}
-  - {fileID: 3733421815130865317}
-  - {fileID: 4229829916973869247}
-  - {fileID: 339681729547475956}
-  - {fileID: 8135400792165102604}
-  - {fileID: 4117836414254742396}
-  - {fileID: 6294260233109938466}
-  - {fileID: 2807582389167575125}
-  - {fileID: 2931317485072673261}
-  - {fileID: 4462170520965757023}
-  - {fileID: 7074107487812687976}
-  - {fileID: 7307378235324396225}
-  - {fileID: 7064629757395653092}
-  - {fileID: 8583817644586266346}
-  - {fileID: 1269180337515236014}
-  - {fileID: 6654580194063374727}
-  - {fileID: 7528603058604118263}
-  - {fileID: 1327323451707775800}
+  - {fileID: 4945284410313399839}
+  - {fileID: 7556029168000696541}
+  - {fileID: 2349093617782801037}
+  - {fileID: 5700005910382775934}
+  - {fileID: 6379860873538542961}
+  - {fileID: 4909741171918012164}
+  - {fileID: 4804116320958671029}
+  - {fileID: 6724453884119051475}
+  - {fileID: 2904138545543958656}
+  - {fileID: 404081919557220350}
+  - {fileID: 1371003608854029170}
+  - {fileID: 8542190157336750856}
+  - {fileID: 1484118248262649523}
+  - {fileID: 1467470433384133626}
+  - {fileID: 2015373373992178353}
+  - {fileID: 966493025860452396}
+  - {fileID: 609769134690382813}
+  - {fileID: 7949792610182921399}
+  - {fileID: 5262425261455409716}
+  - {fileID: 2524212512597442203}
+  - {fileID: 4711247967040466370}
+  - {fileID: 5992031352497785840}
+  - {fileID: 7466651649983755429}
+  - {fileID: 3501390701700912326}
+  - {fileID: 502211602174063723}
+  - {fileID: 9098835208715286350}
+  - {fileID: 6907047957905056482}
+  - {fileID: 2066845934912086868}
+  - {fileID: 508293741609956360}
+  - {fileID: 6309223731473838639}
+  - {fileID: 9054225802968171908}
+  - {fileID: 5353282301882397787}
+  - {fileID: 271914574983229834}
+  - {fileID: 6026590296050737643}
+  - {fileID: 2880840239092035480}
+  - {fileID: 1497071369779936740}
+  - {fileID: 7433641364612193166}
+  - {fileID: 2551300249153110842}
+  - {fileID: 8458206955539076192}
+  - {fileID: 3442534706087515905}
+  - {fileID: 7022023364119637247}
+  - {fileID: 1793933474066526013}
+  - {fileID: 7997876249099552963}
+  - {fileID: 3077075834831512757}
+  - {fileID: 1677998569573496275}
+  - {fileID: 8479454957536351932}
+  - {fileID: 7507738876890655287}
+  - {fileID: 2900765657549624257}
+  - {fileID: 1626947017282666146}
+  - {fileID: 3182669199209709469}
+  - {fileID: 6934632185744002010}
+  - {fileID: 74761942008886617}
+  - {fileID: 4288482024754273351}
+  - {fileID: 3820492182910068014}
+  - {fileID: 7974813705226169465}
+  - {fileID: 2753143741163842132}
+  - {fileID: 4306136613158258591}
+  - {fileID: 6916019328815078582}
+  - {fileID: 6526436871845986829}
+  - {fileID: 3470802277112896576}
+  - {fileID: 3970052862739407653}
+  - {fileID: 1373331451406213030}
+  - {fileID: 5737160018326333810}
+  - {fileID: 5664778260417708501}
+  - {fileID: 1771412493696318482}
+  - {fileID: 3048563852904964686}
+  - {fileID: 1597526856823254021}
+  - {fileID: 8643956245446217715}
+  - {fileID: 4240707770434635136}
+  - {fileID: 8009196878063743359}
+  - {fileID: 4237033927414406272}
+  - {fileID: 4041943953669244869}
+  - {fileID: 1132058945890089909}
+  - {fileID: 9166220946439408895}
+  - {fileID: 8343551889875112137}
+  - {fileID: 967210839973434672}
+  - {fileID: 4964500716240025399}
+  - {fileID: 4327499521567179344}
+  - {fileID: 7066350034098666131}
+  - {fileID: 648227592755721867}
+  - {fileID: 8722965733114693754}
+  - {fileID: 7508688699340780057}
+  - {fileID: 7432509815511377011}
+  - {fileID: 3956979546770790738}
+  - {fileID: 4484405274643211073}
+  - {fileID: 7979995177822660168}
+  - {fileID: 3350628278649217892}
+  - {fileID: 736764253711463419}
+  - {fileID: 5057727283592920385}
+  - {fileID: 1366982005173314622}
+  - {fileID: 6196814839326154413}
+  - {fileID: 5622499341389391932}
+  - {fileID: 8657253059782493629}
+  - {fileID: 3791506352986838153}
+  - {fileID: 5303244931541197824}
+  - {fileID: 7959547518249757951}
+  - {fileID: 894471343229529338}
+  - {fileID: 8975054116092454882}
+  - {fileID: 2484216305290022481}
+  - {fileID: 9118207121543015126}
+  - {fileID: 7167534722046739933}
+  - {fileID: 5592354702085799624}
+  - {fileID: 9114335636460395001}
+  - {fileID: 3920108629834131550}
+  - {fileID: 5155016390075911585}
+  - {fileID: 2690545379010640592}
+  - {fileID: 5233627251090898086}
+  - {fileID: 4874983557732807823}
+  - {fileID: 6709917264033886144}
+  - {fileID: 1702347218855231608}
+  - {fileID: 7369500305304962355}
+  - {fileID: 1552277989347135917}
+  - {fileID: 6875696960604102317}
+  - {fileID: 7390774628975861282}
+  - {fileID: 9009980182635043770}
+  - {fileID: 8974389325111672912}
+  - {fileID: 1934867811115702112}
+  - {fileID: 8267508575057636383}
+  - {fileID: 3364108537722531336}
+  - {fileID: 8969304912316436491}
+  - {fileID: 6625569240141915735}
+  - {fileID: 757830726362344227}
+  - {fileID: 8752609915442713121}
+  - {fileID: 239220656534473943}
+  - {fileID: 3582509660131629845}
+  - {fileID: 9223347328828316804}
+  - {fileID: 6501952452286464707}
+  - {fileID: 2569652379548916814}
+  - {fileID: 435009242292229069}
+  - {fileID: 1189173706159456694}
+  - {fileID: 1120769559420507262}
+  - {fileID: 3003918492074211062}
+  - {fileID: 2145900683279416858}
+  - {fileID: 3198163168006574560}
+  - {fileID: 5002576299650038229}
+  - {fileID: 2242688232218185932}
+  - {fileID: 4894687875848882678}
+  - {fileID: 3325915919378549665}
+  - {fileID: 520154059909878022}
+  - {fileID: 4857264240891424584}
+  - {fileID: 3088781977759805186}
+  - {fileID: 8933528958116812254}
+  - {fileID: 1809536449204352854}
+  - {fileID: 8958307486103298797}
+  - {fileID: 1875583747502591285}
+  - {fileID: 540285301}
+  - {fileID: 509302595}
+  - {fileID: 696781093}
+  - {fileID: 204864484}
+  - {fileID: 694752873}
+  - {fileID: 1767482354}
+  - {fileID: 967763364}
+  - {fileID: 1664147873}
+  - {fileID: 4908590511906777853}
+  - {fileID: 5121771984885000382}
+  - {fileID: 8689809923054608504}
+  - {fileID: 7508007987657090272}
+  - {fileID: 8848268397812415232}
+  - {fileID: 8853141219169442316}
+  - {fileID: 5015580901105371501}
+  - {fileID: 8466633075182898521}
+  - {fileID: 5627645067674989184}
+  - {fileID: 3563836227786608793}
+  - {fileID: 3104524714183239690}
+  - {fileID: 4418591073162682115}
+  - {fileID: 8873212611279306774}
+  - {fileID: 4808929222673670286}
+  - {fileID: 6041628037542318570}
+  - {fileID: 74084525347021413}
+  - {fileID: 2897246609667635145}
+  - {fileID: 5039571833998885819}
   _autoFindPoints: 1
 --- !u!1 &1420163963131029927
 GameObject:
@@ -3267,6 +3254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1435598594385991954
 GameObject:
   m_ObjectHideFlags: 0
@@ -3310,6 +3298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1509982817657350749
 GameObject:
   m_ObjectHideFlags: 0
@@ -3339,7 +3328,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7386322309766777049}
-  m_RootOrder: 159
+  m_RootOrder: 158
   m_LocalEulerAnglesHint: {x: 0, y: 99.965, z: 0}
 --- !u!114 &8853141219169442316
 MonoBehaviour:
@@ -3353,6 +3342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1528346192876732362
 GameObject:
   m_ObjectHideFlags: 0
@@ -3600,6 +3590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1586407791550703231
 GameObject:
   m_ObjectHideFlags: 0
@@ -3629,7 +3620,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7386322309766777049}
-  m_RootOrder: 168
+  m_RootOrder: 167
   m_LocalEulerAnglesHint: {x: 0, y: 99.965, z: 0}
 --- !u!114 &6041628037542318570
 MonoBehaviour:
@@ -3643,6 +3634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1594772446918614603
 GameObject:
   m_ObjectHideFlags: 0
@@ -3686,6 +3678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1603387162870122934
 GameObject:
   m_ObjectHideFlags: 0
@@ -3729,6 +3722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1622855008008075521
 GameObject:
   m_ObjectHideFlags: 0
@@ -3976,6 +3970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1721047129577728087
 GameObject:
   m_ObjectHideFlags: 0
@@ -4019,6 +4014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1734683552935009873
 GameObject:
   m_ObjectHideFlags: 0
@@ -4051,7 +4047,7 @@ Transform:
   - {fileID: 7324745017651804371}
   - {fileID: 8138128627717759211}
   m_Father: {fileID: 6830049553058020056}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &9175077835169149120
 MeshFilter:
@@ -4145,6 +4141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1782151423435185725
 GameObject:
   m_ObjectHideFlags: 0
@@ -4188,6 +4185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1840125826469494863
 GameObject:
   m_ObjectHideFlags: 0
@@ -4231,6 +4229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1861961681225860995
 GameObject:
   m_ObjectHideFlags: 0
@@ -4274,6 +4273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1903884024458485241
 GameObject:
   m_ObjectHideFlags: 0
@@ -4317,6 +4317,90 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
+--- !u!1 &1908506887917146903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4715160359169075376}
+  - component: {fileID: 2469239677787113363}
+  - component: {fileID: 4500758226527640468}
+  m_Layer: 0
+  m_Name: StreetLight(Clone) (23)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4715160359169075376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908506887917146903}
+  m_LocalRotation: {x: 0.5583112, y: 0.13144745, z: 0.79735124, w: 0.18772651}
+  m_LocalPosition: {x: 87.07, y: -9.18, z: 68.42}
+  m_LocalScale: {x: 0.009999999, y: 0.01, z: 0.010000001}
+  m_Children:
+  - {fileID: 3177836072684702590}
+  - {fileID: 3180690355682903294}
+  m_Father: {fileID: 6830049553058020056}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 70, z: 153.503}
+--- !u!33 &2469239677787113363
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908506887917146903}
+  m_Mesh: {fileID: 8632993429437876281, guid: fc3c5d4665ef93843b8eec2e9fc9cc8f, type: 3}
+--- !u!23 &4500758226527640468
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908506887917146903}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 86bed4a414487c043b276b46c3a8a6c0, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1949175760065507161
 GameObject:
   m_ObjectHideFlags: 0
@@ -4360,6 +4444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1960002426360142319
 GameObject:
   m_ObjectHideFlags: 0
@@ -4403,6 +4488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1960786086623966115
 GameObject:
   m_ObjectHideFlags: 0
@@ -4446,6 +4532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1965194999909504372
 GameObject:
   m_ObjectHideFlags: 0
@@ -4489,6 +4576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1977124953253657362
 GameObject:
   m_ObjectHideFlags: 0
@@ -4532,6 +4620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2068393774177756334
 GameObject:
   m_ObjectHideFlags: 0
@@ -4575,6 +4664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2099055787199155679
 GameObject:
   m_ObjectHideFlags: 0
@@ -4618,6 +4708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2128280535353614524
 GameObject:
   m_ObjectHideFlags: 0
@@ -4865,6 +4956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2149771184260625966
 GameObject:
   m_ObjectHideFlags: 0
@@ -5112,6 +5204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2313733429424518469
 GameObject:
   m_ObjectHideFlags: 0
@@ -5155,6 +5248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2393680928782007594
 GameObject:
   m_ObjectHideFlags: 0
@@ -5402,6 +5496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2439601729555850889
 GameObject:
   m_ObjectHideFlags: 0
@@ -5431,7 +5526,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7386322309766777049}
-  m_RootOrder: 155
+  m_RootOrder: 154
   m_LocalEulerAnglesHint: {x: 0, y: 126.167, z: 0}
 --- !u!114 &5121771984885000382
 MonoBehaviour:
@@ -5445,6 +5540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2445896809556425825
 GameObject:
   m_ObjectHideFlags: 0
@@ -5488,6 +5584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2484491559924513025
 GameObject:
   m_ObjectHideFlags: 0
@@ -5939,6 +6036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2572994975761246933
 GameObject:
   m_ObjectHideFlags: 0
@@ -5982,6 +6080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2625440117612996223
 GameObject:
   m_ObjectHideFlags: 0
@@ -6025,6 +6124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2627742804005655215
 GameObject:
   m_ObjectHideFlags: 0
@@ -6272,6 +6372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2709724365302389651
 GameObject:
   m_ObjectHideFlags: 0
@@ -6519,6 +6620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2801102671113700781
 GameObject:
   m_ObjectHideFlags: 0
@@ -6766,6 +6868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2884979804915431109
 GameObject:
   m_ObjectHideFlags: 0
@@ -6809,6 +6912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2888898606626199708
 GameObject:
   m_ObjectHideFlags: 0
@@ -7056,6 +7160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2939459211645640468
 GameObject:
   m_ObjectHideFlags: 0
@@ -7303,6 +7408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3115304905606705208
 GameObject:
   m_ObjectHideFlags: 0
@@ -7346,6 +7452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3210986393030682650
 GameObject:
   m_ObjectHideFlags: 0
@@ -7389,6 +7496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3239702265483515505
 GameObject:
   m_ObjectHideFlags: 0
@@ -7418,7 +7526,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7386322309766777049}
-  m_RootOrder: 164
+  m_RootOrder: 163
   m_LocalEulerAnglesHint: {x: 0, y: 99.965, z: 0}
 --- !u!114 &3104524714183239690
 MonoBehaviour:
@@ -7432,6 +7540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3248033048142299846
 GameObject:
   m_ObjectHideFlags: 0
@@ -7475,6 +7584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3250823831914416159
 GameObject:
   m_ObjectHideFlags: 0
@@ -7587,7 +7697,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7386322309766777049}
-  m_RootOrder: 170
+  m_RootOrder: 169
   m_LocalEulerAnglesHint: {x: 0, y: 99.965, z: 0}
 --- !u!114 &2897246609667635145
 MonoBehaviour:
@@ -7601,6 +7711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3270022193498338894
 GameObject:
   m_ObjectHideFlags: 0
@@ -7644,6 +7755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3282102143292024311
 GameObject:
   m_ObjectHideFlags: 0
@@ -8299,6 +8411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3520313281209689195
 GameObject:
   m_ObjectHideFlags: 0
@@ -8546,6 +8659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3610765672887420540
 GameObject:
   m_ObjectHideFlags: 0
@@ -8575,7 +8689,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7386322309766777049}
-  m_RootOrder: 157
+  m_RootOrder: 156
   m_LocalEulerAnglesHint: {x: 0, y: 126.167, z: 0}
 --- !u!114 &7508007987657090272
 MonoBehaviour:
@@ -8589,6 +8703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3633442181814613783
 GameObject:
   m_ObjectHideFlags: 0
@@ -8632,6 +8747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3709137120631677908
 GameObject:
   m_ObjectHideFlags: 0
@@ -8658,7 +8774,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3709137120631677908}
   m_LocalRotation: {x: 0.91323346, y: 0.06551368, z: 0.36775765, w: -0.1626867}
-  m_LocalPosition: {x: -106.70221, y: -13.203655, z: 70.95282}
+  m_LocalPosition: {x: -105.56, y: -14.22, z: 71.53}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.009999999}
   m_Children:
   - {fileID: 1044947427462047259}
@@ -8758,6 +8874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3732348947395967499
 GameObject:
   m_ObjectHideFlags: 0
@@ -8787,7 +8904,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7386322309766777049}
-  m_RootOrder: 166
+  m_RootOrder: 165
   m_LocalEulerAnglesHint: {x: 0, y: 99.965, z: 0}
 --- !u!114 &8873212611279306774
 MonoBehaviour:
@@ -8801,6 +8918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3788920189916982808
 GameObject:
   m_ObjectHideFlags: 0
@@ -8844,6 +8962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3806273996433961208
 GameObject:
   m_ObjectHideFlags: 0
@@ -8887,6 +9006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3814080952853985362
 GameObject:
   m_ObjectHideFlags: 0
@@ -9338,6 +9458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3956255492910609318
 GameObject:
   m_ObjectHideFlags: 0
@@ -9381,6 +9502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4069422837472724997
 GameObject:
   m_ObjectHideFlags: 0
@@ -9424,6 +9546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4087041123929954189
 GameObject:
   m_ObjectHideFlags: 0
@@ -9941,7 +10064,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4217101513859497152}
   m_LocalRotation: {x: 0.84368336, y: -0.056011852, z: 0.5263071, w: 0.08978839}
-  m_LocalPosition: {x: -65.87584, y: -8.606907, z: 27.677868}
+  m_LocalPosition: {x: -65.38, y: -6.03, z: 27.43}
   m_LocalScale: {x: 0.01, y: 0.010000001, z: 0.01}
   m_Children:
   - {fileID: 141180625150039622}
@@ -10245,6 +10368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4325179848152714584
 GameObject:
   m_ObjectHideFlags: 0
@@ -10288,6 +10412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4344053136677712890
 GameObject:
   m_ObjectHideFlags: 0
@@ -10331,6 +10456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4365309060509021899
 GameObject:
   m_ObjectHideFlags: 0
@@ -10374,6 +10500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4392142239134871249
 GameObject:
   m_ObjectHideFlags: 0
@@ -10417,6 +10544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4458028655605690710
 GameObject:
   m_ObjectHideFlags: 0
@@ -10460,6 +10588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4527541387364874645
 GameObject:
   m_ObjectHideFlags: 0
@@ -10503,6 +10632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4635756207737714588
 GameObject:
   m_ObjectHideFlags: 0
@@ -10750,6 +10880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4725302053397735909
 GameObject:
   m_ObjectHideFlags: 0
@@ -10779,7 +10910,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7386322309766777049}
-  m_RootOrder: 171
+  m_RootOrder: 170
   m_LocalEulerAnglesHint: {x: 0, y: 99.965, z: 0}
 --- !u!114 &5039571833998885819
 MonoBehaviour:
@@ -10793,6 +10924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4738394600120409904
 GameObject:
   m_ObjectHideFlags: 0
@@ -10836,6 +10968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4745515198379305477
 GameObject:
   m_ObjectHideFlags: 0
@@ -10879,6 +11012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4766209913281083137
 GameObject:
   m_ObjectHideFlags: 0
@@ -10908,7 +11042,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7386322309766777049}
-  m_RootOrder: 156
+  m_RootOrder: 155
   m_LocalEulerAnglesHint: {x: 0, y: 126.167, z: 0}
 --- !u!114 &8689809923054608504
 MonoBehaviour:
@@ -10922,6 +11056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4855641025445332225
 GameObject:
   m_ObjectHideFlags: 0
@@ -10965,6 +11100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4871411827651280145
 GameObject:
   m_ObjectHideFlags: 0
@@ -11008,6 +11144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4879105423655040778
 GameObject:
   m_ObjectHideFlags: 0
@@ -11051,6 +11188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4884518144759303405
 GameObject:
   m_ObjectHideFlags: 0
@@ -11094,6 +11232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4897824871330083601
 GameObject:
   m_ObjectHideFlags: 0
@@ -11137,6 +11276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4917661579502626480
 GameObject:
   m_ObjectHideFlags: 0
@@ -11180,6 +11320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4934977155242160694
 GameObject:
   m_ObjectHideFlags: 0
@@ -11427,6 +11568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4969740770425072376
 GameObject:
   m_ObjectHideFlags: 0
@@ -11470,6 +11612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4989901828659240308
 GameObject:
   m_ObjectHideFlags: 0
@@ -11513,6 +11656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5004313130628708998
 GameObject:
   m_ObjectHideFlags: 0
@@ -11964,6 +12108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5158814251707073936
 GameObject:
   m_ObjectHideFlags: 0
@@ -12007,6 +12152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5183327235942673645
 GameObject:
   m_ObjectHideFlags: 0
@@ -12254,6 +12400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5212954196828832430
 GameObject:
   m_ObjectHideFlags: 0
@@ -12297,6 +12444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5372322487374635384
 GameObject:
   m_ObjectHideFlags: 0
@@ -12340,6 +12488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5412618680411643894
 GameObject:
   m_ObjectHideFlags: 0
@@ -12383,6 +12532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5428694850610460921
 GameObject:
   m_ObjectHideFlags: 0
@@ -12426,6 +12576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5508706073944898260
 GameObject:
   m_ObjectHideFlags: 0
@@ -12469,6 +12620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5577940631693489671
 GameObject:
   m_ObjectHideFlags: 0
@@ -12495,13 +12647,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5577940631693489671}
   m_LocalRotation: {x: 0.28570205, y: -0.103171885, z: 0.95224565, w: 0.030954638}
-  m_LocalPosition: {x: 256.42093, y: -4.601755, z: -115.47929}
+  m_LocalPosition: {x: 256.26, y: -5.95, z: -115.73}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.010000001}
   m_Children:
   - {fileID: 2554832491191793952}
   - {fileID: 1523242540759300033}
   m_Father: {fileID: 6830049553058020056}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5083948165742131187
 MeshFilter:
@@ -12595,6 +12747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5638450923029226149
 GameObject:
   m_ObjectHideFlags: 0
@@ -12638,6 +12791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5669311599869640102
 GameObject:
   m_ObjectHideFlags: 0
@@ -12664,7 +12818,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5669311599869640102}
   m_LocalRotation: {x: 0.7680356, y: -0, z: -0.64040726, w: 0}
-  m_LocalPosition: {x: -75.13774, y: -16.096256, z: 140.42047}
+  m_LocalPosition: {x: -78.28, y: -16.31, z: 138.89}
   m_LocalScale: {x: 0.010000001, y: 0.010000002, z: 0.01}
   m_Children:
   - {fileID: 497547670547631777}
@@ -12764,6 +12918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5692283878113742381
 GameObject:
   m_ObjectHideFlags: 0
@@ -12807,6 +12962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5818841684269745848
 GameObject:
   m_ObjectHideFlags: 0
@@ -12836,7 +12992,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7386322309766777049}
-  m_RootOrder: 169
+  m_RootOrder: 168
   m_LocalEulerAnglesHint: {x: 0, y: 99.965, z: 0}
 --- !u!114 &74084525347021413
 MonoBehaviour:
@@ -12850,6 +13006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5826490119650700001
 GameObject:
   m_ObjectHideFlags: 0
@@ -12893,6 +13050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5898784638863812438
 GameObject:
   m_ObjectHideFlags: 0
@@ -12936,6 +13094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5957604563236864915
 GameObject:
   m_ObjectHideFlags: 0
@@ -12979,6 +13138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5968251872165180538
 GameObject:
   m_ObjectHideFlags: 0
@@ -13011,7 +13171,7 @@ Transform:
   - {fileID: 9005663317483969251}
   - {fileID: 2662723185499666549}
   m_Father: {fileID: 6830049553058020056}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7425495289643107552
 MeshFilter:
@@ -13105,6 +13265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &6071891253044798680
 GameObject:
   m_ObjectHideFlags: 0
@@ -13148,6 +13309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &6128377488220400809
 GameObject:
   m_ObjectHideFlags: 0
@@ -13191,6 +13353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &6199951043338647290
 GameObject:
   m_ObjectHideFlags: 0
@@ -13220,7 +13383,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7386322309766777049}
-  m_RootOrder: 162
+  m_RootOrder: 161
   m_LocalEulerAnglesHint: {x: 0, y: 99.965, z: 0}
 --- !u!114 &5627645067674989184
 MonoBehaviour:
@@ -13234,6 +13397,211 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
+--- !u!1 &6222072840175438479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3177836072684702590}
+  - component: {fileID: 2702046599777859587}
+  - component: {fileID: 7006836007086424027}
+  m_Layer: 0
+  m_Name: Spot Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3177836072684702590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6222072840175438479}
+  m_LocalRotation: {x: 0.6651682, y: 0.2398986, z: 0.23989874, w: 0.66516805}
+  m_LocalPosition: {x: 174.2004, y: 573.2058, z: 0.00008419156}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4715160359169075376}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 50.335, y: 90, z: 90}
+--- !u!108 &2702046599777859587
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6222072840175438479}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 0
+  m_Shape: 0
+  m_Color: {r: 0.7216981, g: 0.9364915, b: 1, a: 1}
+  m_Intensity: 798
+  m_Range: 16.235691
+  m_SpotAngle: 134.01599
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 1
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 2
+  m_AreaSize: {x: 0.5, y: 0.5}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &7006836007086424027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6222072840175438479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 0
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
+  m_Intensity: 798
+  m_EnableSpotReflector: 0
+  m_LuxAtDistance: 1
+  m_InnerSpotPercent: 0
+  m_LightDimmer: 1
+  m_VolumetricDimmer: 1
+  m_LightUnit: 2
+  m_FadeDistance: 10000
+  m_AffectDiffuse: 1
+  m_AffectSpecular: 1
+  m_NonLightmappedOnly: 0
+  m_ShapeWidth: 0.5
+  m_ShapeHeight: 0.5
+  m_AspectRatio: 1
+  m_ShapeRadius: 0.025
+  m_SoftnessScale: 1
+  m_UseCustomSpotLightShadowCone: 0
+  m_CustomSpotLightShadowCone: 30
+  m_MaxSmoothness: 0.99
+  m_ApplyRangeAttenuation: 1
+  m_DisplayAreaLightEmissiveMesh: 0
+  m_AreaLightCookie: {fileID: 0}
+  m_AreaLightShadowCone: 120
+  m_UseScreenSpaceShadows: 0
+  m_InteractsWithSky: 1
+  m_AngularDiameter: 0.5
+  m_FlareSize: 2
+  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
+  m_FlareFalloff: 4
+  m_SurfaceTexture: {fileID: 0}
+  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
+  m_Distance: 1.5e+11
+  m_UseRayTracedShadows: 0
+  m_NumRayTracingSamples: 4
+  m_FilterTracedShadow: 1
+  m_FilterSizeTraced: 16
+  m_SunLightConeAngle: 0.5
+  m_LightShadowRadius: 0.5
+  m_SemiTransparentShadow: 0
+  m_ColorShadow: 1
+  m_EvsmExponent: 15
+  m_EvsmLightLeakBias: 0
+  m_EvsmVarianceBias: 0.00001
+  m_EvsmBlurPasses: 0
+  m_LightlayersMask: 1
+  m_LinkShadowLayers: 1
+  m_ShadowNearPlane: 0.1
+  m_BlockerSampleCount: 24
+  m_FilterSampleCount: 16
+  m_MinFilterSize: 0.1
+  m_KernelSize: 5
+  m_LightAngle: 1
+  m_MaxDepthBias: 0.001
+  m_ShadowResolution:
+    m_Override: 512
+    m_UseOverride: 1
+    m_Level: 0
+  m_ShadowDimmer: 1
+  m_VolumetricShadowDimmer: 1
+  m_ShadowFadeDistance: 10000
+  m_UseContactShadow:
+    m_Override: 0
+    m_UseOverride: 1
+    m_Level: 0
+  m_RayTracedContactShadow: 0
+  m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
+  m_PenumbraTint: 0
+  m_NormalBias: 0.75
+  m_SlopeBias: 0.5
+  m_ShadowUpdateMode: 0
+  m_BarnDoorAngle: 90
+  m_BarnDoorLength: 0.05
+  m_ShadowCascadeRatios:
+  - 0.05
+  - 0.2
+  - 0.3
+  m_ShadowCascadeBorders:
+  - 0.2
+  - 0.2
+  - 0.2
+  - 0.2
+  m_ShadowAlgorithm: 0
+  m_ShadowVariant: 0
+  m_ShadowPrecision: 0
+  useOldInspector: 0
+  useVolumetric: 1
+  featuresFoldout: 1
+  showAdditionalSettings: 0
+  m_AreaLightEmissiveMeshShadowCastingMode: 0
+  m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
+  m_AreaLightEmissiveMeshLayer: -1
 --- !u!1 &6255133424607306915
 GameObject:
   m_ObjectHideFlags: 0
@@ -13263,7 +13631,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7386322309766777049}
-  m_RootOrder: 160
+  m_RootOrder: 159
   m_LocalEulerAnglesHint: {x: 0, y: 99.965, z: 0}
 --- !u!114 &5015580901105371501
 MonoBehaviour:
@@ -13277,6 +13645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &6272128013024821653
 GameObject:
   m_ObjectHideFlags: 0
@@ -14136,6 +14505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &6369977480080783884
 GameObject:
   m_ObjectHideFlags: 0
@@ -14179,6 +14549,211 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
+--- !u!1 &6387170669701098837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3180690355682903294}
+  - component: {fileID: 24674253061670144}
+  - component: {fileID: 3771319631040922425}
+  m_Layer: 0
+  m_Name: Spot Light (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3180690355682903294
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6387170669701098837}
+  m_LocalRotation: {x: 0.60073656, y: -0.31530014, z: -0.2416216, w: 0.6937727}
+  m_LocalPosition: {x: -184.40097, y: 573.22034, z: -0.00090003014}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4715160359169075376}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 42.936, y: -83.774, z: -77.259}
+--- !u!108 &24674253061670144
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6387170669701098837}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 0
+  m_Shape: 0
+  m_Color: {r: 0.7216981, g: 0.9364915, b: 1, a: 1}
+  m_Intensity: 798
+  m_Range: 16.235691
+  m_SpotAngle: 134.01599
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 1
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 2
+  m_AreaSize: {x: 0.5, y: 0.5}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &3771319631040922425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6387170669701098837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 0
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
+  m_Intensity: 798
+  m_EnableSpotReflector: 0
+  m_LuxAtDistance: 1
+  m_InnerSpotPercent: 0
+  m_LightDimmer: 1
+  m_VolumetricDimmer: 1
+  m_LightUnit: 2
+  m_FadeDistance: 10000
+  m_AffectDiffuse: 1
+  m_AffectSpecular: 1
+  m_NonLightmappedOnly: 0
+  m_ShapeWidth: 0.5
+  m_ShapeHeight: 0.5
+  m_AspectRatio: 1
+  m_ShapeRadius: 0.025
+  m_SoftnessScale: 1
+  m_UseCustomSpotLightShadowCone: 0
+  m_CustomSpotLightShadowCone: 30
+  m_MaxSmoothness: 0.99
+  m_ApplyRangeAttenuation: 1
+  m_DisplayAreaLightEmissiveMesh: 0
+  m_AreaLightCookie: {fileID: 0}
+  m_AreaLightShadowCone: 120
+  m_UseScreenSpaceShadows: 0
+  m_InteractsWithSky: 1
+  m_AngularDiameter: 0.5
+  m_FlareSize: 2
+  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
+  m_FlareFalloff: 4
+  m_SurfaceTexture: {fileID: 0}
+  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
+  m_Distance: 1.5e+11
+  m_UseRayTracedShadows: 0
+  m_NumRayTracingSamples: 4
+  m_FilterTracedShadow: 1
+  m_FilterSizeTraced: 16
+  m_SunLightConeAngle: 0.5
+  m_LightShadowRadius: 0.5
+  m_SemiTransparentShadow: 0
+  m_ColorShadow: 1
+  m_EvsmExponent: 15
+  m_EvsmLightLeakBias: 0
+  m_EvsmVarianceBias: 0.00001
+  m_EvsmBlurPasses: 0
+  m_LightlayersMask: 1
+  m_LinkShadowLayers: 1
+  m_ShadowNearPlane: 0.1
+  m_BlockerSampleCount: 24
+  m_FilterSampleCount: 16
+  m_MinFilterSize: 0.1
+  m_KernelSize: 5
+  m_LightAngle: 1
+  m_MaxDepthBias: 0.001
+  m_ShadowResolution:
+    m_Override: 512
+    m_UseOverride: 1
+    m_Level: 0
+  m_ShadowDimmer: 1
+  m_VolumetricShadowDimmer: 1
+  m_ShadowFadeDistance: 10000
+  m_UseContactShadow:
+    m_Override: 0
+    m_UseOverride: 1
+    m_Level: 0
+  m_RayTracedContactShadow: 0
+  m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
+  m_PenumbraTint: 0
+  m_NormalBias: 0.75
+  m_SlopeBias: 0.5
+  m_ShadowUpdateMode: 0
+  m_BarnDoorAngle: 90
+  m_BarnDoorLength: 0.05
+  m_ShadowCascadeRatios:
+  - 0.05
+  - 0.2
+  - 0.3
+  m_ShadowCascadeBorders:
+  - 0.2
+  - 0.2
+  - 0.2
+  - 0.2
+  m_ShadowAlgorithm: 0
+  m_ShadowVariant: 0
+  m_ShadowPrecision: 0
+  useOldInspector: 0
+  useVolumetric: 1
+  featuresFoldout: 1
+  showAdditionalSettings: 0
+  m_AreaLightEmissiveMeshShadowCastingMode: 0
+  m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
+  m_AreaLightEmissiveMeshLayer: -1
 --- !u!1 &6480865031608825249
 GameObject:
   m_ObjectHideFlags: 0
@@ -14426,6 +15001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &6577209886662475210
 GameObject:
   m_ObjectHideFlags: 0
@@ -14452,7 +15028,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6577209886662475210}
   m_LocalRotation: {x: 0.89781696, y: -0, z: 0.4403689, w: 0}
-  m_LocalPosition: {x: 62.104248, y: -16.258106, z: -66.767136}
+  m_LocalPosition: {x: 60.52, y: -16.258106, z: -65.54}
   m_LocalScale: {x: 0.009999999, y: 0.01, z: 0.010000001}
   m_Children:
   - {fileID: 2193404375442655693}
@@ -14960,6 +15536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &6769996000200118577
 GameObject:
   m_ObjectHideFlags: 0
@@ -15003,6 +15580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &6790725922678840502
 GameObject:
   m_ObjectHideFlags: 0
@@ -15032,7 +15610,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7386322309766777049}
-  m_RootOrder: 161
+  m_RootOrder: 160
   m_LocalEulerAnglesHint: {x: 0, y: 99.965, z: 0}
 --- !u!114 &8466633075182898521
 MonoBehaviour:
@@ -15046,6 +15624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &6829752420546308721
 GameObject:
   m_ObjectHideFlags: 0
@@ -15089,6 +15668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &6913461624963060283
 GameObject:
   m_ObjectHideFlags: 0
@@ -15132,6 +15712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &6940503827918808642
 GameObject:
   m_ObjectHideFlags: 0
@@ -15164,7 +15745,7 @@ Transform:
   - {fileID: 4922299847101229449}
   - {fileID: 8224688259926553642}
   m_Father: {fileID: 6830049553058020056}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5539445638287756125
 MeshFilter:
@@ -15240,15 +15821,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6966585468580854522}
-  m_LocalRotation: {x: 0.8480194, y: -0.0025216867, z: 0.5299438, w: 0.0040352186}
-  m_LocalPosition: {x: 4.3323975, y: -16.580154, z: -56.069458}
+  m_LocalRotation: {x: 0.8242207, y: 0.124692164, z: 0.5150715, w: -0.19953316}
+  m_LocalPosition: {x: 2.31, y: -15.12, z: -55.08}
   m_LocalScale: {x: 0.010000001, y: 0.01, z: 0.009999999}
   m_Children:
   - {fileID: 8604010182385313976}
   - {fileID: 4182584486755217163}
   m_Father: {fileID: 6830049553058020056}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 207.218, y: -64.004, z: 0}
 --- !u!33 &8580909038338136188
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15341,6 +15922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7007098834705776786
 GameObject:
   m_ObjectHideFlags: 0
@@ -15384,6 +15966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7023449477617533161
 GameObject:
   m_ObjectHideFlags: 0
@@ -15510,6 +16093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7050692200347472478
 GameObject:
   m_ObjectHideFlags: 0
@@ -15553,6 +16137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7052977804612227337
 GameObject:
   m_ObjectHideFlags: 0
@@ -15596,6 +16181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7190002648505196222
 GameObject:
   m_ObjectHideFlags: 0
@@ -15639,6 +16225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7225849819883248472
 GameObject:
   m_ObjectHideFlags: 0
@@ -15886,6 +16473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7360986552908211982
 GameObject:
   m_ObjectHideFlags: 0
@@ -16119,7 +16707,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7386322309766777049}
-  m_RootOrder: 158
+  m_RootOrder: 157
   m_LocalEulerAnglesHint: {x: 0, y: 99.965, z: 0}
 --- !u!114 &8848268397812415232
 MonoBehaviour:
@@ -16133,6 +16721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7414699319676321170
 GameObject:
   m_ObjectHideFlags: 0
@@ -16176,6 +16765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7427563524990236179
 GameObject:
   m_ObjectHideFlags: 0
@@ -16208,7 +16798,7 @@ Transform:
   - {fileID: 272303513531279333}
   - {fileID: 6372920707981478807}
   m_Father: {fileID: 6830049553058020056}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &721777943898896906
 MeshFilter:
@@ -16302,6 +16892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7536415807994390370
 GameObject:
   m_ObjectHideFlags: 0
@@ -16345,6 +16936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7541214974560382780
 GameObject:
   m_ObjectHideFlags: 0
@@ -16388,6 +16980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7566939668520434187
 GameObject:
   m_ObjectHideFlags: 0
@@ -16431,6 +17024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7576968696189169024
 GameObject:
   m_ObjectHideFlags: 0
@@ -16474,6 +17068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7599391502363458406
 GameObject:
   m_ObjectHideFlags: 0
@@ -16517,6 +17112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7658862847918500271
 GameObject:
   m_ObjectHideFlags: 0
@@ -16560,6 +17156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7677837621285030171
 GameObject:
   m_ObjectHideFlags: 0
@@ -16603,6 +17200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7688499125309098877
 GameObject:
   m_ObjectHideFlags: 0
@@ -16646,6 +17244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7785297500754752457
 GameObject:
   m_ObjectHideFlags: 0
@@ -16689,6 +17288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7902901573549754734
 GameObject:
   m_ObjectHideFlags: 0
@@ -16936,6 +17536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8039161894502819593
 GameObject:
   m_ObjectHideFlags: 0
@@ -16979,6 +17580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8059386430296525310
 GameObject:
   m_ObjectHideFlags: 0
@@ -17226,6 +17828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8097011184401845330
 GameObject:
   m_ObjectHideFlags: 0
@@ -17473,210 +18076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &8105201893547527241
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8788557715271156827}
-  - component: {fileID: 657600521009400409}
-  - component: {fileID: 5945570620615904685}
-  m_Layer: 0
-  m_Name: Spot Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8788557715271156827
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8105201893547527241}
-  m_LocalRotation: {x: 0.6651682, y: 0.2398986, z: 0.23989874, w: 0.66516805}
-  m_LocalPosition: {x: 174.2004, y: 573.2058, z: 0.00008419156}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1066934496655418575}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50.335, y: 90, z: 90}
---- !u!108 &657600521009400409
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8105201893547527241}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 0
-  m_Shape: 0
-  m_Color: {r: 0.7216981, g: 0.9364915, b: 1, a: 1}
-  m_Intensity: 798
-  m_Range: 16.235691
-  m_SpotAngle: 134.01599
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 1
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 2
-  m_AreaSize: {x: 0.5, y: 0.5}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!114 &5945570620615904685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8105201893547527241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 0
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
-  m_Intensity: 798
-  m_EnableSpotReflector: 0
-  m_LuxAtDistance: 1
-  m_InnerSpotPercent: 0
-  m_LightDimmer: 1
-  m_VolumetricDimmer: 1
-  m_LightUnit: 2
-  m_FadeDistance: 10000
-  m_AffectDiffuse: 1
-  m_AffectSpecular: 1
-  m_NonLightmappedOnly: 0
-  m_ShapeWidth: 0.5
-  m_ShapeHeight: 0.5
-  m_AspectRatio: 1
-  m_ShapeRadius: 0.025
-  m_SoftnessScale: 1
-  m_UseCustomSpotLightShadowCone: 0
-  m_CustomSpotLightShadowCone: 30
-  m_MaxSmoothness: 0.99
-  m_ApplyRangeAttenuation: 1
-  m_DisplayAreaLightEmissiveMesh: 0
-  m_AreaLightCookie: {fileID: 0}
-  m_AreaLightShadowCone: 120
-  m_UseScreenSpaceShadows: 0
-  m_InteractsWithSky: 1
-  m_AngularDiameter: 0.5
-  m_FlareSize: 2
-  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
-  m_FlareFalloff: 4
-  m_SurfaceTexture: {fileID: 0}
-  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
-  m_Distance: 1.5e+11
-  m_UseRayTracedShadows: 0
-  m_NumRayTracingSamples: 4
-  m_FilterTracedShadow: 1
-  m_FilterSizeTraced: 16
-  m_SunLightConeAngle: 0.5
-  m_LightShadowRadius: 0.5
-  m_SemiTransparentShadow: 0
-  m_ColorShadow: 1
-  m_EvsmExponent: 15
-  m_EvsmLightLeakBias: 0
-  m_EvsmVarianceBias: 0.00001
-  m_EvsmBlurPasses: 0
-  m_LightlayersMask: 1
-  m_LinkShadowLayers: 1
-  m_ShadowNearPlane: 0.1
-  m_BlockerSampleCount: 24
-  m_FilterSampleCount: 16
-  m_MinFilterSize: 0.1
-  m_KernelSize: 5
-  m_LightAngle: 1
-  m_MaxDepthBias: 0.001
-  m_ShadowResolution:
-    m_Override: 512
-    m_UseOverride: 1
-    m_Level: 0
-  m_ShadowDimmer: 1
-  m_VolumetricShadowDimmer: 1
-  m_ShadowFadeDistance: 10000
-  m_UseContactShadow:
-    m_Override: 0
-    m_UseOverride: 1
-    m_Level: 0
-  m_RayTracedContactShadow: 0
-  m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
-  m_PenumbraTint: 0
-  m_NormalBias: 0.75
-  m_SlopeBias: 0.5
-  m_ShadowUpdateMode: 0
-  m_BarnDoorAngle: 90
-  m_BarnDoorLength: 0.05
-  m_ShadowCascadeRatios:
-  - 0.05
-  - 0.2
-  - 0.3
-  m_ShadowCascadeBorders:
-  - 0.2
-  - 0.2
-  - 0.2
-  - 0.2
-  m_ShadowAlgorithm: 0
-  m_ShadowVariant: 0
-  m_ShadowPrecision: 0
-  useOldInspector: 0
-  useVolumetric: 1
-  featuresFoldout: 1
-  showAdditionalSettings: 0
-  m_AreaLightEmissiveMeshShadowCastingMode: 0
-  m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
-  m_AreaLightEmissiveMeshLayer: -1
+  m_suitableForPuzzles: 1
 --- !u!1 &8208800716030183618
 GameObject:
   m_ObjectHideFlags: 0
@@ -17703,7 +18103,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8208800716030183618}
   m_LocalRotation: {x: 0.9816004, y: -0, z: -0.19094688, w: 0}
-  m_LocalPosition: {x: -126.13937, y: -16.096256, z: 122.15884}
+  m_LocalPosition: {x: -127.51, y: -16.44, z: 120.68}
   m_LocalScale: {x: 0.01, y: 0.010000002, z: 0.01}
   m_Children:
   - {fileID: 8019211315283658481}
@@ -17803,6 +18203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8234202066082042902
 GameObject:
   m_ObjectHideFlags: 0
@@ -17846,6 +18247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8307617660437076018
 GameObject:
   m_ObjectHideFlags: 0
@@ -18093,6 +18495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8440327959047613919
 GameObject:
   m_ObjectHideFlags: 0
@@ -18136,6 +18539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8471654098961676765
 GameObject:
   m_ObjectHideFlags: 0
@@ -18179,6 +18583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8566756775495987067
 GameObject:
   m_ObjectHideFlags: 0
@@ -18222,210 +18627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &8594424724243704115
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2621544535792356313}
-  - component: {fileID: 8747648291101422888}
-  - component: {fileID: 4262904305104301982}
-  m_Layer: 0
-  m_Name: Spot Light (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2621544535792356313
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8594424724243704115}
-  m_LocalRotation: {x: 0.60073656, y: -0.31530014, z: -0.2416216, w: 0.6937727}
-  m_LocalPosition: {x: -184.40097, y: 573.22034, z: -0.00090003014}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1066934496655418575}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 42.936, y: -83.774, z: -77.259}
---- !u!108 &8747648291101422888
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8594424724243704115}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 0
-  m_Shape: 0
-  m_Color: {r: 0.7216981, g: 0.9364915, b: 1, a: 1}
-  m_Intensity: 798
-  m_Range: 16.235691
-  m_SpotAngle: 134.01599
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 1
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 2
-  m_AreaSize: {x: 0.5, y: 0.5}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!114 &4262904305104301982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8594424724243704115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 0
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
-  m_Intensity: 798
-  m_EnableSpotReflector: 0
-  m_LuxAtDistance: 1
-  m_InnerSpotPercent: 0
-  m_LightDimmer: 1
-  m_VolumetricDimmer: 1
-  m_LightUnit: 2
-  m_FadeDistance: 10000
-  m_AffectDiffuse: 1
-  m_AffectSpecular: 1
-  m_NonLightmappedOnly: 0
-  m_ShapeWidth: 0.5
-  m_ShapeHeight: 0.5
-  m_AspectRatio: 1
-  m_ShapeRadius: 0.025
-  m_SoftnessScale: 1
-  m_UseCustomSpotLightShadowCone: 0
-  m_CustomSpotLightShadowCone: 30
-  m_MaxSmoothness: 0.99
-  m_ApplyRangeAttenuation: 1
-  m_DisplayAreaLightEmissiveMesh: 0
-  m_AreaLightCookie: {fileID: 0}
-  m_AreaLightShadowCone: 120
-  m_UseScreenSpaceShadows: 0
-  m_InteractsWithSky: 1
-  m_AngularDiameter: 0.5
-  m_FlareSize: 2
-  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
-  m_FlareFalloff: 4
-  m_SurfaceTexture: {fileID: 0}
-  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
-  m_Distance: 1.5e+11
-  m_UseRayTracedShadows: 0
-  m_NumRayTracingSamples: 4
-  m_FilterTracedShadow: 1
-  m_FilterSizeTraced: 16
-  m_SunLightConeAngle: 0.5
-  m_LightShadowRadius: 0.5
-  m_SemiTransparentShadow: 0
-  m_ColorShadow: 1
-  m_EvsmExponent: 15
-  m_EvsmLightLeakBias: 0
-  m_EvsmVarianceBias: 0.00001
-  m_EvsmBlurPasses: 0
-  m_LightlayersMask: 1
-  m_LinkShadowLayers: 1
-  m_ShadowNearPlane: 0.1
-  m_BlockerSampleCount: 24
-  m_FilterSampleCount: 16
-  m_MinFilterSize: 0.1
-  m_KernelSize: 5
-  m_LightAngle: 1
-  m_MaxDepthBias: 0.001
-  m_ShadowResolution:
-    m_Override: 512
-    m_UseOverride: 1
-    m_Level: 0
-  m_ShadowDimmer: 1
-  m_VolumetricShadowDimmer: 1
-  m_ShadowFadeDistance: 10000
-  m_UseContactShadow:
-    m_Override: 0
-    m_UseOverride: 1
-    m_Level: 0
-  m_RayTracedContactShadow: 0
-  m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
-  m_PenumbraTint: 0
-  m_NormalBias: 0.75
-  m_SlopeBias: 0.5
-  m_ShadowUpdateMode: 0
-  m_BarnDoorAngle: 90
-  m_BarnDoorLength: 0.05
-  m_ShadowCascadeRatios:
-  - 0.05
-  - 0.2
-  - 0.3
-  m_ShadowCascadeBorders:
-  - 0.2
-  - 0.2
-  - 0.2
-  - 0.2
-  m_ShadowAlgorithm: 0
-  m_ShadowVariant: 0
-  m_ShadowPrecision: 0
-  useOldInspector: 0
-  useVolumetric: 1
-  featuresFoldout: 1
-  showAdditionalSettings: 0
-  m_AreaLightEmissiveMeshShadowCastingMode: 0
-  m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
-  m_AreaLightEmissiveMeshLayer: -1
+  m_suitableForPuzzles: 1
 --- !u!1 &8606811708642509740
 GameObject:
   m_ObjectHideFlags: 0
@@ -18469,6 +18671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8623941233196136913
 GameObject:
   m_ObjectHideFlags: 0
@@ -18512,6 +18715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8662349489147166802
 GameObject:
   m_ObjectHideFlags: 0
@@ -18541,7 +18745,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7386322309766777049}
-  m_RootOrder: 165
+  m_RootOrder: 164
   m_LocalEulerAnglesHint: {x: 0, y: 99.965, z: 0}
 --- !u!114 &4418591073162682115
 MonoBehaviour:
@@ -18555,6 +18759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8680418661278818851
 GameObject:
   m_ObjectHideFlags: 0
@@ -18802,6 +19007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8725764136395100116
 GameObject:
   m_ObjectHideFlags: 0
@@ -18845,6 +19051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8769930832660024408
 GameObject:
   m_ObjectHideFlags: 0
@@ -18870,15 +19077,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8769930832660024408}
-  m_LocalRotation: {x: 0.9100252, y: -0, z: -0.41455302, w: 0}
-  m_LocalPosition: {x: 165.27066, y: -16.424456, z: -32.282364}
+  m_LocalRotation: {x: 0.8699152, y: 0.18906508, z: -0.31505096, w: -0.32900578}
+  m_LocalPosition: {x: 167.16, y: -21.9, z: -31.48}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 2402415692276360546}
   - {fileID: 1665706704798484109}
   m_Father: {fileID: 6830049553058020056}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: -153.045, y: 48.981995, z: -36.984985}
 --- !u!33 &3456784032139538408
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -18967,7 +19174,6 @@ Transform:
   - {fileID: 5229676628725721677}
   - {fileID: 4785754470176106684}
   - {fileID: 4471777309679833247}
-  - {fileID: 1066934496655418575}
   - {fileID: 3558750443244500033}
   - {fileID: 4169173050560469887}
   - {fileID: 4191978607596004922}
@@ -18978,6 +19184,7 @@ Transform:
   - {fileID: 7345723315398809891}
   - {fileID: 569176406874722812}
   - {fileID: 5817181317663820244}
+  - {fileID: 4715160359169075376}
   m_Father: {fileID: 402362271629531049}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19010,7 +19217,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7386322309766777049}
-  m_RootOrder: 167
+  m_RootOrder: 166
   m_LocalEulerAnglesHint: {x: 0, y: 99.965, z: 0}
 --- !u!114 &4808929222673670286
 MonoBehaviour:
@@ -19024,6 +19231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &9045753952151447797
 GameObject:
   m_ObjectHideFlags: 0
@@ -19067,89 +19275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &9134325876023228349
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1066934496655418575}
-  - component: {fileID: 8378417721215199148}
-  - component: {fileID: 3346388761273297924}
-  m_Layer: 0
-  m_Name: StreetLight(Clone) (15)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1066934496655418575
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9134325876023228349}
-  m_LocalRotation: {x: 0.6516272, y: 0.3286215, z: 0.5720831, w: -0.37431392}
-  m_LocalPosition: {x: 120.997955, y: -12.270206, z: -228.42105}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.009999999}
-  m_Children:
-  - {fileID: 8788557715271156827}
-  - {fileID: 2621544535792356313}
-  m_Father: {fileID: 6830049553058020056}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8378417721215199148
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9134325876023228349}
-  m_Mesh: {fileID: 8632993429437876281, guid: fc3c5d4665ef93843b8eec2e9fc9cc8f, type: 3}
---- !u!23 &3346388761273297924
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9134325876023228349}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 86bed4a414487c043b276b46c3a8a6c0, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
+  m_suitableForPuzzles: 1
 --- !u!1001 &153055488144191554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19227,14 +19353,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b20dbf8b5823d4f4ca38d39e4af2bed2, type: 3}
---- !u!1 &1071481735802195219 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b20dbf8b5823d4f4ca38d39e4af2bed2, type: 3}
-  m_PrefabInstance: {fileID: 153055488144191554}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &402362271629531049 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b20dbf8b5823d4f4ca38d39e4af2bed2, type: 3}
+  m_PrefabInstance: {fileID: 153055488144191554}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1071481735802195219 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b20dbf8b5823d4f4ca38d39e4af2bed2, type: 3}
   m_PrefabInstance: {fileID: 153055488144191554}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1362773057411212502

@@ -28,8 +28,6 @@ public class ScoreOnTrigger : MonoBehaviour
             return;
         }
 
-        Debug.Log("GET SCORED");
-
         if(collider.GetComponent<Bullet>() != null)
         {
             _scoreGiven = true;
@@ -55,6 +53,7 @@ public class ScoreOnTrigger : MonoBehaviour
         var destructionComponent = GetComponent<DestructionFX>();
         if(destructionComponent)
         {
+            destructionComponent.PlayShotSound();
             destructionComponent.Destruct(collider.gameObject);
         }
 

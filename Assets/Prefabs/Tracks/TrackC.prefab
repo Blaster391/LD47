@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &170348926
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,6 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &446037210
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,6 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &505838394
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,6 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &518944830
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,6 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &593425036
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,6 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &643776491
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &801171191
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,6 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &809125622
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,6 +395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &861064421
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,6 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &963833298
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,6 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &964851752
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,6 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &986201024
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,6 +571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &994424491
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1023994398
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,6 +659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1101562576
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,6 +703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1260662663
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,6 +747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1272727212
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,6 +791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1366442721
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,6 +835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1384876271
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,6 +879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1442240977
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,6 +923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1598689480
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,6 +967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1660783993
 GameObject:
   m_ObjectHideFlags: 0
@@ -989,6 +1011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1840592392
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,6 +1055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1988240546
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,6 +1099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1990151210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,6 +1143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1993186337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,6 +1187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2011452525
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,6 +1231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2103767493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,6 +1275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2130050275
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,6 +1319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &42547021994125253
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,6 +1363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &113304764062435597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,6 +1407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &165267682306940201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1419,6 +1451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &170949229802503166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,6 +1495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &250244679985070633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,210 +1539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &261465565490130976
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7529869593393686636}
-  - component: {fileID: 817039055429508555}
-  - component: {fileID: 4132012509862443442}
-  m_Layer: 0
-  m_Name: Spot Light (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7529869593393686636
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 261465565490130976}
-  m_LocalRotation: {x: 0.60073656, y: -0.31530014, z: -0.2416216, w: 0.6937727}
-  m_LocalPosition: {x: -184.40097, y: 573.22034, z: -0.00090003014}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2190521073861592230}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 42.936, y: -83.774, z: -77.259}
---- !u!108 &817039055429508555
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 261465565490130976}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 0
-  m_Shape: 0
-  m_Color: {r: 0.7216981, g: 0.9364915, b: 1, a: 1}
-  m_Intensity: 798
-  m_Range: 16.235691
-  m_SpotAngle: 134.01599
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 1
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 2
-  m_AreaSize: {x: 0.5, y: 0.5}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!114 &4132012509862443442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 261465565490130976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 0
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
-  m_Intensity: 798
-  m_EnableSpotReflector: 0
-  m_LuxAtDistance: 1
-  m_InnerSpotPercent: 0
-  m_LightDimmer: 1
-  m_VolumetricDimmer: 1
-  m_LightUnit: 2
-  m_FadeDistance: 10000
-  m_AffectDiffuse: 1
-  m_AffectSpecular: 1
-  m_NonLightmappedOnly: 0
-  m_ShapeWidth: 0.5
-  m_ShapeHeight: 0.5
-  m_AspectRatio: 1
-  m_ShapeRadius: 0.025
-  m_SoftnessScale: 1
-  m_UseCustomSpotLightShadowCone: 0
-  m_CustomSpotLightShadowCone: 30
-  m_MaxSmoothness: 0.99
-  m_ApplyRangeAttenuation: 1
-  m_DisplayAreaLightEmissiveMesh: 0
-  m_AreaLightCookie: {fileID: 0}
-  m_AreaLightShadowCone: 120
-  m_UseScreenSpaceShadows: 0
-  m_InteractsWithSky: 1
-  m_AngularDiameter: 0.5
-  m_FlareSize: 2
-  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
-  m_FlareFalloff: 4
-  m_SurfaceTexture: {fileID: 0}
-  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
-  m_Distance: 1.5e+11
-  m_UseRayTracedShadows: 0
-  m_NumRayTracingSamples: 4
-  m_FilterTracedShadow: 1
-  m_FilterSizeTraced: 16
-  m_SunLightConeAngle: 0.5
-  m_LightShadowRadius: 0.5
-  m_SemiTransparentShadow: 0
-  m_ColorShadow: 1
-  m_EvsmExponent: 15
-  m_EvsmLightLeakBias: 0
-  m_EvsmVarianceBias: 0.00001
-  m_EvsmBlurPasses: 0
-  m_LightlayersMask: 1
-  m_LinkShadowLayers: 1
-  m_ShadowNearPlane: 0.1
-  m_BlockerSampleCount: 24
-  m_FilterSampleCount: 16
-  m_MinFilterSize: 0.1
-  m_KernelSize: 5
-  m_LightAngle: 1
-  m_MaxDepthBias: 0.001
-  m_ShadowResolution:
-    m_Override: 512
-    m_UseOverride: 1
-    m_Level: 0
-  m_ShadowDimmer: 1
-  m_VolumetricShadowDimmer: 1
-  m_ShadowFadeDistance: 10000
-  m_UseContactShadow:
-    m_Override: 0
-    m_UseOverride: 1
-    m_Level: 0
-  m_RayTracedContactShadow: 0
-  m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
-  m_PenumbraTint: 0
-  m_NormalBias: 0.75
-  m_SlopeBias: 0.5
-  m_ShadowUpdateMode: 0
-  m_BarnDoorAngle: 90
-  m_BarnDoorLength: 0.05
-  m_ShadowCascadeRatios:
-  - 0.05
-  - 0.2
-  - 0.3
-  m_ShadowCascadeBorders:
-  - 0.2
-  - 0.2
-  - 0.2
-  - 0.2
-  m_ShadowAlgorithm: 0
-  m_ShadowVariant: 0
-  m_ShadowPrecision: 0
-  useOldInspector: 0
-  useVolumetric: 1
-  featuresFoldout: 1
-  showAdditionalSettings: 0
-  m_AreaLightEmissiveMeshShadowCastingMode: 0
-  m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
-  m_AreaLightEmissiveMeshLayer: -1
+  m_suitableForPuzzles: 1
 --- !u!1 &274353033940430798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1752,6 +1583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &294053691058582613
 GameObject:
   m_ObjectHideFlags: 0
@@ -1795,6 +1627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &374218466272026825
 GameObject:
   m_ObjectHideFlags: 0
@@ -2125,6 +1958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &417755259540241976
 GameObject:
   m_ObjectHideFlags: 0
@@ -2372,6 +2206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &484996467088440227
 GameObject:
   m_ObjectHideFlags: 0
@@ -2415,6 +2250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &514112896094696294
 GameObject:
   m_ObjectHideFlags: 0
@@ -2745,6 +2581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &534800780453334870
 GameObject:
   m_ObjectHideFlags: 0
@@ -3687,89 +3524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &773219208266856402
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2190521073861592230}
-  - component: {fileID: 4780770416452760931}
-  - component: {fileID: 1570908770862004511}
-  m_Layer: 0
-  m_Name: StreetLight(Clone) (43)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2190521073861592230
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 773219208266856402}
-  m_LocalRotation: {x: 0.93594545, y: -0.027204543, z: 0.34316278, w: 0.07419793}
-  m_LocalPosition: {x: -329.7234, y: -28.313526, z: 174.59126}
-  m_LocalScale: {x: 0.01, y: 0.009999999, z: 0.010000001}
-  m_Children:
-  - {fileID: 1643154728660313538}
-  - {fileID: 7529869593393686636}
-  m_Father: {fileID: 1639995280310267964}
-  m_RootOrder: 42
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4780770416452760931
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 773219208266856402}
-  m_Mesh: {fileID: 8632993429437876281, guid: fc3c5d4665ef93843b8eec2e9fc9cc8f, type: 3}
---- !u!23 &1570908770862004511
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 773219208266856402}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 86bed4a414487c043b276b46c3a8a6c0, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
+  m_suitableForPuzzles: 1
 --- !u!1 &826142569564644590
 GameObject:
   m_ObjectHideFlags: 0
@@ -4017,6 +3772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &846295006318907875
 GameObject:
   m_ObjectHideFlags: 0
@@ -4264,6 +4020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &865500067058492232
 GameObject:
   m_ObjectHideFlags: 0
@@ -4307,6 +4064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &873600269322194446
 GameObject:
   m_ObjectHideFlags: 0
@@ -4433,6 +4191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &894055186354562992
 GameObject:
   m_ObjectHideFlags: 0
@@ -4476,6 +4235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &938284185599206401
 GameObject:
   m_ObjectHideFlags: 0
@@ -4519,6 +4279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &975428528733030326
 GameObject:
   m_ObjectHideFlags: 0
@@ -4562,6 +4323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1150293119985076538
 GameObject:
   m_ObjectHideFlags: 0
@@ -4605,6 +4367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1160711239778151512
 GameObject:
   m_ObjectHideFlags: 0
@@ -4935,6 +4698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1261471429437261552
 GameObject:
   m_ObjectHideFlags: 0
@@ -4961,7 +4725,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1261471429437261552}
   m_LocalRotation: {x: 0.44870862, y: 0.06347504, z: 0.89084756, w: -0.03197157}
-  m_LocalPosition: {x: 112.73337, y: -26.288527, z: -99.158585}
+  m_LocalPosition: {x: 112.81, y: -26.96, z: -99.1}
   m_LocalScale: {x: 0.009999999, y: 0.009999999, z: 0.01}
   m_Children:
   - {fileID: 7014083824743428019}
@@ -5061,6 +4825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1355771035062969657
 GameObject:
   m_ObjectHideFlags: 0
@@ -5187,6 +4952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1380913044656946725
 GameObject:
   m_ObjectHideFlags: 0
@@ -5230,6 +4996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1436059074564614686
 GameObject:
   m_ObjectHideFlags: 0
@@ -5764,6 +5531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1580129371517856429
 GameObject:
   m_ObjectHideFlags: 0
@@ -5807,6 +5575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1624519384390088017
 GameObject:
   m_ObjectHideFlags: 0
@@ -5850,6 +5619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1738843689459897756
 GameObject:
   m_ObjectHideFlags: 0
@@ -6097,6 +5867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1778615584726908610
 GameObject:
   m_ObjectHideFlags: 0
@@ -6140,6 +5911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1856088798927557113
 GameObject:
   m_ObjectHideFlags: 0
@@ -6166,7 +5938,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856088798927557113}
   m_LocalRotation: {x: 0.57739794, y: -0.008551935, z: 0.8163957, w: 0.006048378}
-  m_LocalPosition: {x: 74.013245, y: -31.568527, z: -136.31216}
+  m_LocalPosition: {x: 74.01, y: -31.82, z: -136.31}
   m_LocalScale: {x: 0.009999999, y: 0.009999999, z: 0.010000001}
   m_Children:
   - {fileID: 2632512169686059457}
@@ -6266,6 +6038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &1909283180058448092
 GameObject:
   m_ObjectHideFlags: 0
@@ -6292,7 +6065,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1909283180058448092}
   m_LocalRotation: {x: 0.17130122, y: 0.020388968, z: 0.9850013, w: -0.0035458382}
-  m_LocalPosition: {x: 181.65802, y: -14.888527, z: -11.432301}
+  m_LocalPosition: {x: 180.89, y: -16.39, z: -13.59}
   m_LocalScale: {x: 0.009999999, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 449395755643141819}
@@ -6392,6 +6165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2002818169320117319
 GameObject:
   m_ObjectHideFlags: 0
@@ -6435,6 +6209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2095576300816398240
 GameObject:
   m_ObjectHideFlags: 0
@@ -7052,6 +6827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2335021722073813113
 GameObject:
   m_ObjectHideFlags: 0
@@ -7095,6 +6871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2383068285596997447
 GameObject:
   m_ObjectHideFlags: 0
@@ -7342,6 +7119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2406935608799528977
 GameObject:
   m_ObjectHideFlags: 0
@@ -7385,6 +7163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2414813149342785257
 GameObject:
   m_ObjectHideFlags: 0
@@ -7428,6 +7207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2429978419877523188
 GameObject:
   m_ObjectHideFlags: 0
@@ -7454,7 +7234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2429978419877523188}
   m_LocalRotation: {x: 0.7440176, y: -0, z: 0.66816, w: 0}
-  m_LocalPosition: {x: -502.98343, y: -31.133526, z: 246.58942}
+  m_LocalPosition: {x: -505.33, y: -31.133526, z: 246.84}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.010000001}
   m_Children:
   - {fileID: 5958168576307492453}
@@ -7537,7 +7317,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2491769239974471566}
   m_LocalRotation: {x: -0.1318084, y: -0.030615067, z: 0.990794, w: -0.0040728175}
-  m_LocalPosition: {x: -749.30164, y: -9.698526, z: 17.697498}
+  m_LocalPosition: {x: -748.22, y: -9.83, z: 13.73}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 5636709962461461866}
@@ -7637,6 +7417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2531940845246697773
 GameObject:
   m_ObjectHideFlags: 0
@@ -7680,6 +7461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2634099342972095172
 GameObject:
   m_ObjectHideFlags: 0
@@ -7927,6 +7709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2819924160564550351
 GameObject:
   m_ObjectHideFlags: 0
@@ -8378,6 +8161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2864978004520440528
 GameObject:
   m_ObjectHideFlags: 0
@@ -8708,6 +8492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2960667370170409150
 GameObject:
   m_ObjectHideFlags: 0
@@ -8751,6 +8536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &2972383290354820206
 GameObject:
   m_ObjectHideFlags: 0
@@ -10509,6 +10295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3247928912013429871
 GameObject:
   m_ObjectHideFlags: 0
@@ -10756,6 +10543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3359378772028478181
 GameObject:
   m_ObjectHideFlags: 0
@@ -10799,6 +10587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3365449326201492538
 GameObject:
   m_ObjectHideFlags: 0
@@ -10842,6 +10631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3372083153046052735
 GameObject:
   m_ObjectHideFlags: 0
@@ -10885,6 +10675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3383985864121294946
 GameObject:
   m_ObjectHideFlags: 0
@@ -11011,6 +10802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3425953494582680147
 GameObject:
   m_ObjectHideFlags: 0
@@ -11054,6 +10846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3447334870856249313
 GameObject:
   m_ObjectHideFlags: 0
@@ -11097,6 +10890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3469287280142648887
 GameObject:
   m_ObjectHideFlags: 0
@@ -11344,6 +11138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3552970326412067435
 GameObject:
   m_ObjectHideFlags: 0
@@ -11387,6 +11182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3562036944394014927
 GameObject:
   m_ObjectHideFlags: 0
@@ -11513,6 +11309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3684859416117069346
 GameObject:
   m_ObjectHideFlags: 0
@@ -11582,7 +11379,6 @@ Transform:
   - {fileID: 2715491994550160364}
   - {fileID: 7658923109923081955}
   - {fileID: 570329498065515206}
-  - {fileID: 2190521073861592230}
   - {fileID: 3087085072639599813}
   m_Father: {fileID: 5127080988493591886}
   m_RootOrder: 3
@@ -11630,6 +11426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3787172696185628459
 GameObject:
   m_ObjectHideFlags: 0
@@ -12064,7 +11861,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3793023193125031636}
   m_LocalRotation: {x: -0.45463789, y: -0, z: 0.8906764, w: 0}
-  m_LocalPosition: {x: -644.1317, y: -31.103527, z: -101.9906}
+  m_LocalPosition: {x: -642.87, y: -31.103527, z: -102.9}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 5139316625086749349}
@@ -12572,6 +12369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3879143511157850326
 GameObject:
   m_ObjectHideFlags: 0
@@ -12819,6 +12617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3910532770498474125
 GameObject:
   m_ObjectHideFlags: 0
@@ -12862,6 +12661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &3916681997770771027
 GameObject:
   m_ObjectHideFlags: 0
@@ -12905,6 +12705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4026575272019232844
 GameObject:
   m_ObjectHideFlags: 0
@@ -12948,6 +12749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4078940203376527116
 GameObject:
   m_ObjectHideFlags: 0
@@ -13807,210 +13609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &4193926197028768879
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1643154728660313538}
-  - component: {fileID: 4384097649425165268}
-  - component: {fileID: 8461897573278186328}
-  m_Layer: 0
-  m_Name: Spot Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1643154728660313538
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4193926197028768879}
-  m_LocalRotation: {x: 0.6651682, y: 0.2398986, z: 0.23989874, w: 0.66516805}
-  m_LocalPosition: {x: 174.2004, y: 573.2058, z: 0.00008419156}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2190521073861592230}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50.335, y: 90, z: 90}
---- !u!108 &4384097649425165268
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4193926197028768879}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 0
-  m_Shape: 0
-  m_Color: {r: 0.7216981, g: 0.9364915, b: 1, a: 1}
-  m_Intensity: 798
-  m_Range: 16.235691
-  m_SpotAngle: 134.01599
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 1
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 2
-  m_AreaSize: {x: 0.5, y: 0.5}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!114 &8461897573278186328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4193926197028768879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 0
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
-  m_Intensity: 798
-  m_EnableSpotReflector: 0
-  m_LuxAtDistance: 1
-  m_InnerSpotPercent: 0
-  m_LightDimmer: 1
-  m_VolumetricDimmer: 1
-  m_LightUnit: 2
-  m_FadeDistance: 10000
-  m_AffectDiffuse: 1
-  m_AffectSpecular: 1
-  m_NonLightmappedOnly: 0
-  m_ShapeWidth: 0.5
-  m_ShapeHeight: 0.5
-  m_AspectRatio: 1
-  m_ShapeRadius: 0.025
-  m_SoftnessScale: 1
-  m_UseCustomSpotLightShadowCone: 0
-  m_CustomSpotLightShadowCone: 30
-  m_MaxSmoothness: 0.99
-  m_ApplyRangeAttenuation: 1
-  m_DisplayAreaLightEmissiveMesh: 0
-  m_AreaLightCookie: {fileID: 0}
-  m_AreaLightShadowCone: 120
-  m_UseScreenSpaceShadows: 0
-  m_InteractsWithSky: 1
-  m_AngularDiameter: 0.5
-  m_FlareSize: 2
-  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
-  m_FlareFalloff: 4
-  m_SurfaceTexture: {fileID: 0}
-  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
-  m_Distance: 1.5e+11
-  m_UseRayTracedShadows: 0
-  m_NumRayTracingSamples: 4
-  m_FilterTracedShadow: 1
-  m_FilterSizeTraced: 16
-  m_SunLightConeAngle: 0.5
-  m_LightShadowRadius: 0.5
-  m_SemiTransparentShadow: 0
-  m_ColorShadow: 1
-  m_EvsmExponent: 15
-  m_EvsmLightLeakBias: 0
-  m_EvsmVarianceBias: 0.00001
-  m_EvsmBlurPasses: 0
-  m_LightlayersMask: 1
-  m_LinkShadowLayers: 1
-  m_ShadowNearPlane: 0.1
-  m_BlockerSampleCount: 24
-  m_FilterSampleCount: 16
-  m_MinFilterSize: 0.1
-  m_KernelSize: 5
-  m_LightAngle: 1
-  m_MaxDepthBias: 0.001
-  m_ShadowResolution:
-    m_Override: 512
-    m_UseOverride: 1
-    m_Level: 0
-  m_ShadowDimmer: 1
-  m_VolumetricShadowDimmer: 1
-  m_ShadowFadeDistance: 10000
-  m_UseContactShadow:
-    m_Override: 0
-    m_UseOverride: 1
-    m_Level: 0
-  m_RayTracedContactShadow: 0
-  m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
-  m_PenumbraTint: 0
-  m_NormalBias: 0.75
-  m_SlopeBias: 0.5
-  m_ShadowUpdateMode: 0
-  m_BarnDoorAngle: 90
-  m_BarnDoorLength: 0.05
-  m_ShadowCascadeRatios:
-  - 0.05
-  - 0.2
-  - 0.3
-  m_ShadowCascadeBorders:
-  - 0.2
-  - 0.2
-  - 0.2
-  - 0.2
-  m_ShadowAlgorithm: 0
-  m_ShadowVariant: 0
-  m_ShadowPrecision: 0
-  useOldInspector: 0
-  useVolumetric: 1
-  featuresFoldout: 1
-  showAdditionalSettings: 0
-  m_AreaLightEmissiveMeshShadowCastingMode: 0
-  m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
-  m_AreaLightEmissiveMeshLayer: -1
+  m_suitableForPuzzles: 1
 --- !u!1 &4203187464965759038
 GameObject:
   m_ObjectHideFlags: 0
@@ -14258,6 +13857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4276010290356679674
 GameObject:
   m_ObjectHideFlags: 0
@@ -14301,6 +13901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4333033444703610954
 GameObject:
   m_ObjectHideFlags: 0
@@ -14918,6 +14519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4465242492787239374
 GameObject:
   m_ObjectHideFlags: 0
@@ -14961,6 +14563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4480473385487280552
 GameObject:
   m_ObjectHideFlags: 0
@@ -15004,6 +14607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4483923142326848274
 GameObject:
   m_ObjectHideFlags: 0
@@ -15251,6 +14855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4604847619374622337
 GameObject:
   m_ObjectHideFlags: 0
@@ -15581,6 +15186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4662819107034049605
 GameObject:
   m_ObjectHideFlags: 0
@@ -16198,6 +15804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4754255738886143449
 GameObject:
   m_ObjectHideFlags: 0
@@ -16528,6 +16135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &4919763549056480119
 GameObject:
   m_ObjectHideFlags: 0
@@ -17266,6 +16874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5017499696642085630
 GameObject:
   m_ObjectHideFlags: 0
@@ -17513,6 +17122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5044916632753277213
 GameObject:
   m_ObjectHideFlags: 0
@@ -17760,6 +17370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5167474915092752312
 GameObject:
   m_ObjectHideFlags: 0
@@ -17803,6 +17414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5202966210896245902
 GameObject:
   m_ObjectHideFlags: 0
@@ -17846,6 +17458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5290904380269962326
 GameObject:
   m_ObjectHideFlags: 0
@@ -17889,6 +17502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5318665200216818515
 GameObject:
   m_ObjectHideFlags: 0
@@ -18544,6 +18158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5421699620684974081
 GameObject:
   m_ObjectHideFlags: 0
@@ -18670,6 +18285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5436806810588717621
 GameObject:
   m_ObjectHideFlags: 0
@@ -18879,6 +18495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5463812154021961858
 GameObject:
   m_ObjectHideFlags: 0
@@ -19126,6 +18743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5507018689236561908
 GameObject:
   m_ObjectHideFlags: 0
@@ -19254,7 +18872,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5526219546485313531}
   m_LocalRotation: {x: -0.04382498, y: -0.014121818, z: 0.9989392, w: -0.0006195456}
-  m_LocalPosition: {x: 209.78604, y: -13.568527, z: 48.784576}
+  m_LocalPosition: {x: 209.78, y: -12.57, z: 48.81}
   m_LocalScale: {x: 0.009999999, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 6779014098587386988}
@@ -19354,6 +18972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5570855816685445229
 GameObject:
   m_ObjectHideFlags: 0
@@ -19397,6 +19016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5625159878666508792
 GameObject:
   m_ObjectHideFlags: 0
@@ -19440,6 +19060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5630392896607801734
 GameObject:
   m_ObjectHideFlags: 0
@@ -19483,6 +19104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5631767183110066881
 GameObject:
   m_ObjectHideFlags: 0
@@ -19609,6 +19231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5696138928247041525
 GameObject:
   m_ObjectHideFlags: 0
@@ -19652,6 +19275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5745562665253196637
 GameObject:
   m_ObjectHideFlags: 0
@@ -19695,6 +19319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5826664607915095097
 GameObject:
   m_ObjectHideFlags: 0
@@ -19721,7 +19346,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5826664607915095097}
   m_LocalRotation: {x: 0.9445981, y: -0.027114028, z: 0.31697068, w: 0.080801986}
-  m_LocalPosition: {x: -238.00389, y: -43.568527, z: -4.7122345}
+  m_LocalPosition: {x: -237.26, y: -44.21, z: -5.69}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.009999999}
   m_Children:
   - {fileID: 8640663866277857503}
@@ -20229,6 +19854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5889770350494652312
 GameObject:
   m_ObjectHideFlags: 0
@@ -20355,6 +19981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5902553388762234614
 GameObject:
   m_ObjectHideFlags: 0
@@ -20381,7 +20008,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5902553388762234614}
   m_LocalRotation: {x: 0.97044116, y: -0.01718454, z: -0.24065784, w: 0.005706117}
-  m_LocalPosition: {x: -232.69247, y: -24.090374, z: -9.373096}
+  m_LocalPosition: {x: -230.2, y: -24.07, z: -4.65}
   m_LocalScale: {x: 0.01, y: 0.010000002, z: 0.009999999}
   m_Children:
   - {fileID: 2115731236523100708}
@@ -20481,6 +20108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5968172298339718188
 GameObject:
   m_ObjectHideFlags: 0
@@ -20524,6 +20152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &5979747476070455341
 GameObject:
   m_ObjectHideFlags: 0
@@ -20567,6 +20196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &6013651197580583141
 GameObject:
   m_ObjectHideFlags: 0
@@ -20610,6 +20240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &6059436871404571689
 GameObject:
   m_ObjectHideFlags: 0
@@ -21265,6 +20896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &6288244620316616033
 GameObject:
   m_ObjectHideFlags: 0
@@ -21308,6 +20940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &6315685515506623911
 GameObject:
   m_ObjectHideFlags: 0
@@ -21351,6 +20984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &6390235717300469669
 GameObject:
   m_ObjectHideFlags: 0
@@ -21377,7 +21011,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6390235717300469669}
   m_LocalRotation: {x: 0.31193274, y: 0.042892125, z: 0.9490308, w: -0.014098024}
-  m_LocalPosition: {x: 166.33167, y: -19.418528, z: -71.85181}
+  m_LocalPosition: {x: 166.28, y: -18.52, z: -71.92}
   m_LocalScale: {x: 0.009999999, y: 0.01, z: 0.010000001}
   m_Children:
   - {fileID: 676155786241447305}
@@ -21477,6 +21111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &6409177571886712979
 GameObject:
   m_ObjectHideFlags: 0
@@ -22132,6 +21767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &6592251561226424539
 GameObject:
   m_ObjectHideFlags: 0
@@ -22175,6 +21811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &6615105269660205364
 GameObject:
   m_ObjectHideFlags: 0
@@ -22218,6 +21855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &6643855390337253067
 GameObject:
   m_ObjectHideFlags: 0
@@ -22261,6 +21899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &6648880334882165483
 GameObject:
   m_ObjectHideFlags: 0
@@ -22712,6 +22351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &6738656496981763191
 GameObject:
   m_ObjectHideFlags: 0
@@ -23042,6 +22682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7000126062130233387
 GameObject:
   m_ObjectHideFlags: 0
@@ -23085,6 +22726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7000343884409405129
 GameObject:
   m_ObjectHideFlags: 0
@@ -23128,6 +22770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7032542724642206994
 GameObject:
   m_ObjectHideFlags: 0
@@ -23171,6 +22814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7066764877231637992
 GameObject:
   m_ObjectHideFlags: 0
@@ -23214,6 +22858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7074261668302161080
 GameObject:
   m_ObjectHideFlags: 0
@@ -23257,6 +22902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7115096871339338910
 GameObject:
   m_ObjectHideFlags: 0
@@ -23504,6 +23150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7174977962509911066
 GameObject:
   m_ObjectHideFlags: 0
@@ -23547,6 +23194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7186649442661783623
 GameObject:
   m_ObjectHideFlags: 0
@@ -23590,6 +23238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7234228845638486866
 GameObject:
   m_ObjectHideFlags: 0
@@ -23633,6 +23282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7240507398091120535
 GameObject:
   m_ObjectHideFlags: 0
@@ -23880,6 +23530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7272206600854737004
 GameObject:
   m_ObjectHideFlags: 0
@@ -24006,6 +23657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7289081582976314569
 GameObject:
   m_ObjectHideFlags: 0
@@ -24336,6 +23988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7348950917013906042
 GameObject:
   m_ObjectHideFlags: 0
@@ -24379,6 +24032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7357159984808358548
 GameObject:
   m_ObjectHideFlags: 0
@@ -24626,6 +24280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7431629049199699375
 GameObject:
   m_ObjectHideFlags: 0
@@ -24669,6 +24324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7457219880250512973
 GameObject:
   m_ObjectHideFlags: 0
@@ -24712,6 +24368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7465629823739129684
 GameObject:
   m_ObjectHideFlags: 0
@@ -24755,6 +24412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7511887492627550552
 GameObject:
   m_ObjectHideFlags: 0
@@ -25002,6 +24660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7560466610234487007
 GameObject:
   m_ObjectHideFlags: 0
@@ -25028,7 +24687,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7560466610234487007}
   m_LocalRotation: {x: -0.30247405, y: -0.050568633, z: 0.9516796, w: -0.01607232}
-  m_LocalPosition: {x: 174.15591, y: -18.143528, z: 109.655716}
+  m_LocalPosition: {x: 176.29, y: -18.86, z: 106.63}
   m_LocalScale: {x: 0.010000001, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 9201226198150921202}
@@ -25128,6 +24787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7574304969770612397
 GameObject:
   m_ObjectHideFlags: 0
@@ -25637,179 +25297,179 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   m_splinePoints:
-  - {fileID: 1833633026996241512}
-  - {fileID: 540117382937035371}
-  - {fileID: 3848196104702829758}
-  - {fileID: 8056102063955091838}
-  - {fileID: 6062539968427252236}
-  - {fileID: 6134350015400365392}
-  - {fileID: 7311359348459329213}
-  - {fileID: 5086752591268174858}
-  - {fileID: 4203961204736058414}
-  - {fileID: 3913491940322905388}
-  - {fileID: 2200364834896375984}
-  - {fileID: 1985759410687079094}
-  - {fileID: 913645769368076470}
-  - {fileID: 1366442722}
-  - {fileID: 2130050276}
-  - {fileID: 1101562577}
-  - {fileID: 964851753}
-  - {fileID: 1993186338}
-  - {fileID: 505838395}
-  - {fileID: 1260662664}
-  - {fileID: 1840592393}
-  - {fileID: 1023994399}
-  - {fileID: 801171192}
-  - {fileID: 593425037}
-  - {fileID: 170348927}
-  - {fileID: 986201025}
-  - {fileID: 1660783994}
-  - {fileID: 963833299}
-  - {fileID: 643776492}
-  - {fileID: 518944831}
-  - {fileID: 2103767494}
-  - {fileID: 1384876272}
-  - {fileID: 1442240978}
-  - {fileID: 1988240547}
-  - {fileID: 1272727213}
-  - {fileID: 446037211}
-  - {fileID: 2011452526}
-  - {fileID: 809125623}
-  - {fileID: 994424492}
-  - {fileID: 1598689481}
-  - {fileID: 155574469}
-  - {fileID: 861064422}
-  - {fileID: 1990151211}
-  - {fileID: 7333830173545804265}
-  - {fileID: 34810503003446886}
-  - {fileID: 3253361505512982263}
-  - {fileID: 9212119162822800055}
-  - {fileID: 2464549778469456699}
-  - {fileID: 6346416322348500479}
-  - {fileID: 5714701586972395105}
-  - {fileID: 4530462532913801775}
-  - {fileID: 9216749827611713490}
-  - {fileID: 6222005809161366367}
-  - {fileID: 3611880797214989801}
-  - {fileID: 9168673281963171240}
-  - {fileID: 1289936578093356665}
-  - {fileID: 5956072727106962479}
-  - {fileID: 8073436827434322123}
-  - {fileID: 8300759917870202714}
-  - {fileID: 8829809389667705785}
-  - {fileID: 390260550323274535}
-  - {fileID: 7445835057144585170}
-  - {fileID: 3805029404952745358}
-  - {fileID: 5413239839021702635}
-  - {fileID: 2838091182548793706}
-  - {fileID: 2417144752904920021}
-  - {fileID: 2781862627288147349}
-  - {fileID: 2525097766367773154}
-  - {fileID: 531020793493554144}
-  - {fileID: 3457964683018678898}
-  - {fileID: 6947659082487947729}
-  - {fileID: 5155311217367961372}
-  - {fileID: 3602840963781320122}
-  - {fileID: 6896636280555151759}
-  - {fileID: 4843578338999263864}
-  - {fileID: 7188125543192657312}
-  - {fileID: 6767956517099670054}
-  - {fileID: 3750575316988002268}
-  - {fileID: 9750058445102619}
-  - {fileID: 7306644936943174042}
-  - {fileID: 800979554504812113}
-  - {fileID: 8106989459018475051}
-  - {fileID: 7011991566212164485}
-  - {fileID: 6765555776107761175}
-  - {fileID: 5389424899593141592}
-  - {fileID: 6981398738053212442}
-  - {fileID: 362636169926838857}
-  - {fileID: 4278301439865369162}
-  - {fileID: 6617120047040693497}
-  - {fileID: 4081600303807311876}
-  - {fileID: 4500655828237462471}
-  - {fileID: 4870535853397232021}
-  - {fileID: 4913288147324609182}
-  - {fileID: 7190494806141290499}
-  - {fileID: 8457557020553645694}
-  - {fileID: 1970389583150227751}
-  - {fileID: 3254800660936815660}
-  - {fileID: 6010331068988774050}
-  - {fileID: 1873700000523817543}
-  - {fileID: 7531590857537302058}
-  - {fileID: 2405359991764779998}
-  - {fileID: 2685729710378136190}
-  - {fileID: 8449577364514614828}
-  - {fileID: 791844537347609507}
-  - {fileID: 6201351919071019398}
-  - {fileID: 7411455215608640925}
-  - {fileID: 3975027709566692295}
-  - {fileID: 1926726022350115635}
-  - {fileID: 5344190351935632910}
-  - {fileID: 1658388569004719752}
-  - {fileID: 3906048486819731834}
-  - {fileID: 3356220048582024926}
-  - {fileID: 5778302867044658269}
-  - {fileID: 2533348568775928843}
-  - {fileID: 2984890525170660657}
-  - {fileID: 7972533148296576879}
-  - {fileID: 4825602927178412837}
-  - {fileID: 7563846465282353256}
-  - {fileID: 2151863757679990571}
-  - {fileID: 8361255718720338801}
-  - {fileID: 6154251244216223054}
-  - {fileID: 1978328289754466155}
-  - {fileID: 499573375435616441}
-  - {fileID: 4159069654201256987}
-  - {fileID: 4253355474822790690}
-  - {fileID: 5391456481983265244}
-  - {fileID: 5667648069957040894}
-  - {fileID: 3451381207570797110}
-  - {fileID: 1393094401367333929}
-  - {fileID: 5355614717215724879}
-  - {fileID: 5437811244675348752}
-  - {fileID: 3929347397727732251}
-  - {fileID: 7761394727615284274}
-  - {fileID: 7963608755355363687}
-  - {fileID: 4888488068068849719}
-  - {fileID: 4038615770206560132}
-  - {fileID: 3965385711493371947}
-  - {fileID: 6068488716600953125}
-  - {fileID: 3286376788355362034}
-  - {fileID: 2129427804378275568}
-  - {fileID: 8851730261745733085}
-  - {fileID: 2137703277211979953}
-  - {fileID: 2914603767336070825}
-  - {fileID: 8183039058408424689}
-  - {fileID: 3211913948477671918}
-  - {fileID: 8394581371225203266}
-  - {fileID: 2316669547779932928}
-  - {fileID: 7782083850092774606}
-  - {fileID: 1852232232503494242}
-  - {fileID: 3540762309144259175}
-  - {fileID: 7059712170877461785}
-  - {fileID: 8744701555420910461}
-  - {fileID: 8521579502156734035}
-  - {fileID: 2304910618552612676}
-  - {fileID: 7991276365060718390}
-  - {fileID: 3487034515719009357}
-  - {fileID: 8397100476672444693}
-  - {fileID: 2219966397709269908}
-  - {fileID: 281543688726376757}
-  - {fileID: 7350570388879755460}
-  - {fileID: 3672845206844189414}
-  - {fileID: 8779572364393196254}
-  - {fileID: 7072220192945980101}
-  - {fileID: 6358769579686528765}
-  - {fileID: 6356043339021853307}
-  - {fileID: 3029928352042322849}
-  - {fileID: 1687990257309653242}
-  - {fileID: 8427459779144903534}
-  - {fileID: 5197021952759396496}
-  - {fileID: 1468966555077009232}
-  - {fileID: 5429551784360069888}
-  - {fileID: 7191492143261342910}
-  - {fileID: 2982033983442753585}
+  - {fileID: 5902626552080059515}
+  - {fileID: 1820842682762248178}
+  - {fileID: 3394712966662721285}
+  - {fileID: 8940696960835837847}
+  - {fileID: 4556214629585613283}
+  - {fileID: 626519990528866919}
+  - {fileID: 5074827879215618717}
+  - {fileID: 6075828679179448023}
+  - {fileID: 3426405240160585101}
+  - {fileID: 3445110669764704809}
+  - {fileID: 5383593243792684653}
+  - {fileID: 4975054858732689219}
+  - {fileID: 2853959381156087896}
+  - {fileID: 1366442723}
+  - {fileID: 2130050277}
+  - {fileID: 1101562578}
+  - {fileID: 964851754}
+  - {fileID: 1993186339}
+  - {fileID: 505838396}
+  - {fileID: 1260662665}
+  - {fileID: 1840592394}
+  - {fileID: 1023994400}
+  - {fileID: 801171193}
+  - {fileID: 593425038}
+  - {fileID: 170348928}
+  - {fileID: 986201026}
+  - {fileID: 1660783995}
+  - {fileID: 963833300}
+  - {fileID: 643776493}
+  - {fileID: 518944832}
+  - {fileID: 2103767495}
+  - {fileID: 1384876273}
+  - {fileID: 1442240979}
+  - {fileID: 1988240548}
+  - {fileID: 1272727214}
+  - {fileID: 446037212}
+  - {fileID: 2011452527}
+  - {fileID: 809125624}
+  - {fileID: 994424493}
+  - {fileID: 1598689482}
+  - {fileID: 155574470}
+  - {fileID: 861064423}
+  - {fileID: 1990151212}
+  - {fileID: 8858383210265103806}
+  - {fileID: 1652143186022358924}
+  - {fileID: 4311304403192316944}
+  - {fileID: 6129722619740379093}
+  - {fileID: 7834926753180144054}
+  - {fileID: 8577822560475831206}
+  - {fileID: 7693120420985254483}
+  - {fileID: 696060754741347545}
+  - {fileID: 4324527555811471429}
+  - {fileID: 3271761847463207936}
+  - {fileID: 3659948149258576360}
+  - {fileID: 9013069839633430435}
+  - {fileID: 6713276706965306255}
+  - {fileID: 6047258099103362255}
+  - {fileID: 781523341405850174}
+  - {fileID: 8003581049122722384}
+  - {fileID: 9172407291611343922}
+  - {fileID: 5210237481534897932}
+  - {fileID: 1471935970489659629}
+  - {fileID: 6674326090282712649}
+  - {fileID: 2665135766621138871}
+  - {fileID: 4102316827326151147}
+  - {fileID: 6100177022557928675}
+  - {fileID: 3018570774920145271}
+  - {fileID: 2172116558764812467}
+  - {fileID: 373958982865887129}
+  - {fileID: 5892269130873063211}
+  - {fileID: 7519352704641661462}
+  - {fileID: 9107550665267779798}
+  - {fileID: 7057605814111602410}
+  - {fileID: 4496931434045944299}
+  - {fileID: 8946515999282190663}
+  - {fileID: 1190429476673262972}
+  - {fileID: 4453860408267043044}
+  - {fileID: 7649449205349536132}
+  - {fileID: 7349207609062108177}
+  - {fileID: 5730810339917686026}
+  - {fileID: 5627204345931356762}
+  - {fileID: 4808908772486848700}
+  - {fileID: 4910926287846907386}
+  - {fileID: 6410502203837016148}
+  - {fileID: 8216915472657453917}
+  - {fileID: 2884975830914689363}
+  - {fileID: 3762763182263797126}
+  - {fileID: 5617874786175862145}
+  - {fileID: 1630294863375277612}
+  - {fileID: 4772191274218270344}
+  - {fileID: 6534902209000475232}
+  - {fileID: 6176799949372552731}
+  - {fileID: 9051729616534953105}
+  - {fileID: 3583615454670758083}
+  - {fileID: 1279568408764899385}
+  - {fileID: 5577734783669488550}
+  - {fileID: 1658704337120660278}
+  - {fileID: 7236500950109180643}
+  - {fileID: 3907686127578876373}
+  - {fileID: 6803785887959162323}
+  - {fileID: 6099713493425593305}
+  - {fileID: 3453506733351643235}
+  - {fileID: 7057388394778083907}
+  - {fileID: 7795988843465104712}
+  - {fileID: 2473865374909108308}
+  - {fileID: 4870347264675782892}
+  - {fileID: 2658551396740297290}
+  - {fileID: 7579574712040453313}
+  - {fileID: 3673097440377929179}
+  - {fileID: 564947037083074014}
+  - {fileID: 3948443861660376725}
+  - {fileID: 3274697537969180046}
+  - {fileID: 8077891181076449747}
+  - {fileID: 5741884823023004469}
+  - {fileID: 8960663076185954159}
+  - {fileID: 2566644944498336821}
+  - {fileID: 2627292002919023478}
+  - {fileID: 6742909804648400789}
+  - {fileID: 864544123219386194}
+  - {fileID: 8370324918345736025}
+  - {fileID: 2098515033530463321}
+  - {fileID: 4451903218629610965}
+  - {fileID: 5861445657400074420}
+  - {fileID: 3491589017740581170}
+  - {fileID: 2508373283981240646}
+  - {fileID: 4600398280566569355}
+  - {fileID: 2760328968622030090}
+  - {fileID: 8244138016469887060}
+  - {fileID: 6763601672109019875}
+  - {fileID: 1530940418575336}
+  - {fileID: 1260579783973730047}
+  - {fileID: 204429184924326888}
+  - {fileID: 6830546665985526714}
+  - {fileID: 8024089494625175846}
+  - {fileID: 4924795463177118483}
+  - {fileID: 520512264003379089}
+  - {fileID: 2186718293235828576}
+  - {fileID: 9097648161956709547}
+  - {fileID: 7498392475053689532}
+  - {fileID: 4884367711356563259}
+  - {fileID: 8687583927619886884}
+  - {fileID: 6558048252929997380}
+  - {fileID: 2387049990524380169}
+  - {fileID: 7573121763485866216}
+  - {fileID: 4194342969389362162}
+  - {fileID: 2121861824396318163}
+  - {fileID: 1994076872512164688}
+  - {fileID: 9103472696527943944}
+  - {fileID: 3161841390565115871}
+  - {fileID: 3483819005608172497}
+  - {fileID: 1931665076294060343}
+  - {fileID: 7340685382328806518}
+  - {fileID: 160634818994709949}
+  - {fileID: 5547765739693346421}
+  - {fileID: 706660398581316517}
+  - {fileID: 1672632196687153410}
+  - {fileID: 6106789660231054084}
+  - {fileID: 5878414929125191013}
+  - {fileID: 2922733016801870959}
+  - {fileID: 7169071595664218454}
+  - {fileID: 914845641633282653}
+  - {fileID: 8545020349887658020}
+  - {fileID: 48449287058841020}
+  - {fileID: 5176226743412891796}
+  - {fileID: 3293622329562762672}
+  - {fileID: 1644657241656191203}
+  - {fileID: 7020824887706322805}
+  - {fileID: 8955153068051996808}
+  - {fileID: 6342745397587376578}
+  - {fileID: 2030744338389451929}
+  - {fileID: 7876914338211804526}
+  - {fileID: 7137968310886138414}
+  - {fileID: 1355444602325348019}
   _autoFindPoints: 1
 --- !u!1 &7697592736399168094
 GameObject:
@@ -25854,6 +25514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7725223458581168353
 GameObject:
   m_ObjectHideFlags: 0
@@ -25897,6 +25558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7725330964623139421
 GameObject:
   m_ObjectHideFlags: 0
@@ -26552,6 +26214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7860474911266554913
 GameObject:
   m_ObjectHideFlags: 0
@@ -26799,6 +26462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7931294041548195383
 GameObject:
   m_ObjectHideFlags: 0
@@ -26842,6 +26506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7955583289664420053
 GameObject:
   m_ObjectHideFlags: 0
@@ -26885,6 +26550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &7971171601544800878
 GameObject:
   m_ObjectHideFlags: 0
@@ -27215,6 +26881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8038997110951795890
 GameObject:
   m_ObjectHideFlags: 0
@@ -27258,6 +26925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8146508582270920304
 GameObject:
   m_ObjectHideFlags: 0
@@ -27588,6 +27256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8210288632856719006
 GameObject:
   m_ObjectHideFlags: 0
@@ -27835,6 +27504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8370200928475080920
 GameObject:
   m_ObjectHideFlags: 0
@@ -28082,6 +27752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8540019777795196739
 GameObject:
   m_ObjectHideFlags: 0
@@ -28533,6 +28204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8675196629545040445
 GameObject:
   m_ObjectHideFlags: 0
@@ -28780,6 +28452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8749459864386383731
 GameObject:
   m_ObjectHideFlags: 0
@@ -28823,6 +28496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8752208989820570268
 GameObject:
   m_ObjectHideFlags: 0
@@ -28866,6 +28540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8775528906322111552
 GameObject:
   m_ObjectHideFlags: 0
@@ -28909,6 +28584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8784375140402983190
 GameObject:
   m_ObjectHideFlags: 0
@@ -29156,6 +28832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &8969325075705767507
 GameObject:
   m_ObjectHideFlags: 0
@@ -29199,6 +28876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &9038509858821045148
 GameObject:
   m_ObjectHideFlags: 0
@@ -29242,6 +28920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &9048991908416221077
 GameObject:
   m_ObjectHideFlags: 0
@@ -29489,6 +29168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1 &9160319467431667048
 GameObject:
   m_ObjectHideFlags: 0
@@ -29521,7 +29201,7 @@ Transform:
   - {fileID: 2685558826380314486}
   - {fileID: 5290634863139988659}
   m_Father: {fileID: 1639995280310267964}
-  m_RootOrder: 43
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8824542154195738390
 MeshFilter:
@@ -29615,6 +29295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db67c9b778d8c943b48379aa1bf093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_suitableForPuzzles: 1
 --- !u!1001 &1286767543904500283
 PrefabInstance:
   m_ObjectHideFlags: 0

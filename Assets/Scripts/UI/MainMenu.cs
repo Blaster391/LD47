@@ -117,10 +117,10 @@ public class MainMenu : MonoBehaviour
                 switch (_trackSpins.GetComponent<CarSpinner>().CurrentCar)
                 {
                     case 0:
-                        SceneManager.LoadScene("TrackB");
+                        SceneManager.LoadScene("TrackC");
                         break;
                     case 1:
-                        SceneManager.LoadScene("TrackC");
+                        SceneManager.LoadScene("TrackB");
                         break;
 
                 }
