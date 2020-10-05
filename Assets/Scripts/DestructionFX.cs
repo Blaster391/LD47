@@ -11,7 +11,7 @@ public class DestructionFX : MonoBehaviour
     private bool _destructOnCollision = false;
    
     [SerializeField]
-    private bool _constructed = true;
+    public bool _constructed = true;
     [SerializeField]
     private float _lowEndTime = 1.0f;
     [SerializeField]
@@ -26,6 +26,8 @@ public class DestructionFX : MonoBehaviour
     [SerializeField]
     private float _burstTime = 1.0f;
 
+    [SerializeField]
+    private bool _useShader = false;
 
     private float _destructTime = 0.0f;
 
@@ -36,6 +38,8 @@ public class DestructionFX : MonoBehaviour
     private Mesh _mesh;
 
     private Vector3 _collisionPosition = new Vector3();
+    private Vector3 _deathPosition = new Vector3();
+    private Vector3 _deathScale = new Vector3();
 
     // Start is called before the first frame update
     void Start()
@@ -70,7 +74,8 @@ public class DestructionFX : MonoBehaviour
     void Update()
     {
 
-        if(_constructed)
+        float maxTime = (_highEndTime + _shrinkDelay);
+        if (_constructed)
         {
             if(_destructTime > 0.0f)
             {
@@ -80,7 +85,7 @@ public class DestructionFX : MonoBehaviour
         }
         else
         {
-            float maxTime = (_highEndTime + _shrinkDelay);
+            
             if (_destructTime < maxTime)
             {
                 _destructTime += Time.deltaTime;
@@ -92,23 +97,39 @@ public class DestructionFX : MonoBehaviour
             }
         }
 
-        _material.SetInt("_vertexCount", _mesh.vertexCount);
-        _material.SetFloat("_destructTime", _destructTime);
-        _material.SetFloat("_lowEndTime", _lowEndTime);
-        _material.SetFloat("_highEndTime", _highEndTime);
-
-        if(_trackKillerObject && _killerObject)
+        if (_trackKillerObject && _killerObject)
         {
             _collisionPosition = _killerObject.transform.position;
         }
 
-        _material.SetVector("_collisionPosition", _collisionPosition);
+        if (_useShader)
+        {
+            _material.SetInt("_vertexCount", _mesh.vertexCount);
+            _material.SetFloat("_destructTime", _destructTime);
+            _material.SetFloat("_lowEndTime", _lowEndTime);
+            _material.SetFloat("_highEndTime", _highEndTime);
 
-        _material.SetFloat("_burstSizeMax", _burstSizeMax);
-        _material.SetFloat("_burstSizeMin", _burstSizeMin);
-        _material.SetFloat("_burstTime", _burstTime);
+            _material.SetVector("_collisionPosition", _collisionPosition);
 
-        _material.SetFloat("_shrinkDelay", _shrinkDelay);
+            _material.SetFloat("_burstSizeMax", _burstSizeMax);
+            _material.SetFloat("_burstSizeMin", _burstSizeMin);
+            _material.SetFloat("_burstTime", _burstTime);
+
+            _material.SetFloat("_shrinkDelay", _shrinkDelay);
+        }
+        else if(!_constructed)
+        {
+            float positionProp = 1.0f;
+            if(_lowEndTime > 0.0f)
+            {
+                positionProp = _destructTime / _lowEndTime;
+                positionProp = Mathf.Min(positionProp, 1.0f);
+            }
+
+            float prop = _destructTime / maxTime;
+            transform.position = Vector3.Lerp(_deathPosition, _collisionPosition, positionProp);
+            transform.localScale = Vector3.Lerp(_deathScale, new Vector3(), prop);
+        }
     }
 
     void OnCollisionEnter(Collision collision)
@@ -156,6 +177,9 @@ public class DestructionFX : MonoBehaviour
             _collisionPosition = destroyer.transform.position;
             _killerObject = destroyer;
             _trackKillerObject = true;
+
+            _deathPosition = transform.position;
+            _deathScale = transform.localScale;
         }
     }
 }

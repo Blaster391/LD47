@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5178850859363718893}
   - component: {fileID: 5178850859363718890}
   - component: {fileID: 5178850859363718891}
+  - component: {fileID: 8254302177495695787}
   m_Layer: 0
   m_Name: Cassette
   m_TagString: Untagged
@@ -127,3 +128,25 @@ MonoBehaviour:
   _rotateSpeed: 75
   _bobSpeed: 3
   _bobAmount: 0.5
+--- !u!114 &8254302177495695787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5413204410443819966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f56faa1f2aaa0d848bc19e3b738b9abf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destroyObjectOnDestruction: 1
+  _destructOnCollision: 0
+  _constructed: 1
+  _lowEndTime: 0.4
+  _highEndTime: 1
+  _shrinkDelay: 0
+  _burstSizeMax: 0
+  _burstSizeMin: 0
+  _burstTime: 0
+  _useShader: 0

@@ -30,7 +30,11 @@ public class SpinComponent : MonoBehaviour
     {
         transform.Rotate(new Vector3(0, 1, 0), _rotateSpeed * Time.deltaTime);
 
-        _currentBob += _bobSpeed * Time.deltaTime;
-        transform.position = _intialPosition + transform.up * Mathf.Sin(_currentBob) * _bobAmount;
+
+        if(GetComponent<DestructionFX>()._constructed)
+        {
+            _currentBob += _bobSpeed * Time.deltaTime;
+            transform.position = _intialPosition + transform.up * Mathf.Sin(_currentBob) * _bobAmount;
+        }
     }
 }
