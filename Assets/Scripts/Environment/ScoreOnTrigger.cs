@@ -30,11 +30,26 @@ public class ScoreOnTrigger : MonoBehaviour
 
         Debug.Log("GET SCORED");
 
+        if(collider.GetComponent<Bullet>() != null)
+        {
+            _scoreGiven = true;
+            var dc = GetComponent<DestructionFX>();
+            if (dc)
+            {
+                dc.Destruct(collider.gameObject);
+            }
+            return;
+        }
+
         var player = collider.GetComponent<PlayerScore>();
         if (player)
         {
             player.AddScore(_scoreToAdd);
             _scoreGiven = true;
+        }
+        else
+        {
+            return;
         }
 
         var destructionComponent = GetComponent<DestructionFX>();

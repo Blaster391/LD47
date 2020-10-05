@@ -17,7 +17,8 @@ public class GameOver : MonoBehaviour
 
     public void OnPlayAgainSelected()
     {
-
+        var activeScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(activeScene.name, LoadSceneMode.Single);
     }
 
     public void OnQuitSelected()

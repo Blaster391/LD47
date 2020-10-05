@@ -9,7 +9,9 @@ public class DestructionFX : MonoBehaviour
     private bool _destroyObjectOnDestruction = false;
     [SerializeField]
     private bool _destructOnCollision = false;
-   
+    [SerializeField]
+    public bool _destructOnShoot = true;
+
     [SerializeField]
     public bool _constructed = true;
     [SerializeField]
@@ -44,14 +46,18 @@ public class DestructionFX : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-#if UNITY_EDITOR
 
-        _mesh = GetComponent<MeshFilter>().sharedMesh;
-        _material = GetComponent<Renderer>().sharedMaterial;
+        if(GetComponent<MeshFilter>())
+        {
+#if UNITY_EDITOR
+            _mesh = GetComponent<MeshFilter>().sharedMesh;
+            _material = GetComponent<Renderer>().sharedMaterial;
 #else
         _mesh = GetComponent<MeshFilter>().mesh;
         _material = GetComponent<Renderer>().material;
 #endif
+        }
+
 
         if (!_constructed)
         {
@@ -134,8 +140,13 @@ public class DestructionFX : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (_destructOnCollision)
+        if (_destructOnCollision || _destructOnShoot)
         {
+            if(_destructOnShoot && collision.gameObject?.GetComponent<Bullet>() == null)
+            {
+                return;
+            }
+
             Vector3 collisionPoint = transform.position;
             if(collision.contacts.Length > 0)
             {
@@ -169,6 +180,12 @@ public class DestructionFX : MonoBehaviour
 
             _deathPosition = transform.position;
             _deathScale = transform.localScale;
+
+            var collider = GetComponent<Collider>();
+            if (collider)
+            {
+                collider.enabled = false;
+            }
         }
     }
 
@@ -183,6 +200,12 @@ public class DestructionFX : MonoBehaviour
 
             _deathPosition = transform.position;
             _deathScale = transform.localScale;
+
+            var collider = GetComponent<Collider>();
+            if (collider)
+            {
+                collider.enabled = false;
+            }
         }
     }
 }
