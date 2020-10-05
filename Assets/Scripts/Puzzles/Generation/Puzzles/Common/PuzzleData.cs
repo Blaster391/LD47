@@ -71,12 +71,12 @@ namespace Puzzles
             Shuffle(potentialCell);
 
 
-            int randomClutterAmount = Random.Range(_minClutter, _maxClutter);
+            int randomClutterAmount = Random.Range(_minClutter, _maxClutter + 1);
             randomClutterAmount = Mathf.Min(randomClutterAmount, potentialCell.Count);
 
             for (int i = 0; i < randomClutterAmount; ++i)
             {
-                int randomObject = Random.Range(0, _randomObjects.Count - 1);
+                int randomObject = Random.Range(0, _randomObjects.Count);
                 potentialCell[i].m_prefabToSpawn = _randomObjects[randomObject];
             }
         }
