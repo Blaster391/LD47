@@ -29,7 +29,7 @@ public class SurfaceClampedCarController : MonoBehaviour
     private bool m_active = true;
     private int lapCount = 0;
 
-    private float m_distTrav = 0;
+    private float m_distTrav = 0; // Spline distance, NOT left and right
     private float m_trackLength;
 
     private void Start()
@@ -84,7 +84,7 @@ public class SurfaceClampedCarController : MonoBehaviour
             Quaternion rot = Quaternion.LookRotation(m_avgFwdBuffer.GetAverage(), m_avgUpBuffer.GetAverage()); 
             transform.rotation = rot;
 
-            m_distTrav += (i_desiredPos - transform.position).magnitude;
+            //m_distTrav += (i_desiredPos - transform.position).magnitude; // We don't care about left and right, only forward so gotta do this somewhere else...
             transform.position = i_desiredPos;
         }
     }
@@ -102,7 +102,21 @@ public class SurfaceClampedCarController : MonoBehaviour
 
         int splineIndPrev = m_curSplineIndex;
         m_curSpeed = Mathf.Clamp(m_curSpeed + Input.GetAxis("Vertical") * accel * Time.fixedDeltaTime, m_minSpeed, m_maxSpeed);
+
+        float previousSplineT = m_curSplineT;
         m_spline.Lookahead(ref m_curSplineIndex, m_curSpeed, ref m_curSplineT, out desiredF, out desiredPos);
+        if(m_curSplineT > previousSplineT)
+        {
+            m_distTrav += (m_curSplineT - previousSplineT) * m_spline.GetSegmentLength(m_curSplineIndex);
+        }
+        else if(m_curSplineT == 0f)
+        {
+            m_distTrav += (1f - previousSplineT) * m_spline.GetSegmentLength(m_curSplineIndex);
+        }
+        else
+        {
+            Debug.LogError("Idk");
+        }
 
         if (m_curSplineIndex == 0 && splineIndPrev != 0)
         {

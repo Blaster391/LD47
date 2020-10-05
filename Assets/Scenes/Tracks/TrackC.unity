@@ -153,14 +153,6 @@ PrefabInstance:
       propertyPath: m_car
       value: 
       objectReference: {fileID: 1160864783}
-    - target: {fileID: 8734775359940197190, guid: 5eebe2574f0ce4c469a89913ca8a3cf4, type: 3}
-      propertyPath: m_trackWidthInCells
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8734775359940197190, guid: 5eebe2574f0ce4c469a89913ca8a3cf4, type: 3}
-      propertyPath: m_cellSize
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8734775359940197191, guid: 5eebe2574f0ce4c469a89913ca8a3cf4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -226,6 +218,10 @@ PrefabInstance:
       propertyPath: _hudStats
       value: 
       objectReference: {fileID: 1608984565}
+    - target: {fileID: 4113139706017204405, guid: cea282422ba6ad14cb20e7004fb00585, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4113139706017204406, guid: cea282422ba6ad14cb20e7004fb00585, type: 3}
       propertyPath: m_LocalPosition.y
       value: -16.66
@@ -625,6 +621,30 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6777369512781982412, guid: 3836f9f2516418844b66a4086ae1a40c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843939635914969183, guid: 3836f9f2516418844b66a4086ae1a40c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843939635914969183, guid: 3836f9f2516418844b66a4086ae1a40c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843939635914969183, guid: 3836f9f2516418844b66a4086ae1a40c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843939635914969183, guid: 3836f9f2516418844b66a4086ae1a40c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843939635914969183, guid: 3836f9f2516418844b66a4086ae1a40c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843939635914969183, guid: 3836f9f2516418844b66a4086ae1a40c, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}

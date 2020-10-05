@@ -34,28 +34,35 @@ namespace Puzzles
 
         // Visuals
         [Header("Visuals")]
-        public int m_puzzlesSpawnedAtATime = 3;
+        public int m_puzzlesSpawnedAtATime = 4;
+        public int m_puzzlesInfront = 2;
 
         // Internal
+
         private struct SpawnedPuzzle
         {
             public GameObject[,] m_spawnedObjects;
             public int m_startPuzzleHeight;
             public int m_endPuzzleHeight;
             public PuzzleData m_puzzleData;
+            public SplineTransformData m_startTransformData;
         }
-        private Queue<SpawnedPuzzle> m_spawnedPuzzles = new Queue<SpawnedPuzzle>();
+        [SerializeField] private Queue<SpawnedPuzzle> m_spawnedPuzzles = new Queue<SpawnedPuzzle>();
 
         // State
-        private float m_runningDifficulty = 0f;
-        private int m_runningDistancePS = 0;
+        [Header("Running State - Dont Edit")]
+        [SerializeField] private float m_runningDifficulty = 0f;
+        [SerializeField] private int m_runningDistancePS = 0;
 
         private float m_trackLengthWS = 0f;
         private float m_trackLengthPS = 0; // Puzzle Space boiiii
         private float m_trackTPerCell = 0;
 
         // Updated values
-        private float m_forwardCellsPerSideways = 2f; // Currently not actually updated as expected. Can just expose and tweak tbh
+        [Header("Misc")]
+        public float m_forwardCellsPerSideways = 2f; // Currently not actually updated as expected. Can just expose and tweak tbh
+
+        private bool m_generatingPuzzle = false;
 
         void Start()
         {
@@ -80,26 +87,30 @@ namespace Puzzles
 
         void Update()
         {
-            float currentDistanceTravelledSS = m_car.GetTotalSplineTraveled();
-            int currentDistanceTravelledPS = Mathf.FloorToInt(currentDistanceTravelledSS * m_trackLengthPS);
-
-            // What we going for here...
-            // If we've started the last puzzle in the queue we spawn the next one, destroy the previous
-            if(m_spawnedPuzzles.Count < 3)
+            if (!m_generatingPuzzle)
             {
-                return;
-            }
+                float currentDistanceTravelledSS = m_car.GetTotalSplineTraveled();
+                int currentDistanceTravelledPS = Mathf.FloorToInt(currentDistanceTravelledSS * m_trackLengthPS);
 
-            if(currentDistanceTravelledPS >= m_spawnedPuzzles.Last().m_startPuzzleHeight)
-            {
-                RemovePuzzle();
-                StartCoroutine(GeneratePuzzlesToMax());
+                // What we going for here...
+                // If we've started the last puzzle in the queue we spawn the next one, destroy the previous
+                if (m_spawnedPuzzles.Count < 3)
+                {
+                    return;
+                }
+
+                if (currentDistanceTravelledPS >= m_spawnedPuzzles.ElementAt(m_spawnedPuzzles.Count - m_puzzlesInfront).m_startPuzzleHeight)
+                {
+                    RemovePuzzle();
+                    StartCoroutine(GeneratePuzzlesToMax());
+                }
             }
         }
 
         // Must destroy a puzzle first to spawn a new one
         private IEnumerator GeneratePuzzlesToMax()
         {
+            m_generatingPuzzle = true;
             while (m_spawnedPuzzles.Count < m_puzzlesSpawnedAtATime)
             {
                 PuzzleAsset selectedPuzzle = SelectPuzzle(m_runningDifficulty);
@@ -111,10 +122,11 @@ namespace Puzzles
                 float totalTrackT = m_runningDistancePS / m_trackLengthPS;
                 yield return GeneratePuzzle(selectedPuzzle.Generator, totalTrackT, totalTrackT % 1f);
 
-                int puzzleHeight = m_spawnedPuzzles.Peek().m_puzzleData.Height;
+                int puzzleHeight = m_spawnedPuzzles.Last().m_puzzleData.Height;
                 m_runningDistancePS += puzzleHeight;
                 m_runningDifficulty = Mathf.Min(m_runningDifficulty + m_difficultyIncreasePerCell * puzzleHeight, 1f);
             }
+            m_generatingPuzzle = false;
         }
 
         private void RemovePuzzle()
@@ -156,6 +168,7 @@ namespace Puzzles
         private IEnumerator GeneratePuzzle(IPuzzleGenerator i_puzzleGeneratorIF, float i_startingSplineT, float i_startingSplineTClamped)
         {
             PuzzleData puzzleData = i_puzzleGeneratorIF.GeneratePuzzle(m_trackWidthInCells, m_runningDifficulty, m_forwardCellsPerSideways);
+            SplineTransformData puzzleStartTransformData = m_spline.CalculateAproxSplineTransformData(i_startingSplineTClamped);
 
             Vector2Int gridSize = new Vector2Int(puzzleData.Width, puzzleData.Height);
 
@@ -164,11 +177,12 @@ namespace Puzzles
             spawnedPuzzleData.m_startPuzzleHeight = m_runningDistancePS;
             spawnedPuzzleData.m_endPuzzleHeight = m_runningDistancePS + puzzleData.Height;
             spawnedPuzzleData.m_puzzleData = puzzleData;
+            spawnedPuzzleData.m_startTransformData = puzzleStartTransformData;
             m_spawnedPuzzles.Enqueue(spawnedPuzzleData);
 
             float GetT(int i_y)
             {
-                return i_startingSplineTClamped + i_y * m_trackTPerCell;
+                return (i_startingSplineTClamped + i_y * m_trackTPerCell) % 1f;
             }
 
             // Lets figure out wtf we need to spawn this crap
@@ -238,6 +252,28 @@ namespace Puzzles
                         }
                     }
                 }
+            }
+        }
+
+        private void OnDrawGizmos()
+        {
+            if (Application.isPlaying)
+            {
+                // Draw em
+                Gizmos.color = Color.cyan;
+                foreach (SpawnedPuzzle spawnedPuzzle in m_spawnedPuzzles)
+                {
+                    Vector3 puzzleOnTrackPos = spawnedPuzzle.m_startTransformData.m_worldPos;
+                    Gizmos.DrawLine(puzzleOnTrackPos, puzzleOnTrackPos + spawnedPuzzle.m_startTransformData.m_worldUp * 5f);
+                }
+
+                // Draw us
+                //Gizmos.color = Color.green;
+                //SplineTransformData carSplineData = m_spline.CalculateAproxSplineTransformData(m_car.GetClampedSpineTraveled());
+                //Vector3 carOnTrackPos = carSplineData.m_worldPos;
+                //Gizmos.DrawLine(carOnTrackPos, carOnTrackPos + carSplineData.m_worldUp * 5f);
+
+                Gizmos.color = Color.white;
             }
         }
     }

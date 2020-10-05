@@ -17,7 +17,7 @@ MonoBehaviour:
   m_visibilityMin: 0
   m_visibilityMax: 1
   m_data:
-    m_puzzleLength: 6
+    m_puzzleLength: 10
     m_wallCellPercentageAtMinDif: 0.05
     m_wallCellPercentageAtMaxDif: 0.1
     m_wallPrefab: {fileID: 215526712701257797, guid: 76b379d09a9e1884da928c7d70113c90, type: 3}

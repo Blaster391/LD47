@@ -756,6 +756,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4848933996499922273, guid: 91acd046deab9da45a28b3d8c76af33b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0075
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848933996499922273, guid: 91acd046deab9da45a28b3d8c76af33b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.0075
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848933996499922273, guid: 91acd046deab9da45a28b3d8c76af33b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0075
+      objectReference: {fileID: 0}
     - target: {fileID: 4848933996499922279, guid: 91acd046deab9da45a28b3d8c76af33b, type: 3}
       propertyPath: m_Name
       value: PlayerCarBase
