@@ -171,7 +171,8 @@ namespace Puzzles
 
         private void AddRandomStuff(PuzzleData puzzleData)
         {
-            puzzleData.FillRandomClutter(m_clutter, m_clutterMin, m_clutterMax);
+            int max = Mathf.RoundToInt(m_runningDifficulty * m_clutterMax);
+            puzzleData.FillRandomClutter(m_clutter, m_clutterMin, max);
         }
 
         private IEnumerator GeneratePuzzle(IPuzzleGenerator i_puzzleGeneratorIF, float i_startingSplineT, float i_startingSplineTClamped)
