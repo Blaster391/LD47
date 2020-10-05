@@ -46,10 +46,12 @@ MonoBehaviour:
   m_spline: {fileID: 0}
   m_car: {fileID: 0}
   m_puzzlesToSpawn:
+  - {fileID: 11400000, guid: abd271f63519acb498492755a287580c, type: 2}
   - {fileID: 11400000, guid: 9aad88f415367024e8182cab7d2a750a, type: 2}
-  m_cellSize: 2.25
+  - {fileID: 11400000, guid: 2aeaf3e64a8d4e148aa365c422bd9945, type: 2}
+  m_cellSize: 3
   m_modelScaler: 1.5
-  m_trackWidthInCells: 7
+  m_trackWidthInCells: 5
   m_startingDifficulty: 0
   m_difficultyIncreasePerCell: 0.001
   m_initialSpaceCellSize: 10
@@ -58,4 +60,8 @@ MonoBehaviour:
   m_trackLayer:
     serializedVersion: 2
     m_Bits: 512
-  m_puzzlesSpawnedAtATime: 3
+  m_puzzlesSpawnedAtATime: 4
+  m_puzzlesInfront: 2
+  m_runningDifficulty: 0
+  m_runningDistancePS: 0
+  m_forwardCellsPerSideways: 3

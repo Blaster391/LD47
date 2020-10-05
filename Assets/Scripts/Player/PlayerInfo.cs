@@ -10,7 +10,7 @@ public class PlayerInfo : MonoBehaviour
 
     public int CarModel { get; set; } = 0;
     public string Id { get { return _id; } }
-    public string Username { get { return _username; } 
+    public string Username { get { return _username; }
         set
         {
             _username = value.Trim();
@@ -19,8 +19,14 @@ public class PlayerInfo : MonoBehaviour
         }
     }
 
-    public GameObject SelectedCar { get; set; }
+    private int _selectedCar;
 
+    //public GameObject SelectedCar { get; set; }
+    public int SelectedCar
+    {
+        get { return _selectedCar; }
+        set { _selectedCar = value; }
+    }
 
     private static PlayerInfo m_instance = null;
     public static PlayerInfo Instance { get { return m_instance; } }

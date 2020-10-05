@@ -12,6 +12,11 @@ public class CarSpinner : MonoBehaviour
     private float _startingRotation;
     private int _currentCar = 0;
 
+    public int CurrentCar
+    {
+        get { return _currentCar; }
+    }
+
     private void Start()
     {
         _startingRotation = transform.rotation.eulerAngles.y;

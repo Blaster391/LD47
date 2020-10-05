@@ -298,6 +298,11 @@ public class Spline : MonoBehaviour
 
     }
 
+    public float GetSegmentLength(int i_segmenetIndex)
+    {
+        return m_segments[i_segmenetIndex].m_length;
+    }
+
     //Vector3 spherePos;
     //private void Update()
     //{
