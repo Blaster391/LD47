@@ -976,9 +976,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 48449287058841020, guid: 8c112dee491c8824b9ff714c0140b50e, type: 3}
+      propertyPath: m_suitableForPuzzles
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1263727869899879439, guid: 8c112dee491c8824b9ff714c0140b50e, type: 3}
       propertyPath: m_trackLayer.m_Bits
       value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644657241656191203, guid: 8c112dee491c8824b9ff714c0140b50e, type: 3}
+      propertyPath: m_suitableForPuzzles
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2030744338389451929, guid: 8c112dee491c8824b9ff714c0140b50e, type: 3}
+      propertyPath: m_suitableForPuzzles
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293622329562762672, guid: 8c112dee491c8824b9ff714c0140b50e, type: 3}
+      propertyPath: m_suitableForPuzzles
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5127080988493591886, guid: 8c112dee491c8824b9ff714c0140b50e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1024,9 +1040,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5176226743412891796, guid: 8c112dee491c8824b9ff714c0140b50e, type: 3}
+      propertyPath: m_suitableForPuzzles
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5507018689236561908, guid: 8c112dee491c8824b9ff714c0140b50e, type: 3}
       propertyPath: m_Name
       value: TrackC
+      objectReference: {fileID: 0}
+    - target: {fileID: 6342745397587376578, guid: 8c112dee491c8824b9ff714c0140b50e, type: 3}
+      propertyPath: m_suitableForPuzzles
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020824887706322805, guid: 8c112dee491c8824b9ff714c0140b50e, type: 3}
+      propertyPath: m_suitableForPuzzles
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137968310886138414, guid: 8c112dee491c8824b9ff714c0140b50e, type: 3}
+      propertyPath: m_suitableForPuzzles
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876914338211804526, guid: 8c112dee491c8824b9ff714c0140b50e, type: 3}
+      propertyPath: m_suitableForPuzzles
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545020349887658020, guid: 8c112dee491c8824b9ff714c0140b50e, type: 3}
+      propertyPath: m_suitableForPuzzles
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955153068051996808, guid: 8c112dee491c8824b9ff714c0140b50e, type: 3}
+      propertyPath: m_suitableForPuzzles
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c112dee491c8824b9ff714c0140b50e, type: 3}

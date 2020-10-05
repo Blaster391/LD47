@@ -18,7 +18,7 @@ MonoBehaviour:
   m_visibilityMax: 1
   m_probability: 0.6
   m_data:
-    m_jamLength: 6
+    m_jamLength: 7
     m_lanesOfTrafficAtMinDif: 1
     m_lanesWithoutTrafficAtMaxDif: 1
     m_carPrefabs:
