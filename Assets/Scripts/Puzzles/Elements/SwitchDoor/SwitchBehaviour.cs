@@ -14,10 +14,7 @@ namespace Puzzles
             // Manual testing
             if (m_activate)
             {
-                if (m_activatee != null)
-                {
-                    m_activatee.Activate();
-                }
+                ActivateActivatees();
                 m_activate = false;
             }
         }
@@ -26,15 +23,23 @@ namespace Puzzles
         {
             if (other.gameObject.tag == "Car")
             {
-                m_activatee.Activate();
+                ActivateActivatees();
             }
         }
 
         public void AssignActivee(IActivatee i_activatee)
         {
-            m_activatee = i_activatee;
+            m_activatees.Add(i_activatee);
         }
 
-        private IActivatee m_activatee;
+        private void ActivateActivatees()
+        {
+            foreach(IActivatee activatee in m_activatees)
+            {
+                activatee.Activate();
+            }
+        }
+
+        private List<IActivatee> m_activatees = new List<IActivatee>();
     }
 }

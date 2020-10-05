@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: aiStandardSurface1
-    second: {fileID: 2100000, guid: 245606e1126b6524caa4ef3c65043131, type: 2}
+      name: Track
+    second: {fileID: 3934591437828580715, guid: f0f0888ead206df4c915ddda0ca9fc35, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
