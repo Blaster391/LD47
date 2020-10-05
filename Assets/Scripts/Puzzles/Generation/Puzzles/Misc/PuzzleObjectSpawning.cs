@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PuzzleObjectSpawning : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private DestructionFX m_destructionFX = null;
+
     void Start()
     {
-        
+        //m_destructionFX.
     }
 
-    // Update is called once per frame
     void Update()
     {
         
