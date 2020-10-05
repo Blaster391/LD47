@@ -143,8 +143,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _destroyObjectOnDestruction: 1
   _destructOnCollision: 0
+  _destructOnShoot: 1
   _constructed: 1
-  _lowEndTime: 0.4
+  _lowEndTime: 0.5
   _highEndTime: 1
   _shrinkDelay: 0
   _burstSizeMax: 0
