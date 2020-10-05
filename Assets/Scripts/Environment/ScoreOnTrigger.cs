@@ -28,8 +28,14 @@ public class ScoreOnTrigger : MonoBehaviour
             return;
         }
 
-        if(collider.GetComponent<Bullet>() != null)
+        var destructionComponent = GetComponent<DestructionFX>();
+        if (collider.GetComponent<Bullet>() != null)
         {
+            if (destructionComponent)
+            {
+                destructionComponent.PlayShotSound();
+            }
+
             _scoreGiven = true;
             var dc = GetComponent<DestructionFX>();
             if (dc)
@@ -50,10 +56,8 @@ public class ScoreOnTrigger : MonoBehaviour
             return;
         }
 
-        var destructionComponent = GetComponent<DestructionFX>();
         if(destructionComponent)
         {
-            destructionComponent.PlayShotSound();
             destructionComponent.Destruct(collider.gameObject);
         }
 
