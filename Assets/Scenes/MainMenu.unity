@@ -1144,6 +1144,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1849819953}
     m_Modifications:
+    - target: {fileID: 339576393315882625, guid: 461de2d74a3997244a30c3a6a162a14d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328203329686152781, guid: 461de2d74a3997244a30c3a6a162a14d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2849009680294636980, guid: 461de2d74a3997244a30c3a6a162a14d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1193,6 +1201,14 @@ PrefabInstance:
       value: PlayerFerrariRender
       objectReference: {fileID: 0}
     - target: {fileID: 3225254190937552654, guid: 461de2d74a3997244a30c3a6a162a14d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605953407573149821, guid: 461de2d74a3997244a30c3a6a162a14d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798843497401954743, guid: 461de2d74a3997244a30c3a6a162a14d, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -2182,6 +2198,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1849819953}
     m_Modifications:
+    - target: {fileID: 3083337013006410996, guid: b8fc36444abfc834bad6ae608e88459a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775876726250931138, guid: b8fc36444abfc834bad6ae608e88459a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5412676103363896268, guid: b8fc36444abfc834bad6ae608e88459a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7023521191387330807, guid: b8fc36444abfc834bad6ae608e88459a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2224,6 +2252,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7023521191387330807, guid: b8fc36444abfc834bad6ae608e88459a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7363308712304869593, guid: b8fc36444abfc834bad6ae608e88459a, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7652565621193941581, guid: b8fc36444abfc834bad6ae608e88459a, type: 3}
@@ -2835,6 +2867,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1849819953}
     m_Modifications:
+    - target: {fileID: 1290212135469743112, guid: 87053df073d6a004e8db7fb70d35322b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2189630860481080608, guid: 87053df073d6a004e8db7fb70d35322b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3753157921654546744, guid: 87053df073d6a004e8db7fb70d35322b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3897633332840271023, guid: 87053df073d6a004e8db7fb70d35322b, type: 3}
       propertyPath: m_Name
       value: PlayerPidgeonRender
@@ -2885,6 +2929,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4421686496534910485, guid: 87053df073d6a004e8db7fb70d35322b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569863642420644374, guid: 87053df073d6a004e8db7fb70d35322b, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
