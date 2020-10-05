@@ -21,6 +21,11 @@ public class LevelScoreManager : MonoBehaviour
 
     private List<ScoreResult> _scores = new List<ScoreResult>();
 
+    [SerializeField]
+    private Leaderboard _leaderboard = null;
+
+    private int _currentRank = -1;
+
     private int _totalLaps = -1;
     public int TotalLaps { 
         get
@@ -45,6 +50,9 @@ public class LevelScoreManager : MonoBehaviour
     private bool _scoreRequestSent = false;
     private float _scoreRequestResendTime = 0.0f;
     private int _maxResultsCount = 100;
+    private bool _newHighscore = false;
+    private bool _leaderboardInfoRetrieved = false;
+    private bool _updateLeaderboard = false;
 
     void Start()
     {
@@ -83,6 +91,39 @@ public class LevelScoreManager : MonoBehaviour
 
         ProcessScores();
 
+        UpdateLeaderboard();
+    }
+
+    private void UpdateLeaderboard()
+    {
+        if (_leaderboard && _leaderboardInfoRetrieved && _updateLeaderboard)
+        {
+            List<UIScoreData> leaderboardScores = new List<UIScoreData>();
+
+            for(int i = 0; i < _scores.Count; ++i)
+            {
+                if(i > 9)
+                {
+                    break;
+                }
+
+                UIScoreData sd = new UIScoreData();
+                sd.Ranking = 1 + i;
+                sd.ScoreValue = _scores[i].Score.ScoreValue;
+                if (_scores[i].Score.ExtraData.ContainsKey("Username"))
+                {
+                    sd.Username = _scores[i].Score.ExtraData["Username"];
+                }
+                else
+                {
+                    sd.Username = "Unknown";
+                }
+
+                leaderboardScores.Add(sd);
+            }
+
+            _leaderboard.UpdateScores(leaderboardScores);
+        }
     }
 
     private void OnDeath(Vector3 deathPos)
@@ -91,6 +132,8 @@ public class LevelScoreManager : MonoBehaviour
         {
             return;
         }
+
+        _updateLeaderboard = true;
 
         var scoreboardAPI = PlayerInfo.Instance?.GetComponent<ScoreboardComponent>();
         var playerScore = PlayerLife.Instance.GetComponent<PlayerScore>();
@@ -213,6 +256,7 @@ public class LevelScoreManager : MonoBehaviour
             if (success)
             {
                 _scores = results;
+                _leaderboardInfoRetrieved = true;
                 ProcessScores();
 
                 //m_scoreboardTitleText.text = $"Leaderboard ({m_playerStats.Level})";
@@ -278,6 +322,7 @@ public class LevelScoreManager : MonoBehaviour
                 result.Score = localScore;
                 _scores.Add(result);
 
+                _newHighscore = true;
                 _scores = _scores.OrderByDescending(x => x.Score.ScoreValue).ToList();
             }
         }
@@ -288,6 +333,7 @@ public class LevelScoreManager : MonoBehaviour
             result.Score = localScore;
             _scores.Add(result);
 
+            _newHighscore = true;
             _scores = _scores.OrderByDescending(x => x.Score.ScoreValue).ToList();
         }
 
@@ -299,6 +345,12 @@ public class LevelScoreManager : MonoBehaviour
             {
                 break;
             }
+        }
+
+        _currentRank = index + 1;
+        if(_currentRank > 99)
+        {
+            _currentRank = -1;
         }
 
         var resultScore = new List<UIScoreData>();
