@@ -23,7 +23,14 @@ public class CarSpinner : MonoBehaviour
     private void Start()
     {
         _startingRotation = transform.rotation.eulerAngles.y;
-        _nameText.text = _carList[_currentCar].name;
+        if (_carList[_currentCar].GetComponent<NameComponent>())
+        {
+            _nameText.text = _carList[_currentCar].GetComponent<NameComponent>().PublicName;
+        }
+        else
+        {
+            _nameText.text = _carList[_currentCar].name;
+        }
     }
 
     private void OnDisable()
@@ -47,7 +54,16 @@ public class CarSpinner : MonoBehaviour
         _currentCar = (int)Mathf.Repeat(_currentCar, _carList.Count);
         _carList[_currentCar].SetActive(true);
 
-        _nameText.text = _carList[_currentCar].name;
+        if(_carList[_currentCar].GetComponent<NameComponent>())
+        {
+            _nameText.text = _carList[_currentCar].GetComponent<NameComponent>().PublicName;
+        }
+        else
+        {
+            _nameText.text = _carList[_currentCar].name;
+        }
+
+
     }
 
     private void ResetRot()

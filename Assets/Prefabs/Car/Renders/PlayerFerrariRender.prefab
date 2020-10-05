@@ -186,6 +186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerFerrariRender
       objectReference: {fileID: 0}
+    - target: {fileID: 7642670942376294505, guid: 00ee16888b0ea5943a342205146d74df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00ee16888b0ea5943a342205146d74df, type: 3}
 --- !u!4 &2849009680294636980 stripped
