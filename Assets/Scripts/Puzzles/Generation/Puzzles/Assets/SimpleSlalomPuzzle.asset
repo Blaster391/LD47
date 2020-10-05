@@ -17,7 +17,7 @@ MonoBehaviour:
   m_visibilityMin: 0
   m_visibilityMax: 1
   m_data:
-    m_slalomBarriers: 4
+    m_slalomBarriers: 3
     m_extraEntryWidthMinDif: 1
     m_extraEntryWidthMaxDif: 0
     m_extraHeightPerBarrierMinDif: 0
