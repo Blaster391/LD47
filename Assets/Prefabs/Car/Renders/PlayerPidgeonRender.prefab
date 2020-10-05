@@ -186,6 +186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerPidgeonRender
       objectReference: {fileID: 0}
+    - target: {fileID: 7642670942376294505, guid: 77939d6cf7e601d448ae2481bc8d02a8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77939d6cf7e601d448ae2481bc8d02a8, type: 3}
 --- !u!4 &4421686496534910485 stripped
