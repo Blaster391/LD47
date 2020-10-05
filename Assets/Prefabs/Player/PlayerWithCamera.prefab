@@ -452,6 +452,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCarBase
       objectReference: {fileID: 0}
+    - target: {fileID: 4848933996499922301, guid: 91acd046deab9da45a28b3d8c76af33b, type: 3}
+      propertyPath: m_strafeDelta
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91acd046deab9da45a28b3d8c76af33b, type: 3}
 --- !u!1 &4113139706017204400 stripped
