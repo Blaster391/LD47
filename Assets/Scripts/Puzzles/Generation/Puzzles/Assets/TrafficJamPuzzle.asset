@@ -16,6 +16,7 @@ MonoBehaviour:
   m_difficultyMax: 1
   m_visibilityMin: 0
   m_visibilityMax: 1
+  m_probability: 0.6
   m_data:
     m_jamLength: 6
     m_lanesOfTrafficAtMinDif: 1

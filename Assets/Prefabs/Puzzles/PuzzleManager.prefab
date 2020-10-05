@@ -58,6 +58,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2aeaf3e64a8d4e148aa365c422bd9945, type: 2}
   - {fileID: 11400000, guid: 26ecb6a950bb3b5498b0c9ade93fe67d, type: 2}
   - {fileID: 11400000, guid: ae66ac647b1a4da4b8325c1355f86e0f, type: 2}
+  - {fileID: 11400000, guid: 6a3e04ab7bc60944caeac8eebeda2505, type: 2}
   m_cellSize: 3
   m_modelScaler: 1.5
   m_trackWidthInCells: 5

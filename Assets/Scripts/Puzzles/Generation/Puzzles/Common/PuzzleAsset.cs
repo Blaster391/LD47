@@ -17,12 +17,14 @@ namespace Puzzles
         [SerializeField] private float m_difficultyMax = 1f;
         [SerializeField] private float m_visibilityMin = 0f;
         [SerializeField] private float m_visibilityMax = 1f;
+        [SerializeField] private float m_probability = 1f;
 
         // Interface
         public float DifficultyMin => m_difficultyMin;
         public float DifficultyMax => m_difficultyMax;
         public float VisibilityMin => m_visibilityMin;
         public float VisibilityMax => m_visibilityMax;
+        public float Probability => m_probability;
         public abstract IPuzzleGenerator Generator { get; }
 
         public System.Action ValuesChanged = delegate {};

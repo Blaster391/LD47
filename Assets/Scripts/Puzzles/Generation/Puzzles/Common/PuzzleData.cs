@@ -49,7 +49,7 @@ namespace Puzzles
         private List<List<PuzzleCell>> m_puzzleCells = new List<List<PuzzleCell>>();
 
 
-        public void FillRandomClutter(List<GameObject> _randomObjects, int _minClutter, int _maxClutter)
+        public void FillRandomClutter(List<GameObject> _randomObjects, float _minClutterProp, float _maxClutterProp)
         {
             if(_randomObjects.Count == 0)
             {
@@ -71,7 +71,7 @@ namespace Puzzles
             Shuffle(potentialCell);
 
 
-            int randomClutterAmount = Random.Range(_minClutter, _maxClutter + 1);
+            int randomClutterAmount = Mathf.FloorToInt(Random.Range(_minClutterProp, _maxClutterProp) * potentialCell.Count);
             randomClutterAmount = Mathf.Min(randomClutterAmount, potentialCell.Count);
 
             for (int i = 0; i < randomClutterAmount; ++i)
