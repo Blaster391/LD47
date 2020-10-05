@@ -77,7 +77,7 @@ public class SurfaceClampedCarController : MonoBehaviour
     void UpdateTransform(Vector3 i_desiredPos, Vector3 i_desiredF)
     {
         //Apply strafing
-        m_curStrafe = Mathf.Clamp(m_curStrafe + -Input.GetAxisRaw("Horizontal") * m_strafeDelta, -m_strafeMax, m_strafeMax);
+        m_curStrafe = Mathf.Clamp(m_curStrafe + -Input.GetAxis("Horizontal") * m_strafeDelta, -m_strafeMax, m_strafeMax);
 
         //Calculate the right vector at the desired positon based on world up and desired f
         Vector3 right = Vector3.Normalize( Vector3.Cross(i_desiredF, transform.up)); //TODO, acount or dont allow forward to equal up
