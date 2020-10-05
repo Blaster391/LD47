@@ -11,8 +11,9 @@ public class CarSpinner : MonoBehaviour
     private TMP_Text _nameText;
     [SerializeField]
     private List<GameObject> _carList = new List<GameObject>();
-
+    [SerializeField]
     private float _startingRotation;
+
     private int _currentCar = 0;
 
     public int CurrentCar
@@ -31,6 +32,11 @@ public class CarSpinner : MonoBehaviour
         {
             _nameText.text = _carList[_currentCar].name;
         }
+    }
+
+    private void OnEnable()
+    {
+        ChangeCar(0);
     }
 
     private void OnDisable()
@@ -62,8 +68,6 @@ public class CarSpinner : MonoBehaviour
         {
             _nameText.text = _carList[_currentCar].name;
         }
-
-
     }
 
     private void ResetRot()

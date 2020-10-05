@@ -27,7 +27,7 @@ public class Leaderboard : MonoBehaviour
         {
             if (_rows.Count < amount)
             {
-                for (int i = _rows.Count; i < amount; ++i)
+                while (_rows.Count != amount)
                 {
                     GameObject obj = Instantiate(_rowPrefab);
                     obj.transform.SetParent(_parentContainer);
@@ -38,9 +38,10 @@ public class Leaderboard : MonoBehaviour
             }
             else if (_rows.Count > amount)
             {
-                for (int i = amount; i < _rows.Count; ++i)
+                while (_rows.Count != amount)
                 {
-                    Destroy(_rows[i].gameObject);
+                    Destroy(_rows[_rows.Count - 1].gameObject);
+                    _rows.RemoveAt(_rows.Count - 1);
                 }
             }
         }
