@@ -8,6 +8,7 @@ public class PlayerInfo : MonoBehaviour
     private string _username = "";
     private string _id = "";
 
+    public int CarModel { get; set; } = 0;
     public string Id { get { return _id; } }
     public string Username { get { return _username; } 
         set
@@ -44,6 +45,12 @@ public class PlayerInfo : MonoBehaviour
             PlayerPrefs.SetString("Player_ID", guid.ToString());
         }
 
+        if(!PlayerPrefs.HasKey("Car"))
+        {
+            PlayerPrefs.SetInt("Car", 0);
+        }
+
+        CarModel = PlayerPrefs.GetInt("Car");
         _id = PlayerPrefs.GetString("Player_ID");
  
 

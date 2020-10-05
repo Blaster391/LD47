@@ -15,6 +15,8 @@ public class LiveScores : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _totalLapsText;
     [SerializeField]
+    private TextMeshProUGUI _lapsSeparatorText;
+    [SerializeField]
     private TextMeshProUGUI _highScoresText;
     [SerializeField]
     private TextMeshProUGUI _scoresSeparatorText;
@@ -54,6 +56,7 @@ public class LiveScores : MonoBehaviour
         }
 
         _totalLapsText.text = "";
+        _lapsSeparatorText.text = "";
         _highScoresText.text = "";
         _relativeScoresText.text = "";
         _scoresSeparatorText.text = "";
@@ -103,6 +106,11 @@ public class LiveScores : MonoBehaviour
         else
         {
             _scoresSeparatorText.text = "";
+        }
+
+        if(_totalLapsText.text != "" && _highScores.Count > 0)
+        {
+            _lapsSeparatorText.text = "-----------------------";
         }
     }
 
