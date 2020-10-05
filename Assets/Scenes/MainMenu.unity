@@ -382,7 +382,7 @@ PrefabInstance:
     - target: {fileID: 1603765735789338952, guid: 854b11118ac955346a6f16d11df61266, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 228616113}
+      objectReference: {fileID: 880800467}
     - target: {fileID: 1603765735789338952, guid: 854b11118ac955346a6f16d11df61266, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: Play
@@ -530,7 +530,7 @@ PrefabInstance:
     - target: {fileID: 5958827471827120663, guid: 854b11118ac955346a6f16d11df61266, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 228616113}
+      objectReference: {fileID: 880800467}
     - target: {fileID: 5958827471827120663, guid: 854b11118ac955346a6f16d11df61266, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: Play
@@ -1241,6 +1241,11 @@ GameObject:
 --- !u!224 &880800466 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8146646062218465306, guid: 854b11118ac955346a6f16d11df61266, type: 3}
+  m_PrefabInstance: {fileID: 277256322}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &880800467 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -278895868213266685, guid: 854b11118ac955346a6f16d11df61266, type: 3}
   m_PrefabInstance: {fileID: 277256322}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &914759703
