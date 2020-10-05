@@ -34,7 +34,7 @@ public class MainLeaderboard : MonoBehaviour
                 {
                     List<UIScoreData> scoreData = ParseResultsData(results);
                    
-                    AddLeaderboard("NAME HERE B", scoreData);
+                    AddLeaderboard("Highstrikes Raceway", scoreData);
                    
                 }
 
@@ -46,7 +46,7 @@ public class MainLeaderboard : MonoBehaviour
                 if (success)
                 {
                     List<UIScoreData> scoreData = ParseResultsData(results);
-                    AddLeaderboard("NAME HERE C", scoreData);
+                    AddLeaderboard("Hawkins Superhighway", scoreData);
                 }
 
                 return true;

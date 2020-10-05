@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4b91eddb824c441bd1500ca6b6fd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PublicName: TODO 1
+  PublicName: Highstrikes Raceway
 --- !u!1 &8869021093851778568
 GameObject:
   m_ObjectHideFlags: 0
