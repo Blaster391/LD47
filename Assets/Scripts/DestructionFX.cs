@@ -166,6 +166,9 @@ public class DestructionFX : MonoBehaviour
         {
             _constructed = false;
             _collisionPosition = collisionPosition;
+
+            _deathPosition = transform.position;
+            _deathScale = transform.localScale;
         }
     }
 
