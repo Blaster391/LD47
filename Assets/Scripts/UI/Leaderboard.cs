@@ -8,9 +8,9 @@ public class Leaderboard : MonoBehaviour
     private Transform _parentContainer;
     [SerializeField]
     private GameObject _rowPrefab;
-
+    
     private List<LBDataRow> _rows = new List<LBDataRow>();
-
+    
     public void UpdateScores(List<UIScoreData> leaderboardData)
     {
         SetupRows(leaderboardData.Count);
