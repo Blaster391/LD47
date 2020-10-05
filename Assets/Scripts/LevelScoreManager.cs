@@ -395,7 +395,16 @@ public class LevelScoreManager : MonoBehaviour
         }
 
         var resultScore = new List<UIScoreData>();
-        for (int i = 0; i < 3; ++i)
+
+        bool extendedHighScores = false;
+        int highScoresToShow = 3;
+        if(_currentRank < 6 && _currentRank > 0)
+        {
+            highScoresToShow = 6;
+            extendedHighScores = true;
+        }
+
+        for (int i = 0; i < highScoresToShow; ++i)
         {
             if (i < _scores.Count)
             {
@@ -423,10 +432,18 @@ public class LevelScoreManager : MonoBehaviour
         _liveScores.SetHighScores(resultScore);
 
         resultScore = new List<UIScoreData>();
-        if (index < _maxResultsCount - 2 && index > 3)
+        if (!extendedHighScores && index > 0)
         {
-            
-            for (int i = index - 1; i < index + 2; ++i)
+            int startingPos = index - 1;
+            int endingPos = index + 1;
+
+            if(index == _scores.Count - 1)
+            {
+                startingPos = index - 2;
+                endingPos = index;
+            }
+
+            for (int i = startingPos; i <= endingPos; ++i)
             {
                 if (i < _scores.Count)
                 {
@@ -448,8 +465,6 @@ public class LevelScoreManager : MonoBehaviour
                 {
                     break;
                 }
-
-
             }
 
             _liveScores.SetRelativeScores(resultScore);

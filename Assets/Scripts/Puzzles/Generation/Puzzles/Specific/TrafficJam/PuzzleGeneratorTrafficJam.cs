@@ -36,7 +36,7 @@ namespace Puzzles
             // Spawn our cars
             foreach(int laneIndex in fullLanes)
             {
-                for(int y = 0; y < m_data.m_jamLength; ++y)
+                for(int y = 0; y < m_data.m_jamLength; y += 2)
                 {
                     PuzzleCell carCell = puzzleData.GetCell(laneIndex, y);
                     carCell.m_prefabToSpawn = m_data.m_carPrefabs[Random.Range(0, m_data.m_carPrefabs.Count)];
