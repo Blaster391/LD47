@@ -3,7 +3,22 @@ guid: b20dbf8b5823d4f4ca38d39e4af2bed2
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CentreLine
+    second: {fileID: 2100000, guid: 3447630ed4f8b1840bf3e276807b0f38, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Curb
+    second: {fileID: 2100000, guid: f87db67144fc68143927eeecd2b56580, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Track
+    second: {fileID: 2100000, guid: 9a5c7d52305d3c844bd3385297482b1f, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
