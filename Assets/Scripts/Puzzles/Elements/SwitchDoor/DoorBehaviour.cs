@@ -22,6 +22,10 @@ namespace Puzzles
         {
             m_lower = true;
             m_bollardsObject.enabled = false;
+
+
+            // Lol hack
+            PlayerLife.Instance.GetComponent<PlayerAudio>().GateUnlock();
         }
 
         private void Update()

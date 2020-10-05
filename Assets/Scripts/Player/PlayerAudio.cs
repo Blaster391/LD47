@@ -9,17 +9,15 @@ public class PlayerAudio : MonoBehaviour
     [SerializeField]
     private AudioSource _deathSource;
     [SerializeField]
-    private AudioSource _tireScreechSource;
-    [SerializeField]
-    private AudioSource _shootSource;
+    private AudioSource _gateUnlockSource;
 
-    [SerializeField]
-    private AudioSource _musicSource1;
 
     [SerializeField]
     private AudioClip _engineClip;
     [SerializeField]
     private AudioClip _deathClip;
+    [SerializeField]
+    private AudioClip _gateUnlockClip;
 
     [SerializeField]
     private float _lowSpeedPitch = 1.0f;
@@ -28,6 +26,11 @@ public class PlayerAudio : MonoBehaviour
 
     private PlayerLife _life = null;
     private SurfaceClampedCarController _controller = null;
+
+    public void GateUnlock()
+    {
+        _gateUnlockSource.PlayOneShot(_gateUnlockClip);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -60,8 +63,7 @@ public class PlayerAudio : MonoBehaviour
     void OnDeath(Vector3 pos)
     {
         _engineSource.Stop();
-        _tireScreechSource.Stop();
-        _shootSource.Stop();
+        _gateUnlockSource.Stop();
 
         _deathSource.clip = _deathClip;
         _deathSource.Play();
