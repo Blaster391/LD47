@@ -46,9 +46,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_bulletPrefab: {fileID: 8059047220531537274, guid: 4de4814f30530aa41aefdcb8169aede4, type: 3}
   m_fire: 32
+  m_rotateKey: 13
   m_spawnTrans: {fileID: 564715146997737498}
   m_fireRate: 0.1
   m_shootSound: {fileID: 8300000, guid: 6ea33635976e7493dba6b988d117d549, type: 3}
+  m_maxRotate: 3.5
+  m_rotDelt: -1
+  m_upAngleRef: 90
 --- !u!82 &5996145533960900678
 AudioSource:
   m_ObjectHideFlags: 0

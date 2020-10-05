@@ -107,7 +107,7 @@ MonoBehaviour:
   accel: 0.4
   m_minSpeed: 0.01
   m_maxSpeed: 1
-  m_strafeDelta: 1
+  m_strafeDelta: 22
   m_strafeMax: 7
   m_spline: {fileID: 0}
   m_curSpeed: 0
@@ -481,6 +481,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4848933996499922273}
     m_Modifications:
+    - target: {fileID: 1906283000212451397, guid: b8fc36444abfc834bad6ae608e88459a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 277.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3982994297891836752, guid: b8fc36444abfc834bad6ae608e88459a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 277.3003
+      objectReference: {fileID: 0}
     - target: {fileID: 7023521191387330807, guid: b8fc36444abfc834bad6ae608e88459a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -459,6 +459,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 676450910321985287, guid: cea282422ba6ad14cb20e7004fb00585, type: 3}
+      propertyPath: rotate
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 676450910321985287, guid: cea282422ba6ad14cb20e7004fb00585, type: 3}
+      propertyPath: m_rotateKey
+      value: 113
+      objectReference: {fileID: 0}
+    - target: {fileID: 2616933311091827730, guid: cea282422ba6ad14cb20e7004fb00585, type: 3}
+      propertyPath: rotate
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2616933311091827730, guid: cea282422ba6ad14cb20e7004fb00585, type: 3}
+      propertyPath: m_rotateKey
+      value: 113
+      objectReference: {fileID: 0}
     - target: {fileID: 4113139706017204394, guid: cea282422ba6ad14cb20e7004fb00585, type: 3}
       propertyPath: _speedo
       value: 
