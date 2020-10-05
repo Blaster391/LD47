@@ -3,6 +3,7 @@ using ScoreboardCore.Data;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using UnityEngine;
 
@@ -10,6 +11,8 @@ public class LevelScoreManager : MonoBehaviour
 {
     [SerializeField]
     private string _levelName = "";
+    [SerializeField]
+    private string _publicLevelName = "";
 
     [SerializeField]
     private float _totalUpdateRate = 2.5f;
@@ -23,6 +26,8 @@ public class LevelScoreManager : MonoBehaviour
 
     [SerializeField]
     private Leaderboard _leaderboard = null;
+    [SerializeField]
+    private GameOverDataCont _gameOverData = null;
 
     private int _currentRank = -1;
 
@@ -123,6 +128,23 @@ public class LevelScoreManager : MonoBehaviour
             }
 
             _leaderboard.UpdateScores(leaderboardScores);
+
+
+            if(_gameOverData)
+            {
+                GameOverData gameOverData = new GameOverData();
+                gameOverData.NewRank = _newHighscore;
+                gameOverData.RankNumber = _currentRank;
+
+                var playerScore = PlayerLife.Instance.GetComponent<PlayerScore>();
+                gameOverData.Laps = playerScore.Lap;
+                gameOverData.Score = Mathf.RoundToInt(playerScore.Score);
+                gameOverData.TimeAlive = playerScore.TotalTime;
+                gameOverData.UserName = PlayerInfo.Instance.Username;
+                gameOverData.TrackName = _publicLevelName;
+
+                _gameOverData.SetData(gameOverData);
+            }
         }
     }
 
