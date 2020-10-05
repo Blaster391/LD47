@@ -48,11 +48,17 @@ public class DestructionFX : MonoBehaviour
     private Vector3 _deathPosition = new Vector3();
     private Vector3 _deathScale = new Vector3();
 
+    private bool _wasConstructed = false;
+
     // Start is called before the first frame update
     void Start()
     {
+        _collisionPosition = transform.position;
+        _deathPosition = transform.position;
+        _deathScale = transform.localScale;
+        _wasConstructed = _constructed;
 
-        if(GetComponent<MeshFilter>())
+        if (GetComponent<MeshFilter>())
         {
 #if UNITY_EDITOR
             _mesh = GetComponent<MeshFilter>().sharedMesh;
@@ -102,7 +108,7 @@ public class DestructionFX : MonoBehaviour
                 _destructTime += Time.deltaTime;
                 _destructTime = Mathf.Min(_destructTime, maxTime);
             }
-            else if(_destroyObjectOnDestruction && (!_audioSource || !_audioSource.isPlaying))
+            else if(_destroyObjectOnDestruction && (!_audioSource || !_audioSource.isPlaying) && _wasConstructed)
             {
                 Destroy(gameObject);
             }
@@ -180,7 +186,8 @@ public class DestructionFX : MonoBehaviour
 
     public void Construct(Vector3 collisionPosition)
     {
-        if(!_constructed)
+        _wasConstructed = true;
+        if (!_constructed)
         {
             _constructed = true;
         }
