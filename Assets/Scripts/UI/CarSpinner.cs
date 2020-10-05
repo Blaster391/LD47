@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CarSpinner : MonoBehaviour
 {
     [SerializeField]
     private float _rotationSpeed = 20.0f;
+    [SerializeField]
+    private TMP_Text _nameText;
     [SerializeField]
     private List<GameObject> _carList = new List<GameObject>();
 
@@ -20,6 +23,7 @@ public class CarSpinner : MonoBehaviour
     private void Start()
     {
         _startingRotation = transform.rotation.eulerAngles.y;
+        _nameText.text = _carList[_currentCar].name;
     }
 
     private void OnDisable()
@@ -42,6 +46,8 @@ public class CarSpinner : MonoBehaviour
         _currentCar += moveDir;
         _currentCar = (int)Mathf.Repeat(_currentCar, _carList.Count);
         _carList[_currentCar].SetActive(true);
+
+        _nameText.text = _carList[_currentCar].name;
     }
 
     private void ResetRot()

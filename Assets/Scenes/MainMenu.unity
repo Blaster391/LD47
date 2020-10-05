@@ -350,8 +350,8 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3182748256359831968, guid: 854b11118ac955346a6f16d11df61266, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 100.000244
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5958827471827120663, guid: 854b11118ac955346a6f16d11df61266, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -749,7 +749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b1b9f2078af55bd42bd5a29202960a66, type: 3}
       propertyPath: m_Name
-      value: DejaVu
+      value: Deja Vu
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b1b9f2078af55bd42bd5a29202960a66, type: 3}
       propertyPath: m_IsActive
@@ -1194,7 +1194,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8149535928094868439, guid: 70427d7b351f5ed4a840c6cb8d6060ba, type: 3}
       propertyPath: m_Name
-      value: TrackC_Menu
+      value: Track C
       objectReference: {fileID: 0}
     - target: {fileID: 8149535928094868439, guid: 70427d7b351f5ed4a840c6cb8d6060ba, type: 3}
       propertyPath: m_IsActive
@@ -1488,7 +1488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0eb8bc97efeec2c468898f3fcc7887c6, type: 3}
       propertyPath: m_Name
-      value: Ferrari458Speciale
+      value: Ferrari 458 Speciale
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0eb8bc97efeec2c468898f3fcc7887c6, type: 3}
       propertyPath: m_IsActive
@@ -1740,7 +1740,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3871096116625136689, guid: e16aa51df24f68541bfe04afeb9e5765, type: 3}
       propertyPath: m_Name
-      value: TrackB_Menu
+      value: Track B
       objectReference: {fileID: 0}
     - target: {fileID: 4536028369386833547, guid: e16aa51df24f68541bfe04afeb9e5765, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1830,6 +1830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationSpeed: 20
+  _nameText: {fileID: 2146644697}
   _carList:
   - {fileID: 1792200085}
   - {fileID: 1463474120}
@@ -2121,7 +2122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f0f0888ead206df4c915ddda0ca9fc35, type: 3}
       propertyPath: m_Name
-      value: Pidgeon306
+      value: Pidgeon 306
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f0f0888ead206df4c915ddda0ca9fc35, type: 3}
       propertyPath: m_IsActive
@@ -2169,6 +2170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationSpeed: 20
+  _nameText: {fileID: 2146644697}
   _carList:
   - {fileID: 877867937}
   - {fileID: 1838583603}
@@ -2468,6 +2470,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2146644697 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5801564577541299292, guid: 854b11118ac955346a6f16d11df61266, type: 3}
+  m_PrefabInstance: {fileID: 277256322}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2182001509608749240
 PrefabInstance:
   m_ObjectHideFlags: 0
