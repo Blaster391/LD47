@@ -13,6 +13,7 @@ public class PlayerScore : MonoBehaviour
     private Stats _hudStats = null;
 
     private PlayerLife _life = null;
+    private SurfaceClampedCarController _car = null;
     private float _score = 0.0f;
     private float _previousLapScore = 0.0f;
     private float _currentLapScore = 0.0f;
@@ -29,6 +30,7 @@ public class PlayerScore : MonoBehaviour
     void Start()
     {
         _life = GetComponent<PlayerLife>();
+        _car = GetComponent<SurfaceClampedCarController>();
     }
 
     public void AddScore(float score)
@@ -60,7 +62,7 @@ public class PlayerScore : MonoBehaviour
     {
         if(_life.IsAlive)
         {
-            AddScore(Time.deltaTime * _suvivalScore);
+            AddScore(Time.deltaTime * _suvivalScore * _car.m_curSpeed);
             TotalTime += Time.deltaTime;
             _currentLapTime += Time.deltaTime;
 
