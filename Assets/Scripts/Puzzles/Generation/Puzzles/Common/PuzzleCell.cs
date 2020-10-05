@@ -10,6 +10,7 @@ namespace Puzzles
     public class PuzzleCell
     {
         public GameObject m_prefabToSpawn = null;
+        public Quaternion m_prefabRotation = Quaternion.identity;
         public List<Vector2Int> m_cellsToLinkTo = new List<Vector2Int>();
     }
 }
