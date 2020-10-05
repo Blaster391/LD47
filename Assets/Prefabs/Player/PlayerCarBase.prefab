@@ -116,6 +116,13 @@ MonoBehaviour:
   m_smoothingFramesU: 3
   m_smoothingFramesF: 3
   m_rayOffset: 7
+  m_startMinSpeed: 0.01
+  m_endMinSpeed: 0.5
+  m_startMaxSpeed: 0.5
+  m_endMaxSpeed: 1
+  m_speedUpTime: 120
+  m_baselineSpeedProp: 0.5
+  m_speedDecayRate: 0.25
 --- !u!114 &4848933996499922300
 MonoBehaviour:
   m_ObjectHideFlags: 0

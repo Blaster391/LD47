@@ -32,6 +32,18 @@ public class SurfaceClampedCarController : MonoBehaviour
     private float m_distTrav = 0; // Spline distance, NOT left and right
     private float m_trackLength;
 
+
+
+    public float m_startMinSpeed = 0.02f;
+    public float m_endMinSpeed = 0.05f;
+    public float m_startMaxSpeed = 0.05f;
+    public float m_endMaxSpeed = 0.1f;
+    public float m_speedUpTime = 120.0f;
+    public float m_baselineSpeedProp = 0.5f;
+    public float m_speedDecayRate = 1.0f;
+
+    private float m_currentTime = 0.0f;
+
     private void Start()
     {
         m_curSpeed = m_minSpeed;
@@ -100,8 +112,36 @@ public class SurfaceClampedCarController : MonoBehaviour
         Vector3 desiredF;
         Vector3 desiredPos;
 
+        // DIFFICULTY SPEED SCALING
+
+        m_currentTime += Time.fixedDeltaTime;
+
+        float difficultyProp = m_currentTime / m_speedUpTime;
+        difficultyProp = Mathf.Min(difficultyProp, 1.0f);
+
+        float minSpeed = Mathf.Lerp(m_startMinSpeed, m_endMinSpeed, difficultyProp);
+        float maxSpeed = Mathf.Lerp(m_startMaxSpeed, m_endMaxSpeed, difficultyProp);
+        float targetSpeed = minSpeed + (maxSpeed - minSpeed) * m_baselineSpeedProp;
+
+        float input = Input.GetAxis("Vertical");
+        if(Mathf.Abs(input) < 0.05f)
+        {
+            float decay = m_speedDecayRate * Time.fixedDeltaTime;
+            if (m_curSpeed > targetSpeed)
+            {
+                m_curSpeed = Mathf.Max(targetSpeed, m_curSpeed - decay);
+            }
+            else
+            {
+                m_curSpeed = Mathf.Min(targetSpeed, m_curSpeed + decay);
+            }
+        }
+        // END
+
+
+
         int splineIndPrev = m_curSplineIndex;
-        m_curSpeed = Mathf.Clamp(m_curSpeed + Input.GetAxis("Vertical") * accel * Time.fixedDeltaTime, m_minSpeed, m_maxSpeed);
+        m_curSpeed = Mathf.Clamp(m_curSpeed + input * accel * Time.fixedDeltaTime, minSpeed, maxSpeed);
 
         float previousSplineT = m_curSplineT;
         m_spline.Lookahead(ref m_curSplineIndex, m_curSpeed, ref m_curSplineT, out desiredF, out desiredPos);
@@ -149,7 +189,7 @@ public class SurfaceClampedCarController : MonoBehaviour
     {
         if(_speedo)
         {
-            _speedo.MaxSpeed = m_maxSpeed;
+            _speedo.MaxSpeed = m_endMaxSpeed;
             _speedo.CurrentSpeed = m_curSpeed;
         }
     }
