@@ -65,6 +65,7 @@ public class MainMenu : MonoBehaviour
         _nameEntry.SetActive(true);
         _controlButs.SetActive(true);
         _inputField.SetTextWithoutNotify(PlayerInfo.Instance.Username);
+        _nameText.text = PlayerInfo.Instance.Username;
     }
 
     public void OnLeaderboardSelected()

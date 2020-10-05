@@ -66,7 +66,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2397994976002901611, guid: f0f0888ead206df4c915ddda0ca9fc35, type: 3}
   - {fileID: 2100000, guid: e39b3d805363d9e4ebb99ce9a9bc6db4, type: 2}
-  - {fileID: 3934591437828580715, guid: 0eb8bc97efeec2c468898f3fcc7887c6, type: 3}
+  - {fileID: 2100000, guid: 6da02dbdfb65dfb4ca2b0a39160d57a6, type: 2}
   - {fileID: 2100000, guid: 4b5bf15aa93a49c42b97b95e5e8e4be8, type: 2}
   - {fileID: 2100000, guid: 1aeb39413485a1d4e9a75c61ad5d5d36, type: 2}
   - {fileID: -5290890482986836839, guid: b1b9f2078af55bd42bd5a29202960a66, type: 3}
@@ -105,6 +105,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _destroyObjectOnDestruction: 1
   _destructOnCollision: 0
+  _destructOnShoot: 1
+  _audioSource: {fileID: 0}
+  _shotAudio: {fileID: 0}
   _constructed: 1
   _lowEndTime: 0.25
   _highEndTime: 1

@@ -382,7 +382,7 @@ PrefabInstance:
     - target: {fileID: 1603765735789338952, guid: 854b11118ac955346a6f16d11df61266, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 228616113}
+      objectReference: {fileID: 880800467}
     - target: {fileID: 1603765735789338952, guid: 854b11118ac955346a6f16d11df61266, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: Play
@@ -530,7 +530,7 @@ PrefabInstance:
     - target: {fileID: 5958827471827120663, guid: 854b11118ac955346a6f16d11df61266, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 228616113}
+      objectReference: {fileID: 880800467}
     - target: {fileID: 5958827471827120663, guid: 854b11118ac955346a6f16d11df61266, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: Play
@@ -1243,6 +1243,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8146646062218465306, guid: 854b11118ac955346a6f16d11df61266, type: 3}
   m_PrefabInstance: {fileID: 277256322}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &880800467 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -278895868213266685, guid: 854b11118ac955346a6f16d11df61266, type: 3}
+  m_PrefabInstance: {fileID: 277256322}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &914759703
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,6 +1724,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6572365290017193937, guid: 78a1cfa3d9ca3e44f8e43d3b7e0f4af9, type: 3}
+      propertyPath: m_text
+      value: Enter Username...
+      objectReference: {fileID: 0}
     - target: {fileID: 6635699672341120371, guid: 78a1cfa3d9ca3e44f8e43d3b7e0f4af9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1842,6 +1851,18 @@ PrefabInstance:
     - target: {fileID: 7768931388526422084, guid: 78a1cfa3d9ca3e44f8e43d3b7e0f4af9, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768931388526422084, guid: 78a1cfa3d9ca3e44f8e43d3b7e0f4af9, type: 3}
+      propertyPath: m_ContentType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768931388526422084, guid: 78a1cfa3d9ca3e44f8e43d3b7e0f4af9, type: 3}
+      propertyPath: m_KeyboardType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768931388526422084, guid: 78a1cfa3d9ca3e44f8e43d3b7e0f4af9, type: 3}
+      propertyPath: m_CharacterValidation
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78a1cfa3d9ca3e44f8e43d3b7e0f4af9, type: 3}
