@@ -205,15 +205,15 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a904912cf92944849b769d105a7fbf52, type: 2}
-  m_sharedMaterial: {fileID: 6657602388862048061, guid: a904912cf92944849b769d105a7fbf52, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5ab6e49e88389fd489809d91c2734fb2, type: 2}
+  m_sharedMaterial: {fileID: 6657602388862048061, guid: 5ab6e49e88389fd489809d91c2734fb2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288286974
-  m_fontColor: {r: 0.99607843, g: 0.0627451, b: 0.6039216, a: 1}
+    rgba: 4278220799
+  m_fontColor: {r: 1, g: 0.46568146, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1134,7 +1134,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -10, y: 0}
+  m_AnchoredPosition: {x: -9.999878, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1349988804645787042
@@ -1359,15 +1359,15 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a904912cf92944849b769d105a7fbf52, type: 2}
-  m_sharedMaterial: {fileID: 6657602388862048061, guid: a904912cf92944849b769d105a7fbf52, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5ab6e49e88389fd489809d91c2734fb2, type: 2}
+  m_sharedMaterial: {fileID: 6657602388862048061, guid: 5ab6e49e88389fd489809d91c2734fb2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288286974
-  m_fontColor: {r: 0.99607843, g: 0.0627451, b: 0.6039216, a: 1}
+    rgba: 4278220799
+  m_fontColor: {r: 1, g: 0.46568146, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1686,7 +1686,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5120740242451295886, guid: 10a48544a2e69cc4da7ac8654764b29f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -20
+      value: -20.000122
       objectReference: {fileID: 0}
     - target: {fileID: 5120740242451295886, guid: 10a48544a2e69cc4da7ac8654764b29f, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1932,7 +1932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8249559875073071662, guid: d863e9a0cfb8d824ead489701fc0e8fe, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 125
+      value: 125.00012
       objectReference: {fileID: 0}
     - target: {fileID: 8249559875073071662, guid: d863e9a0cfb8d824ead489701fc0e8fe, type: 3}
       propertyPath: m_AnchoredPosition.y
