@@ -301,12 +301,12 @@ public class LevelScoreManager : MonoBehaviour
             }
         }
 
-        var resultScore = new List<LiveScores.Score>();
+        var resultScore = new List<UIScoreData>();
         for (int i = 0; i < 3; ++i)
         {
             if (i < _scores.Count)
             {
-                LiveScores.Score s = new LiveScores.Score();
+                UIScoreData s = new UIScoreData();
                 if (_scores[i].Score.ExtraData.ContainsKey("Username"))
                 {
                     s.Username = _scores[i].Score.ExtraData["Username"];
@@ -329,7 +329,7 @@ public class LevelScoreManager : MonoBehaviour
         }
         _liveScores.SetHighScores(resultScore);
 
-        resultScore = new List<LiveScores.Score>();
+        resultScore = new List<UIScoreData>();
         if (index < _maxResultsCount - 2 && index > 3)
         {
             
@@ -337,7 +337,7 @@ public class LevelScoreManager : MonoBehaviour
             {
                 if (i < _scores.Count)
                 {
-                    LiveScores.Score s = new LiveScores.Score();
+                    UIScoreData s = new UIScoreData();
                     if (_scores[i].Score.ExtraData.ContainsKey("Username"))
                     {
                         s.Username = _scores[i].Score.ExtraData["Username"];
@@ -363,7 +363,7 @@ public class LevelScoreManager : MonoBehaviour
         }
         else
         {
-            _liveScores.SetRelativeScores(new List<LiveScores.Score>());
+            _liveScores.SetRelativeScores(new List<UIScoreData>());
         }
     }
 }

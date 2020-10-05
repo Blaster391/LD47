@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+public struct UIScoreData
+{
+    public int Ranking;
+    public string Username;
+    public int ScoreValue;
+}
+
 public class LiveScores : MonoBehaviour
 {
     [SerializeField]
@@ -13,17 +20,9 @@ public class LiveScores : MonoBehaviour
     private TextMeshProUGUI _scoresSeparatorText;
     [SerializeField]
     private TextMeshProUGUI _relativeScoresText;
-
-
-    public struct Score
-    {
-        public int Ranking;
-        public string Username;
-        public int ScoreValue;
-    }
-
-    private List<Score> _highScores = new List<Score>();
-    private List<Score> _relativeScores = new List<Score>();
+    
+    private List<UIScoreData> _highScores = new List<UIScoreData>();
+    private List<UIScoreData> _relativeScores = new List<UIScoreData>();
 
     public void SetLaps(int laps)
     {
@@ -37,12 +36,12 @@ public class LiveScores : MonoBehaviour
         }
     }
 
-    public void SetHighScores(List<Score> scores)
+    public void SetHighScores(List<UIScoreData> scores)
     {
         _highScores = scores;
     }
 
-    public void SetRelativeScores(List<Score> scores)
+    public void SetRelativeScores(List<UIScoreData> scores)
     {
         _relativeScores = scores;
     }
@@ -107,7 +106,7 @@ public class LiveScores : MonoBehaviour
         }
     }
 
-    private string FormatScore(Score _score)
+    private string FormatScore(UIScoreData _score)
     {
         return $"{_score.Ranking}. {_score.Username} - {_score.ScoreValue}";
     }

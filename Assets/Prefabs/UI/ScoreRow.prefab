@@ -144,6 +144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8640514367096492832}
   - component: {fileID: 2557828348114754420}
+  - component: {fileID: 9179255591261970502}
   m_Layer: 5
   m_Name: ScoreRow
   m_TagString: Untagged
@@ -198,6 +199,21 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &9179255591261970502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3064848099878715767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19f1e1675af644145bed74bc08f101a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rankText: {fileID: 4218506980939873652}
+  _nameText: {fileID: 8636420096529588381}
+  _scoreText: {fileID: 6541669371436716918}
 --- !u!1 &3112046110294749359
 GameObject:
   m_ObjectHideFlags: 0

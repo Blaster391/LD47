@@ -23,13 +23,10 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private GameObject _vehicleSelect;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        _firstButton.Select();
-        
-    }
-
+    [Header("Stage 4 - Leaderboard")]
+    [SerializeField]
+    private GameObject _leaderboard;
+    
     public void OnPlayButtonSelected()
     {
         _buttons.SetActive(false);
@@ -37,6 +34,18 @@ public class MainMenu : MonoBehaviour
         _inputField.gameObject.SetActive(true);
         _inputField.SetTextWithoutNotify(PlayerInfo.Instance.Username);
         _inputField.Select();
+    }
+
+    public void OnLeaderboardSelected()
+    {
+        _buttons.SetActive(false);
+        _leaderboard.SetActive(true);
+    }
+
+    public void OnLeaderboardClosed()
+    {
+        _leaderboard.SetActive(false);
+        _buttons.SetActive(true);
     }
 
     public void OnQuitButtonSelected()
